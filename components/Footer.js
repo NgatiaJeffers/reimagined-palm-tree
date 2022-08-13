@@ -8,9 +8,6 @@ import {
     faMailchimp
   } from "@fortawesome/free-brands-svg-icons";
 
-import Logo from "../assets/images/logo.png"
-
-
 
 const Footer = () => {
     const getCurrentYear = () => {
