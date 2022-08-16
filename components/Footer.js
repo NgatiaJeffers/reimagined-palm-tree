@@ -1,12 +1,13 @@
-import Link from "next/link";
 import React from "react";
+import Link from "next/link";
+import Image from "next/image";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-    faYoutube,
-    faFacebook,
-    faTwitter,
-    faMailchimp
-  } from "@fortawesome/free-brands-svg-icons";
+import { faYoutube, faFacebook, faTwitter, faMailchimp } from "@fortawesome/free-brands-svg-icons";
+
+import logo from "../public/assets/images/logo.png"
+import challenge from "../public/assets/images/challenge.jpg"
+import ride from "../public/assets/images/ride.jpg"
 
 
 const Footer = () => {
@@ -22,7 +23,7 @@ const Footer = () => {
                             <div className="footer_widget">
                                 <div className="footer_logo">
                                     <a>
-                                        <img src="/assets/images/logo.png" alt="Faraja Logo"/>
+                                        <Image src={logo} alt="Faraja Logo"/>
                                     </a>
                                 </div>
                                 <h3> Did you know? </h3>
@@ -93,7 +94,7 @@ const Footer = () => {
                                     <li>
                                         <div className="thumb">
                                             <a >
-                                                <img src="/icon.png" alt=""/>
+                                                <Image src={ride} alt="Faraja Ride"/>
                                             </a>
                                         </div>
                                         <div className="info">
@@ -108,7 +109,7 @@ const Footer = () => {
                                     <li>
                                         <div className="thumb">
                                             <a >
-                                                <img src="/icon.png" alt=""/>
+                                                <Image src={challenge} alt="Faraja Challenge"/>
                                             </a>
                                         </div>
                                         <div className="info">
