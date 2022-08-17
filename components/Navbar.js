@@ -7,6 +7,7 @@ import { faPhone, faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-
 import { faYoutube, faFacebook, faTwitter, faMailchimp } from "@fortawesome/free-brands-svg-icons";
 
 import logo from "../public/assets/images/logo.png"
+import whiteLogo from "../public/assets/images/white-logo.png"
 import challenge from "../public/assets/images/challenge.jpg"
 import ride from "../public/assets/images/ride.jpg"
 
@@ -25,10 +26,10 @@ const Navbar = () => {
         const header = document.querySelector("#sticky-header");
         const position = window.pageYOffset;
 
-        if (position > 400) {
+        if (position < 400) {
             header.classList.remove("sticky");
         }
-        if (position < 401) {
+        if (position > 401) {
             header.classList.add("sticky");
         }
 
@@ -48,11 +49,13 @@ const Navbar = () => {
                                         <li>
                                             <a href="#">
                                                 <FontAwesomeIcon icon={faPhone}/>
+                                                    Nairobi: 0748 811 909
                                             </a>
                                         </li>
                                         <li>
                                             <a href="#">
                                                 <FontAwesomeIcon icon={faMailchimp}/>
+                                                    info@farajacancersupport.org
                                             </a>
                                         </li>
                                     </ul>
@@ -60,13 +63,13 @@ const Navbar = () => {
                             </div>
                             <div className="col-xl-6 col-md-6 col-lg-4">
                                 <div className="social-media-links d-none d-lg-block">
-                                    <a href="#">
+                                    <a className="icon" href="#">
                                         <FontAwesomeIcon icon={faFacebook}/>
                                     </a>
-                                    <a href="#">
+                                    <a className="icon" href="#">
                                         <FontAwesomeIcon icon={faYoutube}/>
                                     </a>
-                                    <a href="#">
+                                    <a className="icon" href="#">
                                         <FontAwesomeIcon icon={faTwitter}/>
                                     </a>
                                 </div>
@@ -77,7 +80,7 @@ const Navbar = () => {
                 <div id="sticky-header" className="main-header-area">
                     <div className="container-fluid">
                         <div className="row align-items-center">
-                            <div className="col-xl-3 col-lg-3">
+                            <div className="col-xl-3 col-lg-3 col-md-3">
                                 <div className="logo">
                                     <a href="#">
                                         <Image 
@@ -87,7 +90,7 @@ const Navbar = () => {
                                     </a>
                                 </div>
                             </div>
-                            <div className="col-xl-9 xol-lg-9">
+                            <div className="col-xl-9 col-lg-9 col-md-9">
                                 <div className="main-menu">
                                     <nav>
                                         <ul>
@@ -123,6 +126,9 @@ const Navbar = () => {
                                         </div>
                                     </div>
                                 </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="mobile-menu d-block d-lg-none"></div>
                             </div>
                         </div>
                     </div>

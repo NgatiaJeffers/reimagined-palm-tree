@@ -89,14 +89,21 @@ li {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-area {
+    padding: 0 10px 10px 10px;
+  }
+}
+
 .header-area .main-header-area {
-  background: #63b2f5;
+  background: #f2f4f9;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
   padding: 25px 35px;
   position: absolute;
   bottom: -50px;
+  z-index: 999;
   z-index: 999;
   left: 100px;
   top: 70px;
@@ -130,6 +137,21 @@ li {
   }
 }
 
+@media (min-width: 768px) and (max-width: 991px) {
+  .header-area .main-header-area {
+    right: 15px;
+    left: 15px;
+    padding: 12px 0;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+  .header-area .main-header-area {
+    right: 60px;
+    left: 60px;
+  }
+}
+
 @media (max-width: 991px) {
   .header-area .main-header-area {
     right: 15px;
@@ -140,6 +162,7 @@ li {
 
 @media (max-width: 767px) {
   .header-area .main-header-area .logo {
+    width: 100px;
   }
 }
 
@@ -155,13 +178,74 @@ li {
   }
 } 
 
-.header-are .main-header-area .main-menu ul li {
+.header-area .header-top-area .short-contact-list {
+  text-align: left;
+}
+
+@media (max-width: 767px) {
+  .header-area .header-top-area .short-contact-list {
+    text-align: center;
+  }
+}
+
+.header-area .header-top-area .short-contact-list ul li {
+  display: inline-block;
+}
+
+.header-area .header-top-area .short-contact-list ul li a {
+  font-size: 16px;
+  color: #222222;
+  margin-right: 40px;
+  font-family: "Open Sans", sans-serif;
+}
+
+@media (max-width: 767px) {
+  .header-area .header-top-area .short-contact-list ul li a {
+    margin-right: 0;
+    margin: 0 5px;
+  }
+}
+
+@media (max-width: 767px) {
+  .header-area .header-top-area .short-contact-list ul li a i {
+    margin-right: 10px;
+    margin: 20px;
+  }
+}
+
+.header-area .header-top-area .short-contact-list ul li a i {
+  margin-right: 10px;
+  margin: 0 5px;
+}
+
+.header-area .header-top-area .social-media-links {
+  text-align: right;
+}
+
+.header-area .header-top-area .social-media-links .icon {
+  font-size: 15px;
+  color: #222222;
+  margin-right: 12px;
+}
+
+@media (max-width: 767px) {
+  .header-area .header-top-area .social-media-links {
+    text-align: center;
+  }
+}
+
+.header-area .header-top-area .social-media-links .icon:hover {
+  color: #3CC78F;
+}
+
+
+.header-area .main-header-area .main-menu ul li {
   display: inline-block;
   position: relative;
   margin: 0 10px;
 }
 
-.header-are .main-header-area .main-menu ul li a {
+.header-area .main-header-area .main-menu ul li a {
   color: #fff;
   font-size: 16px;
   text-transform: capitalize;
@@ -235,6 +319,12 @@ li {
   transition: 0.3s;
   display: block;
   color: #000;
+}
+
+.header-area .main-header-area .main-menu ul li {
+  display: inline-block;
+  position: relative;
+  margin: 0 10px;
 }
 
 .header-area .main-header-area .main-menu ul li .submenu li a::before {
@@ -338,19 +428,12 @@ li {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1200px) {
-  /* line 90, ../../Arafath/CL/january 2020/242. charity/HTML/scss/_header.scss */
-  .header-area .main-header-area .donate-button .donate-btn a {
-    padding: 12px 20px;
-  }
-}
-
 .header-area .main-header-area .donate-button .donate-btn a:hover {
   background: #fff;
   color: #3CC78F;
 }
 
-.header-are .main-header-area.sticky {
+.header-area .main-header-area.sticky {
   box-shadow: 0px 3px 16px 0px rgba(0, 0, 0, 0.01);
   position: fixed;
   width: 100%;
