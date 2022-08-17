@@ -27,7 +27,7 @@ const Footer = () => {
                                     </a>
                                 </div>
                                 <h3> Did you know? </h3>
-                                <p className="address_text">Faraja means 'Comfort' in Swahili and was founded in 2010 by Shaira Adamali.</p>
+                                <p className="address_text">Faraja means &apos;Comfort&apos; in Swahili and was founded in 2010 by Shaira Adamali.</p>
                                 <p className="address_text">Our Main Objective is to provide a safe haven for patients and their carers by providing emotional, practical and healing support.</p>
                                 <div className="social_links">
                                     <ul>
@@ -134,7 +134,7 @@ const Footer = () => {
                         <div className="col-xl-12">
                             <div className="copy_right text-left">
                                 <p>
-                                    Copyright &copy;{getCurrentYear()} Faraja Cancer Support. All Rights Reserved
+                                    Copyright &copy; {getCurrentYear()} Faraja Cancer Support. All Rights Reserved
                                 </p>
                             </div>
                         </div>
