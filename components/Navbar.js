@@ -6,10 +6,11 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { faYoutube, faFacebook, faTwitter, faMailchimp } from "@fortawesome/free-brands-svg-icons";
 
-import logo from "../public/assets/images/logo.png"
-import whiteLogo from "../public/assets/images/white-logo.png"
-import challenge from "../public/assets/images/challenge.jpg"
-import ride from "../public/assets/images/ride.jpg"
+import styles from "./Navbar.module.css";
+import logo from "../public/assets/images/logo.png";
+import whiteLogo from "../public/assets/images/white-logo.png";
+import challenge from "../public/assets/images/challenge.jpg";
+import ride from "../public/assets/images/ride.jpg";
 
 const Navbar = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
@@ -27,10 +28,10 @@ const Navbar = () => {
         const position = window.pageYOffset;
 
         if (position < 400) {
-            header.classList.remove("sticky");
+            header.classList.remove("sticky-bar");
         }
         if (position > 401) {
-            header.classList.add("sticky");
+            header.classList.add("sticky-bar");
         }
 
         setScrollPosition(position);
@@ -40,95 +41,50 @@ const Navbar = () => {
     return (
         <header>
             <div className="header-area">
-                <div className="header-top-area">
-                    <div className="container-fluid">
-                        <div className="row">
-                            <div className="col-xl-6 col-md-12 col-lg-8">
-                                <div className="short-contact-list">
-                                    <ul>
-                                        <li>
-                                            <a href="#">
-                                                <FontAwesomeIcon icon={faPhone}/>
-                                                    Nairobi: 0748 811 909
-                                            </a>
-                                        </li>
-                                        <li>
-                                            <a href="#">
-                                                <FontAwesomeIcon icon={faMailchimp}/>
-                                                    info@farajacancersupport.org
-                                            </a>
-                                        </li>
-                                    </ul>
+                <div className="main-header">
+                    <div id="sticky-header" className="header-bottom">
+                        <div className="container-fluid">
+                            <div className="row align-items-center">
+                                <div className="col-xl-2 col-lg-2">
+                                    <div className="logo">
+                                        <a href="#">
+                                            <Image src={logo} alt="Faraja Logo"/>
+                                        </a>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="col-xl-6 col-md-6 col-lg-4">
-                                <div className="social-media-links d-none d-lg-block">
-                                    <a className="icon" href="#">
-                                        <FontAwesomeIcon icon={faFacebook}/>
-                                    </a>
-                                    <a className="icon" href="#">
-                                        <FontAwesomeIcon icon={faYoutube}/>
-                                    </a>
-                                    <a className="icon" href="#">
-                                        <FontAwesomeIcon icon={faTwitter}/>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="sticky-header" className="main-header-area">
-                    <div className="container-fluid">
-                        <div className="row align-items-center">
-                            <div className="col-xl-3 col-lg-3 col-md-3">
-                                <div className="logo">
-                                    <a href="#">
-                                        <Image 
-                                            src={logo} 
-                                            alt="Faraja Logo"
-                                        />
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="col-xl-9 col-lg-9 col-md-9">
-                                <div className="main-menu">
-                                    <nav>
-                                        <ul>
-                                            <li>
-                                                <a href="#">Home</a>
-                                            </li>
-                                            <li>
-                                                <a href="#">About
-                                                    <FontAwesomeIcon 
-                                                        icon={faAngleDown} 
-                                                        className="dropdown-icon"    
-                                                    />
-                                                </a>
-                                                <ul className="submenu">
-                                                    <li><a href="#">Our Work with children</a></li>
-                                                    <li><a href="#">Annual Reports</a></li>
+                                <div className="col-xl-10 col-lg-10">
+                                    <div className="menu-wrapper d-flex align-items-center justify-content-end">
+                                        {/* MAin Menu */}
+                                        <div className="main-menu d-none d-lg-block">
+                                            <nav>
+                                                <ul>
+                                                    <li><a href="#">Home</a></li>
+                                                    <li><a href="#">About</a></li>
+                                                    <li><a href="#">What we do</a></li>
+                                                    <li><a href="#">Projects</a></li>
+                                                    <li><a href="#">Blog</a>
+                                                        <ul className="submenu">
+                                                            <li><a href="#">Blog</a></li>
+                                                            <li><a href="#">Blog Details</a></li>
+                                                            <li><a href="#">Element</a></li>
+                                                        </ul>
+                                                    </li>
+                                                    <li><a href="#">Contact</a></li>
                                                 </ul>
-                                            </li>
-                                            <li>
-                                                <a href="#">About
-                                                    <FontAwesomeIcon icon={faAngleDown} />
-                                                </a>
-                                                <ul className="submenu">
-                                                    <li><a href="#">Our Work with children</a></li>
-                                                    <li><a href="#">Annual Reports</a></li>
-                                                </ul>
-                                            </li>
-                                        </ul>
-                                    </nav>
-                                    <div className="donate-button">
-                                        <div className="donate-btn d-none d-lg-block">
-                                            <a data-scroll-nav="1" href="#">Make a Donate</a>
+                                            </nav>
+                                        </div>
+                                        {/* Donate Button */}
+                                        <div className="header-right-btn d-none d-lg-block ml-20">
+                                            <a href="#"
+                                            className="highlight-button btn btn-large button xs-margin-bottom-five"
+                                            data-abc="true">Make a Donation</a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div className="col-12">
-                                <div className="mobile-menu d-block d-lg-none"></div>
+                                {/* Mobile Meni */}
+                                <div className="col-12">
+                                    <div className="mobile_menu d-block d-block d-lg-none"></div>
+                                </div>
                             </div>
                         </div>
                     </div>
