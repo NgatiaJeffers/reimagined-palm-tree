@@ -1,0 +1,30 @@
+.heroWrap {
+    background-image: url("../public/assets/images/Body_Talk.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+.heroWrap {
+    width: 100%;
+    height: calc(100vh - 117px);
+    min-height: 700px;
+    position: relative;
+}
+
+.heroWrap {
+    height: 600px;
+}
+
+.sliderText {
+    color: #fff;
+    height: 700px;
+}
+
+.sliderText h1 {
+    font-size: 60px;
+    color: #fff;
+    line-height: 1.2;
+    font-weight: 400;
+}

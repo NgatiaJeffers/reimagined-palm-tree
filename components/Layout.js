@@ -2,6 +2,7 @@ import Head from "next/head";
 
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Banner from "./Banner";
 
 export default function Layout({ children }) {
     return (
@@ -12,6 +13,7 @@ export default function Layout({ children }) {
             <header>
                 <Navbar />
             </header>
+                <Banner />
             <main>
                 {children}
             </main>

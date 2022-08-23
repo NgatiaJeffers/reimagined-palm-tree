@@ -2,15 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPhone, faAngleDown, faAngleRight } from "@fortawesome/free-solid-svg-icons";
-import { faYoutube, faFacebook, faTwitter, faMailchimp } from "@fortawesome/free-brands-svg-icons";
-
-import styles from "./Navbar.module.css";
 import logo from "../public/assets/images/logo.png";
-import whiteLogo from "../public/assets/images/white-logo.png";
-import challenge from "../public/assets/images/challenge.jpg";
-import ride from "../public/assets/images/ride.jpg";
 
 const Navbar = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
@@ -39,58 +31,56 @@ const Navbar = () => {
 
 
     return (
-        <header>
-            <div className="header-area">
-                <div className="main-header">
-                    <div id="sticky-header" className="header-bottom">
-                        <div className="container-fluid">
-                            <div className="row align-items-center">
-                                <div className="col-xl-2 col-lg-2">
-                                    <div className="logo">
-                                        <a href="#">
-                                            <Image src={logo} alt="Faraja Logo"/>
-                                        </a>
+        <div className="header-area">
+            <div className="main-header">
+                <div id="sticky-header" className="header-bottom">
+                    <div className="container-fluid">
+                        <div className="row align-items-center">
+                            <div className="col-xl-2 col-lg-2">
+                                <div className="logo">
+                                    <a href="#">
+                                        <Image src={logo} alt="Faraja Logo"/>
+                                    </a>
+                                </div>
+                            </div>
+                            <div className="col-xl-10 col-lg-10">
+                                <div className="menu-wrapper d-flex align-items-center justify-content-end">
+                                    {/* MAin Menu */}
+                                    <div className="main-menu d-none d-lg-block">
+                                        <nav>
+                                            <ul>
+                                                <li><a href="#">Home</a></li>
+                                                <li><a href="#">About</a></li>
+                                                <li><a href="#">What we do</a></li>
+                                                <li><a href="#">Projects</a></li>
+                                                <li><a href="#">Blog</a>
+                                                    <ul className="submenu">
+                                                        <li><a href="#">Blog</a></li>
+                                                        <li><a href="#">Blog Details</a></li>
+                                                        <li><a href="#">Element</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li><a href="#">Contact</a></li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                    {/* Donate Button */}
+                                    <div className="header-right-btn d-none d-lg-block ml-20">
+                                        <a href="#"
+                                        className="highlight-button btn btn-large button xs-margin-bottom-five"
+                                        data-abc="true">Make a Donation</a>
                                     </div>
                                 </div>
-                                <div className="col-xl-10 col-lg-10">
-                                    <div className="menu-wrapper d-flex align-items-center justify-content-end">
-                                        {/* MAin Menu */}
-                                        <div className="main-menu d-none d-lg-block">
-                                            <nav>
-                                                <ul>
-                                                    <li><a href="#">Home</a></li>
-                                                    <li><a href="#">About</a></li>
-                                                    <li><a href="#">What we do</a></li>
-                                                    <li><a href="#">Projects</a></li>
-                                                    <li><a href="#">Blog</a>
-                                                        <ul className="submenu">
-                                                            <li><a href="#">Blog</a></li>
-                                                            <li><a href="#">Blog Details</a></li>
-                                                            <li><a href="#">Element</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li><a href="#">Contact</a></li>
-                                                </ul>
-                                            </nav>
-                                        </div>
-                                        {/* Donate Button */}
-                                        <div className="header-right-btn d-none d-lg-block ml-20">
-                                            <a href="#"
-                                            className="highlight-button btn btn-large button xs-margin-bottom-five"
-                                            data-abc="true">Make a Donation</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                {/* Mobile Meni */}
-                                <div className="col-12">
-                                    <div className="mobile_menu d-block d-block d-lg-none"></div>
-                                </div>
+                            </div>
+                            {/* Mobile Meni */}
+                            <div className="col-12">
+                                <div className="mobile_menu d-block d-block d-lg-none"></div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </header>
+        </div>
     )
 
 }

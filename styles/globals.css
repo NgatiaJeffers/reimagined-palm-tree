@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Yeseva+One:regular");
+@import url("https://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800");
+@import url("https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 
 * {
   margin: 0;
@@ -7,7 +9,7 @@
 }
 
 body {
-  font-family: "Yeseva One", cursive;
+  font-family: "Overpass", cursivec;
   font-weight: normal;
   font-style: normal;
   font-size: 16px
@@ -19,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Yeseva One", cursive;
+  font-family: "Dosis", cursive !important;
   color: #425140;
   margin-top: 0px;
   font-style: normal;
@@ -28,7 +30,7 @@ h6 {
 }
 
 p {
-  font-family: "Yeseva One", cursive;
+  font-family: "Overpass", cursivec !important;
   color: #10285d;
   font-size: 16px;
   line-height: 30px;
@@ -51,6 +53,7 @@ a:focus,
 }
 
 a {
+  font-family: "Overpass", cursivec !important;
   color: #635c5c !important;
   text-decoration: none !important;
 }
@@ -175,7 +178,13 @@ hr {
 .main-header {
   position: relative;
   z-index: 3;
-  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
+  /* -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1); */
+  /* Glassmorphism */
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1) !important;
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
 }
 
 @media only screen and (min-width: 1200px) and (max-width: 1600px) {
@@ -260,17 +269,23 @@ hr {
   position: fixed;
   top: 0;
   width: 100%;
-  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  z-index: 9999;
+  z-index: 9999 !important;
+  /* Glassmorphism */
+  background: rgba( 255, 255, 255, 0.2 );
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1) !important;
+  backdrop-filter: blur( 6.5px );
+  -webkit-backdrop-filter: blur( 6.5px );
+  border-radius: 10px;
   -webkit-animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
   animation: 300ms ease-in-out 0s normal none 1 running fadeInDown;
-  -webkit-box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1);
-  background: #fff
 }
 
 .header-sticky.sticky-bar {
-  background: #fff
+  background: rgba( 255, 255, 255, 0.3 ) !important;
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1) !important;
+  backdrop-filter: blur( 7.5px ) !important;
+  -webkit-backdrop-filter: blur( 7.5px ) !important;
+  border: 1px solid rgba( 255, 255, 255, 0.18 ) !important;
 }
 
 .header-sticky.sticky-bar.sticky .main-menu ul li a {
