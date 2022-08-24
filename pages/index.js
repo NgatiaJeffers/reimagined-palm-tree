@@ -158,13 +158,10 @@ export default function Home() {
                     {/* <div className='thumb'>
                       <Image 
                         src={CancerScreening} 
-                        alt='Cancer Screening'
-                        // width="500px"
-                        // height="600px"
-                        // placeholder="blur"  
+                        alt='Cancer Screening' 
                       />
                     </div> */}
-                    <div class="news-info">
+                    <div className="news-info">
                         <span>August 2, 2016</span>
                         <a href="#">
                             <h3>NAKUMATT ON BOARD- LET'S FIGHT THIS BATTLE TOGETHER</h3>
@@ -175,13 +172,7 @@ export default function Home() {
                           'Let's Fight this Battle Together'. Both show the 
                           power corporate partnerships can have.
                         </p>
-                        <p>
-                          In 2014, Nakumatt chose to partner Faraja to deliver 
-                          two ground-breaking projects called 'Make-Over' and 
-                          'Let's Fight this Battle Together'. Both show the 
-                          power corporate partnerships can have.
-                        </p>
-                        <a class="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
+                        <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
                   </div>
                 </div>
@@ -190,7 +181,7 @@ export default function Home() {
               <div className='col-md-5'>
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
-                  <div class="news-info">
+                  <div className="news-info">
                         <span>July 13, 2016</span>
                         <a href="#">
                             <h3>WHAT IS KENYA'S BIGGEST COFFEE MORNING?</h3>
@@ -199,7 +190,7 @@ export default function Home() {
                           If you’ve heard about Kenya’s Biggest Coffee 
                           Morning – and want to find out more – you at the right place.
                         </p>
-                        <a class="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
+                        <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
                     {/* <div className='thumb'>
                       <Image className="img-thumb" src={FarajaCoffee} alt='Cancer Screening' />
