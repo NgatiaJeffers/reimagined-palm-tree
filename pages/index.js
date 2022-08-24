@@ -158,7 +158,7 @@ export default function Home() {
                     <div className="news-info">
                         <span>August 2, 2016</span>
                         <a href="#">
-                            <h3>NAKUMATT ON BOARD- LET'S FIGHT THIS BATTLE TOGETHER</h3>
+                            <h3>NAKUMATT ON BOARD- LET&apos;S FIGHT THIS BATTLE TOGETHER</h3>
                         </a>
                         <p>
                           In 2014, Nakumatt chose to partner Faraja to deliver 
