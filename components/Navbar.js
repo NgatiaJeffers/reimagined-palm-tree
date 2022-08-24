@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -29,11 +29,10 @@ const Navbar = () => {
         setScrollPosition(position);
     };
 
-
     return (
         <div className="header-area">
-            <div className="main-header">
-                <div id="sticky-header" className="header-bottom">
+            <div id="sticky-header" className="main-header">
+                <div className="header-bottom">
                     <div className="container-fluid">
                         <div className="row align-items-center">
                             <div className="col-xl-2 col-lg-2">
@@ -48,18 +47,20 @@ const Navbar = () => {
                                     {/* MAin Menu */}
                                     <div className="main-menu d-none d-lg-block">
                                         <nav>
-                                            <ul>
+                                            <ul id="navigation">
                                                 <li><a href="#">Home</a></li>
                                                 <li><a href="#">About</a></li>
-                                                <li><a href="#">What we do</a></li>
-                                                <li><a href="#">Projects</a></li>
-                                                <li><a href="#">Blog</a>
+                                                <li><a href="#">Therapy</a></li>
+                                                <li><a href="#">Events</a></li>
+                                                <li><a href="#">News & Media</a>
                                                     <ul className="submenu">
+                                                        <li><a href="#">News</a></li>
+                                                        <li><a href="#">Media Details</a></li>
                                                         <li><a href="#">Blog</a></li>
-                                                        <li><a href="#">Blog Details</a></li>
-                                                        <li><a href="#">Element</a></li>
                                                     </ul>
                                                 </li>
+                                                <li><a href="#">Gallery</a></li>
+                                                <li><a href="#">Support Us</a></li>
                                                 <li><a href="#">Contact</a></li>
                                             </ul>
                                         </nav>
