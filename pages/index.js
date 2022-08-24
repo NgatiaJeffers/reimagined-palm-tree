@@ -155,12 +155,6 @@ export default function Home() {
               <div className='col-md-5'>
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
-                    {/* <div className='thumb'>
-                      <Image 
-                        src={CancerScreening} 
-                        alt='Cancer Screening' 
-                      />
-                    </div> */}
                     <div className="news-info">
                         <span>August 2, 2016</span>
                         <a href="#">
@@ -168,8 +162,8 @@ export default function Home() {
                         </a>
                         <p>
                           In 2014, Nakumatt chose to partner Faraja to deliver 
-                          two ground-breaking projects called 'Make-Over' and 
-                          'Let's Fight this Battle Together'. Both show the 
+                          two ground-breaking projects called &apos;Make-Over&apos; and 
+                          &apos;Let&apos;s Fight this Battle Together&apos;. Both show the 
                           power corporate partnerships can have.
                         </p>
                         <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
@@ -184,18 +178,14 @@ export default function Home() {
                   <div className="news-info">
                         <span>July 13, 2016</span>
                         <a href="#">
-                            <h3>WHAT IS KENYA'S BIGGEST COFFEE MORNING?</h3>
+                            <h3>WHAT IS KENYA&apos;S BIGGEST COFFEE MORNING?</h3>
                         </a>
                         <p>
-                          If you’ve heard about Kenya’s Biggest Coffee 
+                          If you&apos;ve heard about Kenya&apos;s Biggest Coffee 
                           Morning – and want to find out more – you at the right place.
                         </p>
                         <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
-                    {/* <div className='thumb'>
-                      <Image className="img-thumb" src={FarajaCoffee} alt='Cancer Screening' />
-                    </div> */}
-                    
                   </div>
                 </div>
               </div>
