@@ -1,11 +1,14 @@
 import React, { useState, useEffect, useRef } from "react";
-import Link from "next/link";
+// import Link from "next/link";
 import Image from "next/image";
+import { Navbar, Button, Text, Link, Card, Spacer, Radio, useTheme } from "@nextui-org/react";
 
 import logo from "../public/assets/images/logo.png";
 
-const Navbar = () => {
+const NavbarLayout = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
+
+    const {isDark} = useTheme();
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll, { passive: true });
@@ -16,74 +19,86 @@ const Navbar = () => {
     }, [scrollPosition]);
 
     const handleScroll = () => {
-        const header = document.querySelector("#sticky-header");
-        const position = window.pageYOffset;
+        // const header = document.querySelector("#sticky-header");
+        // const position = window.pageYOffset;
 
-        if (position < 400) {
-            header.classList.remove("sticky-bar");
-        }
-        if (position > 401) {
-            header.classList.add("sticky-bar");
-        }
+        // if (position < 400) {
+        //     header.classList.remove("sticky-bar");
+        // }
+        // if (position > 401) {
+        //     header.classList.add("sticky-bar");
+        // }
 
-        setScrollPosition(position);
+        // setScrollPosition(position);
+        console.log("Yes")
     };
+    const collapseItems = [
+        "Home",
+        "About",
+        "Therapy",
+        "Events",
+        "News & Media",
+        "Gallery",
+        "Support Us",
+        "Contact",
+    ]
 
     return (
-        <div className="header-area">
-            <div id="sticky-header" className="main-header">
-                <div className="header-bottom">
-                    <div className="container-fluid">
-                        <div className="row align-items-center">
-                            <div className="col-xl-2 col-lg-2">
-                                <div className="logo">
-                                    <a href="#">
-                                        <Image src={logo} alt="Faraja Logo"/>
-                                    </a>
-                                </div>
-                            </div>
-                            <div className="col-xl-10 col-lg-10">
-                                <div className="menu-wrapper d-flex align-items-center justify-content-end">
-                                    {/* MAin Menu */}
-                                    <div className="main-menu d-none d-lg-block">
-                                        <nav>
-                                            <ul id="navigation">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">About</a></li>
-                                                <li><a href="#">Therapy</a></li>
-                                                <li><a href="#">Events</a></li>
-                                                <li><a href="#">News & Media</a>
-                                                    <ul className="submenu">
-                                                        <li><a href="#">News</a></li>
-                                                        <li><a href="#">Media Details</a></li>
-                                                        <li><a href="#">Blog</a></li>
-                                                    </ul>
-                                                </li>
-                                                <li><a href="#">Gallery</a></li>
-                                                <li><a href="#">Support Us</a></li>
-                                                <li><a href="#">Contact</a></li>
-                                            </ul>
-                                        </nav>
-                                    </div>
-                                    {/* Donate Button */}
-                                    <div className="header-right-btn d-none d-lg-block ml-20">
-                                        <a href="#"
-                                        className="highlight-button btn btn-large button xs-margin-bottom-five"
-                                        data-abc="true">Make a Donation</a>
-                                    </div>
-                                </div>
-                            </div>
-                            {/* Mobile Meni */}
-                            <div className="col-12">
-                                <div className="mobile_menu d-block d-block d-lg-none"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <>
+            <Navbar isBordered variant="sticky">
+             <Navbar.Toggle showIn="xs" />
+                <Navbar.Brand
+                css={{
+                    "@xs": {
+                    w: "12%",
+                    },
+                }}>
+                <Image src={logo} height="30" width={"70"}/>
+                </Navbar.Brand>
+            <Navbar.Content hideIn="xs" variant="highlight">
+                <Navbar.Link isActive href="">Home</Navbar.Link>
+                <Navbar.Link href="">About</Navbar.Link>
+                <Navbar.Link href="">Therapy</Navbar.Link>
+                <Navbar.Link href="">Events</Navbar.Link>
+                <Navbar.Link href="">News & Media</Navbar.Link>
+                <Navbar.Link href="">Gallery</Navbar.Link>
+                <Navbar.Link href="">Support Us</Navbar.Link>
+                <Navbar.Link href="">Contact</Navbar.Link>
+            </Navbar.Content>
+            <Navbar.Content>
+                <Navbar.Item>
+                    <Button auto flat as={Link} color={"warning"} href="#">
+                        Make a Donation
+                    </Button>
+                </Navbar.Item>
+            </Navbar.Content>
+            <Navbar.Collapse disableAnimation={true}>
+          {collapseItems.map((item, index) => (
+            <Navbar.CollapseItem
+              key={item}
+              activeColor="warning"
+              css={{
+                color: index === collapseItems.length - 1 ? "$error" : "",
+              }}
+              isActive={index === 2}
+            >
+              <Link
+                color="inherit"
+                css={{
+                  minWidth: "100%",
+                }}
+                href="#"
+              >
+                {item}
+              </Link>
+            </Navbar.CollapseItem>
+          ))}
+        </Navbar.Collapse>
+        </Navbar>
+        </>
+        
     )
 
 }
 
-export default Navbar;
+export default NavbarLayout;

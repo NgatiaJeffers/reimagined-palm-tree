@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import Navbar from "./Navbar";
+import NavbarLayout from "./Navbar";
 import Footer from "./Footer";
 import Banner from "./Banner";
 
@@ -10,9 +10,9 @@ export default function Layout({ children }) {
             <Head>
                 <title>Faraja Support Cancer - Trust Fund Supoort</title>
             </Head>
-            <header>
-                <Navbar />
-            </header>
+            {/* <header> */}
+                <NavbarLayout />
+            {/* </header> */}
                 <Banner />
             <main>
                 {children}

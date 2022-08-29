@@ -759,7 +759,7 @@ nav ul li a:hover {
 .ftco-section .img {
   background-image: url("../public/assets/images/who.jpg");
   width: 100%;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -875,54 +875,238 @@ nav ul li a:hover {
 .sponsor .img {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-2.original.png");
+  background-image: url("../public/assets/images/logo-2.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
 }
 
 .sponsor .img1 {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-3.original.png");
+  background-image: url("../public/assets/images/logo-3.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
 }
 
 .sponsor .img2 {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-4.original.png");
+  background-image: url("../public/assets/images/logo-4.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
 }
 
 .sponsor .img3 {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-5.original.png");
+  background-image: url("../public/assets/images/logo-5.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
 }
 
 .sponsor .img4 {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-6.original.png");
+  background-image: url("../public/assets/images/logo-6.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
 }
 
 .sponsor .img5 {
   width: 110px;
   height: 105px;
-  background-image: url("../public/assets/logos/logo-8.original.png");
+  background-image: url("../public/assets/images/logo-8.original.png");
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center center;
   background-size: contain;
+}
+
+/* TESTIMONIAL AREA STYLES */
+.testimonial-section {
+  padding: 100px 0;
+}
+
+.testimonial-section .row .tabs {
+  all: unset;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonial-section .row .tabs li {
+  all: unset;
+  display: block;
+  position: relative;
+}
+
+.testimonial-section .row .tabs li.active::before {
+  position: absolute;
+  content: "";
+  width: 50px;
+  height: 50px;
+  background-color: #00b9ec;
+  border-radius: 50%;
+}
+
+.testimonial-section .row .tabs li.active::after {
+  position: absolute;
+  content: "";
+  width: 30px;
+  height: 30px;
+  background-color: #00b9ec;
+  border-radius: 50%;
+}
+
+.testimonial-section .row .tabs li:nth-child(1) {
+  align-self: flex-end !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(1)::before {
+  left: 64% !important;
+  bottom: -50px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(1)::after {
+  left: 97% !important;
+  bottom: -81px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(1) figure .img-fluid {
+  margin-left: auto !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(2) {
+  align-self: flex-start !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(2)::before {
+  right: -65px !important;
+  top: 50% !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(2)::after {
+  bottom: 101px !important;
+  border-radius: 50% !important;
+  right: -120px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(2) figure .img-fluid {
+  margin-right: auto !important;
+  max-width: 300px !important;
+  width: 100% !important;
+  margin-top: -50px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(3) {
+  align-self: flex-end !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(3)::before {
+  right: -10px !important;
+  top: -66% !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(3)::after {
+  top: -130px !important;
+  border-radius: 50% !important;
+  right: -46px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(3) figure .img-fluid {
+  margin-left: auto !important;
+  margin-top: -50px !important;
+}
+
+.testimonial-section .row .tabs li:nth-child(3):focus {
+  border: 10px solid rgb(3, 118, 225);
+}
+
+.testimonial-section .row .tabs li figure {
+  position: relative !important;
+}
+
+.testimonial-section .row .tabs li figure .img-fluid {
+  display: block !important;
+}
+
+.testimonial-section .row .tabs li figure::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  border: 4px solid #dff9d9 !important;
+  border-radius: 50%;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.testimonial-section .row .tabs li figure:hover::after {
+  -webkit-transform: scale(1.1) !important;
+  -ms-transform: scale(1.1) !important;
+  transform: scale(1.1) !important;
+}
+
+.testimonial-section .row .tabs.carousel-indicators li.active figure::after {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.testimonial-section .row .carousel > h3 {
+  font-size: 20px;
+  line-height: 1.45;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: 600;
+  margin-bottom: 0;
+}
+
+.testimonial-section .row .carousel h1 {
+  font-size: 40px;
+  line-height: 1.225;
+  margin-top: 23px;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+
+.testimonial-section .row .carousel .carousel-indicators {
+  all: unset;
+  padding-top: 43px;
+  display: flex;
+  list-style: none;
+}
+
+.testimonial-section .row .carousel .carousel-indicators li {
+  background: #000 !important;
+  background-clip: padding-box !important;
+  height: 2px !important;
+}
+
+.testimonial-section .row .carousel .carousel-inner .carousel-item .quote-wrapper {
+  margin-top: 42px !important;
+}
+
+.testimonial-section .row .carousel .carousel-inner .carousel-item .quote-wrapper h3 {
+  color: #000;
+  font-weight: 700;
+  margin-top: 37px;
+  font-size: 20px;
+  line-height: 1.45;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 1200px) {
+  .testimonial-section .row .tabs {
+    margin-right: 25px;
+  }
 }
 
 
@@ -1020,7 +1204,7 @@ nav ul li a:hover {
 }
 
 .footer .footer_top .footer_widget .news_links li .thumb img {
-  width: 98px;
+  width: 98px !important;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;

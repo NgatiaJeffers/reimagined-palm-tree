@@ -8,6 +8,9 @@ import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import CancerScreening from "../public/assets/images/cancer-screening.jpg";
 import FarajaCoffee from "../public/assets/images/coffee.jpg";
+import testOne from "../public/assets/images/kevin.max.png";
+import testTwo from "../public/assets/images/monica.max.png";
+import testThree from "../public/assets/images/tracy.max.png";
 
 export default function Home() {
   return (
@@ -77,6 +80,75 @@ export default function Home() {
                 holistic approach to coping with the challenges of cancer.
               </p>
               <p><a href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonial Section */}
+      <section className='testimonial-section'>
+        <div className='container'>
+          <div className='row'>
+            <div className='col-lg-6 d-none d-lg-block'>
+              <ol className='carousel-indicators tabs'>
+                <li data-target="#carouselExampleIndicatos" data-slide-to="0" className='active'>
+                  <figure>
+                      <Image src={testOne} className="img-fluid" />
+                  </figure>
+                </li>
+                <li data-target="#carouselExampleIndicatos" data-slide-to="1">
+                  <figure>
+                      <Image src={testThree} className="img-fluid"/>
+                  </figure>
+                </li>
+                <li data-target="#carouselExampleIndicatos" data-slide-to="2">
+                  <figure>
+                      <Image src={testTwo} className="img-fluid"/>
+                  </figure>
+                </li>
+              </ol>
+            </div>
+            <div className='col-lg-6 d-flex justify-content-center align-items-center'>
+              <div id="carouselExampleIndicators" data-interval="false" className='carousel slide' data-ride="carousel">
+                <h3 className=''>Testimonials</h3>
+                <div className='carousel-inner'>
+                  <div className='carousel-item active'>
+                    <div className='quote-wrapper'>
+                      <p>
+                        Taken from Parent&apos;s Magazine; September 2013 Nine-year 
+                        old Kevin Githinji is a jovial and active boy. He wears a 
+                        woolen cap at home and in school to cover his bald head.
+                      </p>
+                      <a href='#'>Kevin Githinji</a>
+                    </div>
+                  </div>
+                  <div className='carousel-item'>
+                    <div className='quote-wrapper'>
+                      <p>
+                        I had an amazing time at Faraja meeting the staff, volunteers 
+                        and patients and now I am back in the UK, I am determined 
+                        to do what I can to support the charity.
+                      </p>
+                      <a href='#'>Tracy Chapman</a>
+                    </div>
+                  </div>
+                  <div className='carousel-item'>
+                    <div className='quote-wrapper'>
+                      <p>
+                        Monica was diagnosed with cancer of the oesophagus cancer in 
+                        2012 at Kenyatta National Hospital but she could not secure 
+                        a slot for surgery despite the urgency required in her condition.
+                      </p>
+                      <a href='#'>Monica Buluma</a>
+                    </div>
+                  </div>
+                </div>
+                <ol className='carousel-indicators indicators'>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                </ol>
+              </div>
             </div>
           </div>
         </div>
