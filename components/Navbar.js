@@ -30,7 +30,7 @@ const NavbarLayout = () => {
         // }
 
         // setScrollPosition(position);
-        console.log("Yes")
+        
     };
     const collapseItems = [
         "Home",
