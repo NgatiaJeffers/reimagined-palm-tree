@@ -7,8 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Banner from "../components/Banner.js";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-import CancerScreening from "../public/cancer-screening.jpg";
-import FarajaCoffee from "../public/coffee.jpg";
+
 import testOne from "../public/kevin.max.png";
 import testTwo from "../public/monica.max.png";
 import testThree from "../public/tracy.max.png";
@@ -103,7 +102,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      {/* <section className='ftco-section'>
+      <section className='ftco-section'>
         <div className='container'>
           <div className='row'>
             <div className='col-md-offset-2 col-md-8 text-center'>
@@ -213,7 +212,7 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section> */}
+      </section>
 
       {/* Sponsors Section */}
       <section className='ftco-section'>
