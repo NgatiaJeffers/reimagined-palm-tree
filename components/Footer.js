@@ -5,9 +5,9 @@ import Image from "next/image";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faYoutube, faFacebook, faTwitter, faMailchimp } from "@fortawesome/free-brands-svg-icons";
 
-import logo from "../public/assets/images/logo.png"
-import challenge from "../public/assets/images/challenge.jpg"
-import ride from "../public/assets/images/ride.jpg"
+import logo from "../public/logo.png"
+import challenge from "../public/challenge.jpg"
+import ride from "../public/ride.jpg"
 
 
 const Footer = () => {

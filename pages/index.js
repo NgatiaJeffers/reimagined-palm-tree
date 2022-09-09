@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import Head from 'next/head';
 import Image from 'next/image.js';
 
@@ -6,13 +7,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Banner from "../components/Banner.js";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-import CancerScreening from "../public/assets/images/cancer-screening.jpg";
-import FarajaCoffee from "../public/assets/images/coffee.jpg";
-import testOne from "../public/assets/images/kevin.max.png";
-import testTwo from "../public/assets/images/monica.max.png";
-import testThree from "../public/assets/images/tracy.max.png";
+import CancerScreening from "../public/cancer-screening.jpg";
+import FarajaCoffee from "../public/coffee.jpg";
+import testOne from "../public/kevin.max.png";
+import testTwo from "../public/monica.max.png";
+import testThree from "../public/tracy.max.png";
 
 export default function Home() {
+  // const [scrollPosition] = useState(0);
+
+  // useEffect(() => {
+  //   window.addEventListener("click", setInitialInterval, { passive: true });
+  //   return () => {
+  //     window.addEventListener("click", setInitialInterval);
+  //   };
+  // }, [scrollPosition]);
+
+  // const setInitialInterval = () => {
+  //   let carousel = document.querySelector("#quote-carousel").carousel({
+  //     pause: true,
+  //     interval: 4000,
+  //   });
+  //   console.log(carousel);
+  // }
   return (
     <div className="container">
       <Head>
@@ -28,10 +45,10 @@ export default function Home() {
                 <div className='text'>
                   <strong className='quote'>
                     <q>
-                      Faraja saved my life, and I will forever be grateful for the support. 
-                      It has become like a second home to me and I cannot let a week pass 
+                      Faraja saved my life, and I will forever be grateful for the support.
+                      It has become like a second home to me and I cannot let a week pass
                       without visiting
-                    </q> 
+                    </q>
                   </strong>
                   <span>Monica</span>
                 </div>
@@ -42,7 +59,7 @@ export default function Home() {
                 <div className='text'>
                   <h3 className='mb-4 donate-title'>Donate</h3>
                   <p className='donate-text'>Even the all-powerful Pointing has no control about the blind texts.</p>
-              	  <p><a href="#" className="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
+                  <p><a href="#" className="btn btn-white px-3 py-2 mt-2">Donate Now</a></p>
                 </div>
               </div>
             </div>
@@ -68,15 +85,15 @@ export default function Home() {
             <div className='col-md-6 pl-md-5'>
               <h2 className='mb-4'>Who we are?</h2>
               <p>
-                The Faraja Cancer Support Trust was founded in 2010 with the aim of providing emotional, 
-                practical and healing support to anyone affected by cancer. We offer cancer patients 
-                and their carers information, advice, counselling and complementary therapies 
+                The Faraja Cancer Support Trust was founded in 2010 with the aim of providing emotional,
+                practical and healing support to anyone affected by cancer. We offer cancer patients
+                and their carers information, advice, counselling and complementary therapies
                 in order to make their cancer journey a little more manageable.
               </p>
               <p>
-                We work alongside several institutions and hospitals that offer conventional cancer 
-                treatments such as radiotherapy, chemotherapy and surgery. 
-                We aim to take our patients beyond medical treatment through offering them a 
+                We work alongside several institutions and hospitals that offer conventional cancer
+                treatments such as radiotherapy, chemotherapy and surgery.
+                We aim to take our patients beyond medical treatment through offering them a
                 holistic approach to coping with the challenges of cancer.
               </p>
               <p><a href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a></p>
@@ -86,73 +103,117 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      <section className='testimonial-section'>
+      {/* <section className='ftco-section'>
         <div className='container'>
           <div className='row'>
-            <div className='col-lg-6 d-none d-lg-block'>
-              <ol className='carousel-indicators tabs'>
-                <li data-target="#carouselExampleIndicatos" data-slide-to="0" className='active'>
-                  <figure>
-                      <Image src={testOne} className="img-fluid" />
-                  </figure>
-                </li>
-                <li data-target="#carouselExampleIndicatos" data-slide-to="1">
-                  <figure>
-                      <Image src={testThree} className="img-fluid"/>
-                  </figure>
-                </li>
-                <li data-target="#carouselExampleIndicatos" data-slide-to="2">
-                  <figure>
-                      <Image src={testTwo} className="img-fluid"/>
-                  </figure>
-                </li>
-              </ol>
+            <div className='col-md-offset-2 col-md-8 text-center'>
+              <h2>Testimonials</h2>
             </div>
-            <div className='col-lg-6 d-flex justify-content-center align-items-center'>
-              <div id="carouselExampleIndicators" data-interval="false" className='carousel slide' data-ride="carousel">
-                <h3 className=''>Testimonials</h3>
-                <div className='carousel-inner'>
-                  <div className='carousel-item active'>
-                    <div className='quote-wrapper'>
-                      <p>
-                        Taken from Parent&apos;s Magazine; September 2013 Nine-year 
-                        old Kevin Githinji is a jovial and active boy. He wears a 
-                        woolen cap at home and in school to cover his bald head.
-                      </p>
-                      <a href='#'>Kevin Githinji</a>
-                    </div>
+          </div>
+          <div className="row">
+            <div className="accordion d-flex justify-content-center align-items-center height" id="accordionExample">
+              <div className="row">
+                <div className="col-md-6">
+                  <div className="p-3">
+                    <ul className="testimonial-list">
+                      <li>
+                        <div className="card p-3" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                          <div className="d-flex flex-row align-items-center">
+                            <Image src={testOne} width="50" placeholder="blur" className="rounded-circle" />
+                              <div className="d-flex flex-column ml-2">
+                                <span className="font-weight-normal">Milton Austin</span>
+                                <span>Sales Manager, Stack</span>
+                              </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="card p-3" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                          <div className="d-flex flex-row align-items-center">
+                            <Image src={testTwo} width="50" placeholder="blur" className="rounded-circle" />
+                              <div className="d-flex flex-column ml-2">
+                                <span className="font-weight-normal">John Reeves</span>
+                                <span>Head of Sales, Asana</span>
+                              </div>
+                          </div>
+                        </div>
+                      </li>
+                      <li>
+                        <div className="card p-3" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                          <div className="d-flex flex-row align-items-center">
+                            <Image src={testThree} width="50" placeholder="blur" className="rounded-circle" />
+                              <div className="d-flex flex-column ml-2">
+                                <span className="font-weight-normal">Luke Harper</span>
+                                <span>Sales Team Lead,Sketch</span>
+                              </div>
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
                   </div>
-                  <div className='carousel-item'>
-                    <div className='quote-wrapper'>
-                      <p>
-                        I had an amazing time at Faraja meeting the staff, volunteers 
-                        and patients and now I am back in the UK, I am determined 
-                        to do what I can to support the charity.
-                      </p>
-                      <a href='#'>Tracy Chapman</a>
+                </div>
+                <div className="col-md-6">
+                  <div className="p-3 testimonials-margin">
+                    <div id="collapseOne" className="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+                      <div className="card-body">
+                        <h4>It was a great experience</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                          Ut enim ad minim veniam, quis nostrud exercitation ullamco 
+                          laboris nisi ut aliquip ex ea commodo consequat. Duis aute 
+                          irure dolor in reprehenderit in voluptate velit esse cillum 
+                          dolore eu fugiat nulla pariatur. Excepteur sint occaecat 
+                          cupidatat non proident, sunt in culpa qui officia deserunt 
+                          mollit anim id est laborum.Lorem ipsum dolor sit amet, 
+                          consectetur adipiscing elit, sed do eiusmod tempor 
+                          incididunt ut labore et dolore magna aliqua. 
+                          Ut enim ad minim veniam.
+                        </p>
+                      </div>
                     </div>
-                  </div>
-                  <div className='carousel-item'>
-                    <div className='quote-wrapper'>
-                      <p>
-                        Monica was diagnosed with cancer of the oesophagus cancer in 
-                        2012 at Kenyatta National Hospital but she could not secure 
-                        a slot for surgery despite the urgency required in her condition.
-                      </p>
-                      <a href='#'>Monica Buluma</a>
+                    <div id="collapseTwo" className="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+                      <div className="card-body">
+                        <h4>Thanks for this great service</h4>
+                        <p>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt ut labore et dolore magna 
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                          Duis aute irure dolor in reprehenderit in voluptate velit 
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                          sint occaecat cupidatat non proident, sunt in culpa qui 
+                          officia deserunt mollit anim id est laborum.Lorem ipsum 
+                          dolor sit amet, consectetur adipiscing elit, sed do 
+                          eiusmod tempor incididunt ut labore et dolore magna 
+                          aliqua. Ut enim ad minim veniam.
+                        </p>
+                      </div>
+                    </div>
+                    <div id="collapseThree" className="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                      <div className="card-body">
+                        <h4>You all are awesome thanks alot</h4>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
+                          sed do eiusmod tempor incididunt ut labore et dolore magna 
+                          aliqua. Ut enim ad minim veniam, quis nostrud exercitation 
+                          ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+                          Duis aute irure dolor in reprehenderit in voluptate velit 
+                          esse cillum dolore eu fugiat nulla pariatur. Excepteur 
+                          sint occaecat cupidatat non proident, sunt in culpa qui 
+                          officia deserunt mollit anim id est laborum.Lorem ipsum 
+                          dolor sit amet, consectetur adipiscing elit, sed do eiusmod 
+                          tempor incididunt ut labore et dolore magna aliqua. 
+                          Ut enim ad minim veniam.
+                        </p>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <ol className='carousel-indicators indicators'>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-                  <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-                </ol>
               </div>
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Sponsors Section */}
       <section className='ftco-section'>
@@ -161,7 +222,7 @@ export default function Home() {
             <div className='col-md-7 sponsors-section text-center'>
               <h2 className='mb-4'>Our Sponsors</h2>
               <p>
-                To become a better you, remember to be grateful to 
+                To become a better you, remember to be grateful to
                 people who have contributed to making you who you are today.
               </p>
             </div>
@@ -228,17 +289,17 @@ export default function Home() {
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
                     <div className="news-info">
-                        <span>August 2, 2016</span>
-                        <a href="#">
-                            <h3>NAKUMATT ON BOARD- LET&apos;S FIGHT THIS BATTLE TOGETHER</h3>
-                        </a>
-                        <p>
-                          In 2014, Nakumatt chose to partner Faraja to deliver 
-                          two ground-breaking projects called &apos;Make-Over&apos; and 
-                          &apos;Let&apos;s Fight this Battle Together&apos;. Both show the 
-                          power corporate partnerships can have.
-                        </p>
-                        <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
+                      <span>August 2, 2016</span>
+                      <a href="#">
+                        <h3>NAKUMATT ON BOARD- LET&apos;S FIGHT THIS BATTLE TOGETHER</h3>
+                      </a>
+                      <p>
+                        In 2014, Nakumatt chose to partner Faraja to deliver
+                        two ground-breaking projects called &apos;Make-Over&apos; and
+                        &apos;Let&apos;s Fight this Battle Together&apos;. Both show the
+                        power corporate partnerships can have.
+                      </p>
+                      <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
                   </div>
                 </div>
@@ -247,16 +308,16 @@ export default function Home() {
               <div className='col-md-5'>
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
-                  <div className="news-info">
-                        <span>July 13, 2016</span>
-                        <a href="#">
-                            <h3>WHAT IS KENYA&apos;S BIGGEST COFFEE MORNING?</h3>
-                        </a>
-                        <p>
-                          If you&apos;ve heard about Kenya&apos;s Biggest Coffee 
-                          Morning – and want to find out more – you at the right place.
-                        </p>
-                        <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
+                    <div className="news-info">
+                      <span>July 13, 2016</span>
+                      <a href="#">
+                        <h3>WHAT IS KENYA&apos;S BIGGEST COFFEE MORNING?</h3>
+                      </a>
+                      <p>
+                        If you&apos;ve heard about Kenya&apos;s Biggest Coffee
+                        Morning – and want to find out more – you at the right place.
+                      </p>
+                      <a className="read-more" href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a>
                     </div>
                   </div>
                 </div>

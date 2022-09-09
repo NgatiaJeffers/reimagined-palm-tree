@@ -3,7 +3,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import { Navbar, Button, Text, Link, Card, Spacer, Radio, useTheme } from "@nextui-org/react";
 
-import logo from "../public/assets/images/logo.png";
+import logo from "../public/logo.png";
 
 const NavbarLayout = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
@@ -12,7 +12,6 @@ const NavbarLayout = () => {
 
     useEffect(() => {
         window.addEventListener("scroll", handleScroll, { passive: true });
-    
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
