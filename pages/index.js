@@ -125,7 +125,7 @@ export default function Home() {
                             <div className="tour-item ">
                                 <div className="tour-desc">
                                     <div className="tour-text text-dark text-center">&ldquo;Taken from Parent&ldquo;s Magazine; September 2013 Nine-year old Kevin Githinji is a jovial and active boy. He wears a woolen cap at home and in school to cover his bald head.&rdquo;</div>
-                                    <div className="d-flex justify-content-center pt-2 pb-2 testimonial-image">
+                                    <div className="d-flex justify-content-center pt-2 pb-2">
                                       <Image className="tm-people" src={testOne} alt="" height={"60"} width={"60"} />
                                     </div>
                                     <div className="link-name text-dark d-flex justify-content-center">Kevin Githinji</div>
