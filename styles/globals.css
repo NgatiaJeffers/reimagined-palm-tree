@@ -1176,7 +1176,7 @@ nav ul li a:hover {
 }
 
 .footer .footer_top .footer_widget p a:hover {
-  color: #3CC78F;
+  color: #08ABF1;
 }
 
 .footer .footer_top .footer_widget p.footer_text {
@@ -1193,8 +1193,8 @@ nav ul li a:hover {
 }
 
 .footer .footer_top .footer_widget p.footer_text a.domain:hover {
-  color: #3CC78F;
-  border-bottom: 1px solid #3CC78F;
+  color: #08ABF1;
+  border-bottom: 1px solid #3C08ABF1C78F;
 }
 
 .footer .footer_top .footer_widget p.footer_text.doanar a {
@@ -1203,8 +1203,8 @@ nav ul li a:hover {
 }
 
 .footer .footer_top .footer_widget p.footer_text.doanar a:hover {
-  color: #3CC78F;
-  border-bottom: 1px solid #3CC78F;
+  color: #08ABF1;
+  border-bottom: 1px solid #08ABF1;
 }
 
 .footer .footer_top .footer_widget p.footer_text.doanar a.first {
@@ -1224,7 +1224,7 @@ nav ul li a:hover {
 }
 
 .footer .footer_top .footer_widget ul li a:hover {
-  color: #3CC78F;
+  color: #08ABF1;
 }
 
 .footer .footer_top .footer_widget .newsletter_form {
@@ -1263,7 +1263,7 @@ nav ul li a:hover {
   border: none;
   font-size: 14px;
   color: #fff;
-  background: #3CC78F;
+  background: #08ABF1;
   padding: 10px;
   padding: 0 22px;
   cursor: pointer;
@@ -1305,7 +1305,7 @@ nav ul li a:hover {
 }
 
 .footer .copy-right_text .copy_right a {
-  color: #3CC78F;
+  color: #08ABF1;
 }
 
 .footer .copy-right_text .copy_right p {
@@ -1345,7 +1345,7 @@ nav ul li a:hover {
 }
 
 .footer .social_links ul li a:hover {
-  color: #3CC78F !important;
+  color: #08ABF1 !important;
   border-color: transparent;
 }
 
