@@ -98,12 +98,12 @@ const Footer = () => {
                                             </a>
                                         </div>
                                         <div className="info">
-                                            <a>
-                                                <h4>School for African
-                                                    Children
+                                            <a >
+                                                <h4>Free Cancer Screenings
                                                 </h4>
                                             </a>
-                                            <span>Jun 12, 2019</span>
+                                            <span>25th, 26th August 2016</span>
+                                            
                                         </div>
                                     </li>
                                     <li>
@@ -113,12 +113,10 @@ const Footer = () => {
                                             </a>
                                         </div>
                                         <div className="info">
-                                            <a >
-                                                <h4>School for African
-                                                    Children
-                                                </h4>
+                                            <a>
+                                                <h4>The White Water Rafting</h4>
                                             </a>
-                                            <span>Jun 12, 2019</span>
+                                            <span>19th - 21st May 2017</span>
                                         </div>
                                     </li>
                                 </ul>
