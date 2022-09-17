@@ -88,7 +88,7 @@ export default function Home() {
               <div className='img img-about align-self-stretch'></div>
             </div>
             <div className='col-md-6 pl-md-5'>
-              <h2 className='mb-4'>Who we are?</h2>
+              <h2 className='mb-4 about-title'>Who we are?</h2>
               <p>
                 The Faraja Cancer Support Trust was founded in 2010 with the aim of providing emotional,
                 practical and healing support to anyone affected by cancer. We offer cancer patients
@@ -114,8 +114,8 @@ export default function Home() {
               {/* <div className="col-md-12 pt-4 d-flex justify-content-center">
                 <h3 className="testimonial-test">Testimonials</h3>
               </div> */}
-              <div className="col-md-12 pt-4 d-flex justify-content-center">
-                  <h2>Testimonials</h2>
+              <div className="col-md-12 pt-4 d-flex justify-content-center title-area">
+                  <h2 className="testimonial-title">Testimonials</h2>
               </div>
           </div>
           <section className="home-testimonial-bottom">
@@ -165,7 +165,7 @@ export default function Home() {
         <div className='container'>
           <div className='row justify-content-center mb-5 pd-2'>
             <div className='col-md-7 sponsors-section text-center'>
-              <h2 className='mb-4'>Our Sponsors</h2>
+              <h2 className='mb-4 sponsor-title'>Our Sponsors</h2>
               <p>
                 To become a better you, remember to be grateful to
                 people who have contributed to making you who you are today.
@@ -225,7 +225,7 @@ export default function Home() {
           <div className='container'>
             <div className='row justify-content-center'>
               <div className='col-md-12 text-center'>
-                <h1 className='mb-4'>
+                <h1 className='mb-4 news-title'>
                   <span>News & Updates</span>
                 </h1>
               </div>

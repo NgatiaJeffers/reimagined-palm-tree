@@ -758,6 +758,7 @@ nav ul li a:hover {
 .ftco-section {
   padding: 7em 0;
   position: relative;
+  margin-top: 6em;
 }
 
 .ftco-section .img {
@@ -769,12 +770,46 @@ nav ul li a:hover {
 
 @media (max-width: 767.98px) {
   .ftco-section {
-    padding: 6em 0;
+    padding: 8em 0;
   }
 
   .img-about {
     height: 400px;
     margin-bottom: 30px;
+  }
+}
+
+.about-title {
+  position: relative;
+}
+
+.about-title::before {
+  content: "";
+  position: absolute;
+  left: 12%;
+  bottom: 1px;
+  width: 80px;
+  height: 10px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgb(250 143 61 / 51%);
+}
+
+@media (max-width: 541px) {
+  .about-title::before {
+    left: 12% !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .about-title::before {
+    content: "";
+    position: absolute;
+    left: 8%;
+    bottom: -2px;
+    width: 80px;
+    height: 10px;
+    transform: skew(-12deg) translateX(-50%);
+    background: rgb(250 143 61 / 51%);
   }
 }
 
@@ -796,6 +831,26 @@ nav ul li a:hover {
     /* padding-top: 80px; */
     padding-bottom: 80px;
   }
+}
+
+.news-title {
+  font-size: 34px;
+  font-weight: 400;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.news-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 80px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgb(250 143 61 / 51%);
+  z-index: -1;
 }
 
 .news-area .single-blog {
@@ -850,6 +905,20 @@ nav ul li a:hover {
   font-size: 34px;
   font-weight: 400;
   text-transform: uppercase;
+  position: relative;
+  z-index: 1;
+}
+
+.sponsor-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 80px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgb(250 143 61 / 51%);
+  z-index: -1;
 }
 
 @media (max-width: 767.98px) {
@@ -960,17 +1029,31 @@ nav ul li a:hover {
   color: #fff !important;
 }
 
+.home-testimonial h2 {
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  position: relative;
+  z-index: 1;
+}
+
+.testimonial-title::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -4px;
+  width: 80px;
+  height: 14px;
+  transform: skew(-12deg) translateX(-50%);
+  background: rgb(0 173 235 / 51%);
+  z-index: -1;
+}
+
 .home-testimonial h3 {
   color: var(--orange);
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase
-}
-
-.home-testimonial h2 {
-  color: white;
-  font-size: 28px;
-  font-weight: 700
 }
 
 .home-testimonial .tour-item {
