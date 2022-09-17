@@ -2,7 +2,7 @@
     background-image: url("../public/Body_Talk.jpg");
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: 100% !important;
     background-attachment: fixed;
 }
 

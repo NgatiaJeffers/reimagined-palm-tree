@@ -761,9 +761,9 @@ nav ul li a:hover {
 }
 
 .ftco-section .img {
-  background-image: url("../public/who.jpg");
+  background-image: url("/who.jpg");
   width: 100%;
-  background-position: center center;
+  background-position: 100% !important;
   background-repeat: no-repeat;
 }
 
@@ -876,54 +876,54 @@ nav ul li a:hover {
   }
 }
 
-.sponsor .img img {
+.sponsor .img0 {
   width: 110px;
   height: 105px;
-  /* background-image: url("../public/logo-2.original.png"); */
+  background-image: url("/logo-2.original.png");
   background-repeat: no-repeat;
   background-position: center center;
 }
 
-.sponsor .img1 img {
+.sponsor .img1 {
   width: 110px;
   height: 105px;
-  /* background-image: url("../public/logo-3.original.png");
-  background-repeat: no-repeat; */
-  background-position: center center;
-  background-size: contain;
-}
-
-.sponsor .img2 img {
-  width: 110px;
-  height: 105px;
-  /* background-image: url("../public/logo-4.original.png"); */
+  background-image: url("/logo-3.original.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.sponsor .img3 img {
+.sponsor .img2 {
   width: 110px;
   height: 105px;
-  /* background-image: url("../public/logo-5.original.png"); */
+  background-image: url("/logo-4.original.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.sponsor .img4 img {
+.sponsor .img3 {
   width: 110px;
   height: 105px;
-  /* background-image: url("../public/logo-6.original.png"); */
+  background-image: url("/logo-5.original.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
 }
 
-.sponsor .img5 img {
+.sponsor .img4 {
   width: 110px;
   height: 105px;
-  /* background-image: url("../public/logo-8.original.png"); */
+  background-image: url("/logo-6.original.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+
+.sponsor .img5 {
+  width: 110px;
+  height: 105px;
+  background-image: url("/logo-8.original.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain;
@@ -932,7 +932,7 @@ nav ul li a:hover {
 /* TESTIMONIAL AREA STYLES */
 .home-testimonial {
   height: 380px;
-  background-image: url("../public/overlay.jpg");
+  background-image: url("/overlay.jpg");
   background-position: center;
   background-attachment: fixed;
   background-repeat: no-repeat;

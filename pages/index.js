@@ -176,54 +176,42 @@ export default function Home() {
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img">
-                    <Image src={img} height={"110"} width={"105"} />
-                  </div>
+                  <div className="img0"></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img1">
-                  <Image src={img1} height={"105"} width={"110"} />
-                  </div>
+                  <div className="img1"></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img2">
-                    <Image src={img2} height={"105"} width={"110"} />
-                  </div>
+                  <div className="img2"></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img3">
-                    <Image src={img3} height={"105"} width={"110"} />
-                  </div>
+                  <div className="img3"></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img4">
-                    <Image src={img4} height={"105"} width={"110"} />
-                  </div>
+                  <div className="img4"></div>
                 </div>
               </div>
             </div>
             <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
               <div className="sponsor">
                 <div className="d-flex mb-4 text-center">
-                  <div className="img5">
-                    <Image src={img5} height={"105"} width={"110"} />
-                  </div>
+                  <div className="img5"></div>
                 </div>
               </div>
             </div>
