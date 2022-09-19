@@ -764,7 +764,7 @@ nav ul li a:hover {
 .ftco-section .img {
   background-image: url("/who.jpg");
   width: 100%;
-  background-position: 100% !important;
+  background-position: center center;
   background-repeat: no-repeat;
 }
 
@@ -781,6 +781,7 @@ nav ul li a:hover {
 
 .about-title {
   position: relative;
+  z-index: 1;
 }
 
 .about-title::before {
@@ -792,6 +793,7 @@ nav ul li a:hover {
   height: 10px;
   transform: skew(-12deg) translateX(-50%);
   background: rgb(250 143 61 / 51%);
+  z-index: -1;
 }
 
 @media (max-width: 541px) {
