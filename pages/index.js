@@ -230,8 +230,8 @@ export default function Home() {
                 </h1>
               </div>
             </div>
-            <div className='row'>
-              <div className='col-md-5'>
+            <div className='row news-row'>
+              <div className='col-md-6'>
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
                     <div className="news-info">
@@ -250,8 +250,8 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-              <div className='col-md-2'></div>
-              <div className='col-md-5'>
+              {/* <div className='col-md-2'></div> */}
+              <div className='col-md-6'>
                 <div className='news-active'>
                   <div className='single-blog d-flex align-items-center'>
                     <div className="news-info">

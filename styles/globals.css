@@ -826,6 +826,10 @@ nav ul li a:hover {
     /* padding-top: 60px; */
     padding-bottom: 60px;
   }
+
+  .news-row {
+    gap: 20px !important;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {
@@ -879,6 +883,8 @@ nav ul li a:hover {
 
 .news-area .single-blog .news-info {
   padding: 20px 40px;
+  height: 345px;
+  overflow: auto;
 }
 
 .news-area .single-blog .news-info span {
