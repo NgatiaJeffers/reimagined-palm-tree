@@ -9,7 +9,7 @@
 }
 
 body {
-  font-family: "Overpass", cursivec;
+  font-family: "Overpass", cursivec !important;
   font-weight: normal;
   font-style: normal;
   font-size: 16px
@@ -712,9 +712,10 @@ nav ul li a:hover {
 }
 
 .ftco-intro .block-18 .text strong {
-  font-size: 30px;
+  font-size: 25px;
   color: #fff;
   font-weight: 300;
+  font-family: "Overpass", cursivec;
 }
 
 .ftco-intro .block-18 .text span {
@@ -725,18 +726,26 @@ nav ul li a:hover {
 
 .donate-title {
   color: #fff !important;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .donate-text {
   color: #fff !important;
+  font-size: 25px;
+  font-weight: 300;
 }
 
 .volunteer-title {
   color: #fff !important;
+  font-size: 25px;
+  font-weight: 700;
 }
 
 .volunteer-text {
   color: #fff !important;
+  font-size: 25px;
+  font-weight: 300;
 }
 
 .btn.btn-white {
