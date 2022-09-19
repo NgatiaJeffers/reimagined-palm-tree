@@ -787,7 +787,7 @@ nav ul li a:hover {
 .about-title::before {
   content: "";
   position: absolute;
-  left: 12%;
+  left: 10%;
   bottom: 1px;
   width: 80px;
   height: 10px;
@@ -1283,10 +1283,10 @@ nav ul li a:hover {
   font-weight: 400;
 }
 
-.footer .footer_top .footer_widget p.footer_text a.domain:hover {
+/* .footer .footer_top .footer_widget p.footer_text a.domain:hover {
   color: #08ABF1;
   border-bottom: 1px solid #3C08ABF1C78F;
-}
+} */
 
 .footer .footer_top .footer_widget p.footer_text.doanar a {
   font-weight: 500;
