@@ -1,6 +1,6 @@
 import Head from "next/head";
 
-import NavbarLayout from "./Navbar";
+import NavbarLayout from "./Navbar/Navbar";
 import Footer from "./Footer";
 import Banner from "./Banner";
 
