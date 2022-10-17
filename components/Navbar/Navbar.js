@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import NavItem from "./NavItem";
+import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
 import Button from "../atoms/Button";
 
 const NavbarLayout = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
     const [isActive, setIsActive] = useState(false);
+    const [activeIdx, setActiveIdx] = useState(-1);
 
     const toggleOpen = () => {
       if (typeof document !== 'undefined') {
@@ -43,7 +46,7 @@ const NavbarLayout = () => {
             <div className="container">
               <Link href={"/"}>
                 <a className="navbar-brand">
-                  <Image src={logo} height="60" width={"110"}/>
+                  <Image src={logo} height="60" width={"120"}/>
                 </a>
               </Link>
               <button onClick={toggleOpen} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -54,16 +57,32 @@ const NavbarLayout = () => {
           
               <div className="nav-items collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav ms-auto ">
-                  <li className="nav-item">
-                    <a className="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+                {/* {MENU_LIST.map((menu, idx) => (
+                  <li className="nav-item" onClick={() => {setActiveIdx(idx);}} key={menu.text}>
+                    <NavItem active={activeIdx === idx} {...menu} />                    
                   </li>
+                ))} */}
+                  <li className="nav-item">
+                    <Link href={"/"}>
+                      <a className="nav-link mx-2">Home</a>
+                    </Link>
+                  </li>
+                  
                   <li className="nav-item dropdown">
                     <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                       About
                     </a>
                     <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" data-bs-trigger="hover focus">
-                      <li><a className="dropdown-item" href="#">Our work with children</a></li>
-                      <li><a className="dropdown-item" href="#">Annual reports</a></li>
+                      <li>
+                        <Link href={"/about/our-work"}>
+                          <a className="dropdown-item" href="#">Our work with children</a>
+                        </Link>
+                      </li>
+                      <li>
+                        <Link href={"/about/annual-reports"}>
+                          <a className="dropdown-item" href="#">Annual reports</a>
+                        </Link>
+                      </li>
                     </ul>
                   </li>
                   <li className="nav-item dropdown">
@@ -96,7 +115,6 @@ const NavbarLayout = () => {
                     </a>
                       <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                         <li><a className="dropdown-item" href="#">Updates on Faraja Support Trust</a></li>
-                        <li><a className="dropdown-item" href="#">Evenst in Eldoret</a></li>
                       </ul>
                   </li>
                   <li className="nav-item dropdown">

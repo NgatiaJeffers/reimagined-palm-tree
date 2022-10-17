@@ -13,7 +13,7 @@ export default function Layout({ children }) {
             {/* <header> */}
                 <NavbarLayout />
             {/* </header> */}
-                <Banner />
+                {/* <Banner /> */}
             <main>
                 {children}
             </main>

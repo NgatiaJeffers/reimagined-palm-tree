@@ -2,6 +2,20 @@
 @import url("https://fonts.googleapis.com/css?family=Dosis:200,300,regular,500,600,700,800");
 @import url("https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic");
 
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../fonts/GalanoGrotesqueAltRegular.otf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Galano Grotesque";
+  src: url("../fonts/GalanoGrotesqueAltBold.otf");
+  font-weight: bold;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +23,10 @@
 }
 
 body {
-  font-family: "Overpass", cursivec !important;
+  font-family: "Galano Grotesque", cursivec !important;
   font-weight: normal;
   font-style: normal;
-  font-size: 16px
+  line-height: 1.5;
 }
 
 h1,
@@ -21,21 +35,18 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Dosis", cursive !important;
+  font-family: "Galano Grotesque", cursive !important;
   color: #00b9ec;
-  margin-top: 0px;
-  font-style: normal;
-  font-weight: 500;
-  text-transform: normal
+  line-height: 1.2;
+  font-weight: 600;
 }
 
 p {
-  font-family: "Overpass", cursivec !important;
+  font-family: "Galano Grotesque", cursivec !important;
   color: #000;
-  font-size: 16px;
-  line-height: 30px;
-  margin-bottom: 15px;
-  font-weight: normal
+  /* font-size: 16px; */
+  line-height: 1.5;
+  margin: 0;
 }
 
 a,
@@ -818,6 +829,117 @@ hr {
   font-family: "Overpass", Sans-serif;
   font-size: 12px;
   color: #6c83a2
+}
+
+/* ABOUT SECTION STYLES */
+.post-area {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px !important;
+  margin-bottom: 40px;
+}
+
+.post-image-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page-image img {
+  border-radius: 10px !important;
+}
+
+.post-area-para {
+  line-height: 1.3 !important;
+}
+
+.post-details-1 {
+  max-width: 39.25rem;
+}
+
+.post-about-title {
+  font-size: 2.125rem;
+  font-weight: 600;
+  line-height: 1.2 !important;
+}
+
+.post-about-subtitle {
+  font-weight: 400;
+}
+
+.post-row {
+  align-items: center;
+  margin: 6rem auto 4rem;
+}
+
+.post-details {
+  -webkit-box-flex: 1;
+    -ms-flex: 1 1 50%;
+    flex: 1 1 50%;
+    max-width: 30rem;
+    min-width: 25rem;
+    margin: 20px auto 35px;
+}
+
+.post-details-title {
+  margin: 0 0 1.5rem;
+}
+
+.post-area-3 {
+  display: flex;
+  justify-content: center;
+}
+
+.post-details-3 {
+  max-width: 60.25rem;
+  margin: 10px auto 35px;
+}
+
+/* .post-area {
+  background-image: url("/svgs/doodle-1.svg");
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.post-area-craft {
+  background-image: url("/svgs/doodle-2.svg");
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.post-area-3 {
+  background-image: url("/svgs/doodle-1.svg");
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-position: left;
+}
+
+.post-area-snack {
+  background-image: url("/svgs/doodle-2.svg");
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-position: right;
+}
+
+.post-area-music {
+  background-image: url("/svgs/doodle-1.svg");
+  background-size: 200px 100px;
+  background-repeat: no-repeat;
+  background-position: left;
+} */
+
+
+@media (max-width: 767.98px) {
+  .page-image {
+   width: 350px !important;
+   /* height: 250px !important; */
+  }
+
+  .post-row {
+    margin: 0 auto !important;
+  }
 }
 
 /* FOOTER STYLING */

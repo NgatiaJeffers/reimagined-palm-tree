@@ -5,10 +5,10 @@ export const MENU_LIST = [
     },
     { 
       text: "About", 
-      href: "/about",
+      href: "/about/about",
       subItems: {
         text: "Our work with children",
-        href: ""
+        href: "/about/aour-work-with-children/ourWork"
       }
     }
   ]
