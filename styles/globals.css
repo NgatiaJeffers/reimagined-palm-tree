@@ -4,14 +4,14 @@
 
 @font-face {
   font-family: "Galano Grotesque";
-  src: url("../fonts/GalanoGrotesqueAltRegular.otf");
+  src: url("/fonts/GalanoGrotesqueAltRegular.otf");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: "Galano Grotesque";
-  src: url("../fonts/GalanoGrotesqueAltBold.otf");
+  src: url("/fonts/GalanoGrotesqueAltBold.otf");
   font-weight: bold;
   font-style: normal;
 }
