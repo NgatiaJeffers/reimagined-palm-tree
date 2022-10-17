@@ -47,7 +47,7 @@ const OurWork = () => {
                                 Children can get pretty miserable and bored having to stay for months on
                                 end at a hospital for cancer treatment. The Crafts for Cure program takes
                                 place every Wednesday morning and Friday afternoon at Kenyatta National
-                                Hospital (KNH) run by Faraja and Nairobi University's AIESEC students.
+                                Hospital (KNH) run by Faraja and Nairobi University&apos;s AIESEC students.
                             </p>
                             <p>
                                 Craft for Cure enables these kids a welcome distraction from treatments,
@@ -79,7 +79,7 @@ const OurWork = () => {
                                 <Link href={""}><a>Kevin Githinji</a></Link> can get the right treatment at the right time.
                             </p>
                             <p>
-                                All proceeds from Renuka Patel's popular book "Chef at Home" have been donated to Faraja's
+                                All proceeds from Renuka Patel&apos;s popular book &apos;Chef at Home&apos; have been donated to Faraja&apos;s
                                 Medical Support Fund for supporting children with cancer. To date a total of Shs 1.5 million
                                 has been raised through sale of the book. In 2017 with Funds raised by <Link href={""}><a>Wigs and Turbans</a></Link>,
                                 other well wishers and funds from the Faraja Medical Support Fund we have supported
