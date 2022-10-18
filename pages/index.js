@@ -7,16 +7,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Banner from "../components/Banner.js";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
-
+import who from "../public/who.jpg";
 import testOne from "../public/kevin.max.png";
 import testTwo from "../public/monica.max.png";
 import testThree from "../public/tracy.max.png";
-import img from "../public/logo-2.original.png"
-import img1 from "../public/logo-3.original.png"
-import img2 from "../public/logo-4.original.png"
-import img3 from "../public/logo-5.original.png"
-import img4 from "../public/logo-6.original.png"
-import img5 from "../public/logo-8.original.png"
 
 export default function Home() {
   // const [scrollPosition] = useState(0);
@@ -85,10 +79,12 @@ export default function Home() {
       <section className='ftco-section'>
         <div className='container'>
           <div className='row'>
-            <div className='col-md-6 d-flex'>
-              <div className='img img-about align-self-stretch'></div>
+            <div className='col-md-6 d-flex justify-content-center'>
+              <div className='img img-about align-self-stretch' style={{ width: "500px", height: "300px" }}>
+                <Image src={who} />
+              </div>
             </div>
-            <div className='col-md-6 pl-md-5'>
+            <div className='col-md-6 about-details'>
               <h2 className='mb-4 about-title'>Who we are?</h2>
               <p>
                 The Faraja Cancer Support Trust was founded in 2010 with the aim of providing emotional,

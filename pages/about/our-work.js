@@ -1,6 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
+import pageBanner from "../../public/svgs/sit.svg";
 import ourWork from "../../public/our-work.jpg";
 import craftforCure from "../../public/crafts_for_cure.jpg";
 import FarajaFruity from "../../public/Faraja_fruity.jpg";
@@ -8,12 +9,12 @@ import received from "../../public/received.jpg";
 
 const OurWork = () => {
     return (
-        <section className="section-padding">
+        <section className="section-padding section-color">
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-12">
-                        <div className="single-post text-center" style={{ marginTop: "100px" }}>
-                            <Image src={ourWork} />
+                    <div className="col-md-12 d-flex justify-content-center">
+                        <div className="single-post text-center" style={{ marginTop: "100px", width: "450px" }}>
+                            <Image src={pageBanner} />
                         </div>
                     </div>
                 </div>
@@ -62,14 +63,19 @@ const OurWork = () => {
                         </div>
                     </div>
                     <div className="col-md-6 post-image-area">
-                        <div className="page-image" style={{ width: "500px" }}>
+                        <div className="page-image" style={{ width: "450px" }}>
                             <Image src={craftforCure} />
                         </div>
                     </div>
                 </div>
                 <div className="row post-row">
-                    <div className="col-md-12 post-area-3">
-                        <div className="post-details-3 text-center">
+                    <div className="col-md-6 post-image-area">
+                        <div className="page-image" style={{ width: "450px" }}>
+                            <Image src={ourWork} />
+                        </div>
+                    </div>
+                    <div className="col-md-6">
+                        <div className="post-details">
                             <h3 className="post-details-title">Through Providing Life-Saving Treatments</h3>
                             <p>
                                 On November 12th 2016, Faraja officially launched the <Link href={""}><a>Faraja Medical Support Fund</a></Link>
@@ -92,11 +98,6 @@ const OurWork = () => {
                     </div>
                 </div>
                 <div className="row post-row">
-                    <div className="col-md-6 post-image-area">
-                        <div className="page-image" style={{ width: "500px" }}>
-                            <Image src={FarajaFruity} />
-                        </div>
-                    </div>
                     <div className="col-md-6">
                         <div className="post-details">
                             <h3 className="post-details-title">Milk and Fruit Donations- Every Friday </h3>
@@ -112,6 +113,11 @@ const OurWork = () => {
                                 We are thankful to Fruity Fruits Ltd who donate two cartons of apples twice a month
                                 to the program and cash donations from many well wishers.
                             </p>
+                        </div>
+                    </div>
+                    <div className="col-md-6 post-image-area">
+                        <div className="page-image" style={{ width: "450px" }}>
+                            <Image src={FarajaFruity} />
                         </div>
                     </div>
                 </div>
@@ -136,6 +142,11 @@ const OurWork = () => {
                     </div>
                 </div>
                 <div className="row">
+                    <div className="col-md-6 post-image-area">
+                        <div className="page-image" style={{ width: "450px" }}>
+                            <Image src={received} />
+                        </div>
+                    </div>
                     <div className="col-md-6">
                         <div className="post-details">
                             <h3>Through Special One-Off Projects</h3>
@@ -156,11 +167,6 @@ const OurWork = () => {
                                     <b>See how you can help us continue to provide hope and support to more children <Link href={""}>here</Link>.</b>
                                 </span>
                             </p>
-                        </div>
-                    </div>
-                    <div className="col-md-6 post-image-area">
-                        <div className="page-image" style={{ width: "500px" }}>
-                            <Image src={received} />
                         </div>
                     </div>
                 </div>

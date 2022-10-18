@@ -16,6 +16,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "Gotcha";
+  src: url("/fonts/gotcha-regular.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -36,7 +43,7 @@ h4,
 h5,
 h6 {
   font-family: "Galano Grotesque", cursive !important;
-  color: #00b9ec;
+  color: #033f68;
   line-height: 1.2;
   font-weight: 600;
 }
@@ -459,12 +466,12 @@ hr {
   margin-top: 6em;
 }
 
-.ftco-section .img {
+/* .ftco-section .img {
   background-image: url("/who.jpg");
   width: 100%;
   background-position: center center;
   background-repeat: no-repeat;
-}
+} */
 
 @media (max-width: 767.98px) {
   .ftco-section {
@@ -478,6 +485,7 @@ hr {
 }
 
 .about-title {
+  font-family: "Gotcha" !important;
   position: relative;
   z-index: 1;
 }
@@ -485,7 +493,7 @@ hr {
 .about-title::before {
   content: "";
   position: absolute;
-  left: 10%;
+  left: 15%;
   bottom: 1px;
   width: 80px;
   height: 10px;
@@ -496,7 +504,7 @@ hr {
 
 @media (max-width: 541px) {
   .about-title::before {
-    left: 12% !important;
+    left: 13% !important;
   }
 }
 
@@ -511,6 +519,15 @@ hr {
     transform: skew(-12deg) translateX(-50%);
     background: rgb(250 143 61 / 51%);
   }
+}
+
+.about-details {
+  -webkit-box-flex: 1;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50% !important;
+  max-width: 30rem !important;
+  min-width: 25rem;
+  margin: 20px auto 35px;
 }
 
 /* News Area Styling */
@@ -832,6 +849,10 @@ hr {
 }
 
 /* ABOUT SECTION STYLES */
+.section-color {
+  background-color: #f3fcf8;
+}
+
 .post-area {
   display: flex;
   justify-content: center;
@@ -874,11 +895,11 @@ hr {
 
 .post-details {
   -webkit-box-flex: 1;
-    -ms-flex: 1 1 50%;
-    flex: 1 1 50%;
-    max-width: 30rem;
-    min-width: 25rem;
-    margin: 20px auto 35px;
+  -ms-flex: 1 1 50%;
+  flex: 1 1 50%;
+  max-width: 30rem;
+  min-width: 25rem;
+  margin: 20px auto 35px;
 }
 
 .post-details-title {
