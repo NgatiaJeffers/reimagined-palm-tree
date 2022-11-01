@@ -95,7 +95,7 @@ export default function Home() {
       </section>
 
       {/* Testimonial Section */}
-      {/* <section className="wrapper">
+      <section className="wrapper">
         <div className="container">
           <div className="row">
             <div className="col text-center mb-5 title-area">
@@ -166,9 +166,9 @@ export default function Home() {
           </div>
 
         </div>
-      </section> */}
+      </section>
 
-      <section className="home-testimonial">
+      {/* <section className="home-testimonial">
         <div className="container-fluid">
           <div className="row d-flex justify-content-center testimonial-pos">
             <div className="col-md-12 pt-4 d-flex justify-content-center title-area">
@@ -215,7 +215,7 @@ export default function Home() {
             </div>
           </section>
         </div>
-      </section>
+      </section> */}
 
       {/* Sponsors Section */}
       <section className='ftco-section'>
