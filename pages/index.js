@@ -95,7 +95,7 @@ export default function Home() {
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
                     <small className="card-meta mb-2 text-light">An overzealous doctor led to an early diagnosis</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" herf="#">I am grateful to God that I am now in remission and not begging in the streets, thanks to Faraja.</a></h4>
+                    <h4 className="card-title mt-0 "><a className="text-light" href="#">I am grateful to God that I am now in remission and not begging in the streets, thanks to Faraja.</a></h4>
                     <small><i className="far fa-clock"></i> July 25, 2022</small>
                   </div>
                   <div className="card-footer">
@@ -115,7 +115,7 @@ export default function Home() {
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
                     <small className="card-meta mb-2 text-light">Thought Leadership</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                    <h4 className="card-title mt-0 "><a className="text-light" href="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
                     <small><i className="far fa-clock"></i> October 15, 2020</small>
                   </div>
                   <div className="card-footer">
@@ -135,7 +135,7 @@ export default function Home() {
                 <div className="card-img-overlay d-flex flex-column">
                   <div className="card-body">
                     <small className="card-meta mb-2 text-light">Thought Leadership</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" herf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
+                    <h4 className="card-title mt-0 "><a className="text-light" hehrefrf="#">Goverment Lorem Ipsum Sit Amet Consectetur dipisi?</a></h4>
                     <small><i className="far fa-clock"></i> October 15, 2020</small>
                   </div>
                   <div className="card-footer">
