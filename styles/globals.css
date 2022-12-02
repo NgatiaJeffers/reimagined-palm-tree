@@ -374,6 +374,32 @@ hr {
   z-index: 99;
 }
 
+/* BANNER AREA STYLES */
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  /* left: 50%; */
+  background: #0af;
+  width: 100%;
+  height: 100%;
+  /* margin-left: -250px;
+  margin-top: -250px; */
+  transform-origin: 50% 48%;
+  /* border-radius: 43%; */
+  animation: drift 10000ms infinite linear;
+}
+
+@keyframes drift {
+  from {
+      transform: rotate(0deg);
+  }
+
+  from {
+      transform: rotate(360deg);
+  }
+}
+
 /* INTRO STYLES */
 #section-donate {
   position: relative;
@@ -691,20 +717,21 @@ hr {
 
 /* sponsor section styles */
 .sponsors-section h2 {
-  font-size: 34px;
-  font-weight: 400;
-  text-transform: uppercase;
   position: relative;
   z-index: 1;
+}
+
+.sponsor-title {
+  font-family: "Gotcha" !important;
 }
 
 .sponsor-title::before {
   content: "";
   position: absolute;
   left: 50%;
-  bottom: -4px;
+  bottom: 1px;
   width: 80px;
-  height: 14px;
+  height: 10px;
   transform: skew(-12deg) translateX(-50%);
   background: rgb(250 143 61 / 51%);
   z-index: -1;
@@ -839,7 +866,7 @@ hr {
 .card.card-has-bg:hover .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, #044572 100%);
+  /* background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, #044572 100%); */
 }
 .card .card-footer {
   background: none;
@@ -865,7 +892,7 @@ hr {
 .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
   background: #234f6d;
-  background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #455f71 100%);
+  /* background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #455f71 100%); */
 }
 
 .home-testimonial {
