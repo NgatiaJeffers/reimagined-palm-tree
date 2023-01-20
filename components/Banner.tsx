@@ -1,9 +1,16 @@
 import React from "react";
+import type { GetServerSideProps } from "next";
 
 import style from "./Banner.module.css";
+import { fetchBannerContent } from "../util/fetchBannerContent";
+
+interface Props {
+    images: BannerContent[];
+}
 
 
-const Banner = () => {
+const Banner = ({ images }: Props) => {
+    console.log(images)
 
     return (
         <div className={`${style.heroWrap}`} data-stellar-background-ratio="0.5">
@@ -18,3 +25,13 @@ const Banner = () => {
 }
 
 export default Banner;
+
+export const getServerSideProps: GetServerSideProps<Props> = async () => {
+    const images = await fetchBannerContent();
+
+    return {
+        props: {
+            images,
+        }
+    }
+}

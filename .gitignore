@@ -5,6 +5,9 @@
 /.pnp
 .pnp.js
 
+# dependecies on faraja backend
+/farajabackend/node_modules
+
 # testing
 /coverage
 

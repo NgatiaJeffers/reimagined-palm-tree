@@ -4,7 +4,7 @@ import Image from 'next/image.js';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import Banner from "../components/Banner.js";
+import Banner from "../components/Banner";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
 
 import who from "../public/who.jpg";
@@ -154,55 +154,6 @@ export default function Home() {
 
         </div>
       </section>
-
-      {/* <section className="home-testimonial">
-        <div className="container-fluid">
-          <div className="row d-flex justify-content-center testimonial-pos">
-            <div className="col-md-12 pt-4 d-flex justify-content-center title-area">
-              <h2 className="testimonial-title">Testimonials</h2>
-            </div>
-          </div>
-          <section className="home-testimonial-bottom">
-            <div className="container testimonial-inner">
-              <div className="row d-flex justify-content-center">
-                <div className="col-md-4 style-3">
-                  <div className="tour-item ">
-                    <div className="tour-desc">
-                      <div className="tour-text text-dark text-center">&ldquo;Taken from Parent&ldquo;s Magazine; September 2013 Nine-year old Kevin Githinji is a jovial and active boy. He wears a woolen cap at home and in school to cover his bald head.&rdquo;</div>
-                      <div className="d-flex justify-content-center pt-2 pb-2">
-                        <Image className="tm-people" src={testOne} alt="" height={"60"} width={"60"} />
-                      </div>
-                      <div className="link-name text-dark d-flex justify-content-center">Kevin Githinji</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 style-3">
-                  <div className="tour-item ">
-                    <div className="tour-desc">
-                      <div className="tour-text text-dark text-center">&ldquo;I had an amazing time at Faraja meeting the staff, volunteers and patients and now I am back in the UK, I am determined to do what I can to support the charity.&rdquo;</div>
-                      <div className="d-flex justify-content-center pt-2 pb-2">
-                        <Image className="tm-people" src={testTwo} alt="" height={"60"} width={"60"} />
-                      </div>
-                      <div className="link-name text-dark d-flex justify-content-center">Tracy Chapman</div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-md-4 style-3">
-                  <div className="tour-item ">
-                    <div className="tour-desc">
-                      <div className="tour-text text-dark text-center">&ldquo;Monica was diagnosed with cancer of the oesophagus cancer in 2012 at Kenyatta National Hospital but she could not secure a slot for surgery despite the urgency required in her condition.&rdquo;</div>
-                      <div className="d-flex justify-content-center pt-2 pb-2">
-                        <Image className="tm-people" src={testThree} alt="" height={"60"} width={"60"} />
-                      </div>
-                      <div className="link-name text-dark d-flex justify-content-center">Monica Buluma</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-        </div>
-      </section> */}
 
       {/* Sponsors Section */}
       <section className='ftco-section'>

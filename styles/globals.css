@@ -493,6 +493,13 @@ hr {
   margin: 60px auto;
 }
 
+.text q {
+  background: white;
+  display: inline;
+  padding: 6px 4px;
+  white-space: pre-wrap;
+}
+
 @media (max-width: 495.98px) {
   .intro-image {
     width: 370px !important;
@@ -865,7 +872,7 @@ hr {
 }
 .card.card-has-bg:hover .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: #234f6d;
+  background: #05abeb;
   /* background: linear-gradient(0deg, rgba(4, 69, 114, 0.5) 0%, #044572 100%); */
 }
 .card .card-footer {
@@ -891,7 +898,7 @@ hr {
 }
 .card .card-img-overlay {
   transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
-  background: #234f6d;
+  background: #05abeb;
   /* background: linear-gradient(0deg, rgba(35, 79, 109, 0.3785889356) 0%, #455f71 100%); */
 }
 
@@ -1140,6 +1147,20 @@ hr {
     margin: 0 auto !important;
   }
 }
+
+
+/* ANNUAL REPORT STYLING */
+.annual-report-area {
+    margin-top: 150px !important;
+    margin-bottom: 40px; 
+}
+
+
+
+
+
+
+
 
 /* FOOTER STYLING */
 .footer {
