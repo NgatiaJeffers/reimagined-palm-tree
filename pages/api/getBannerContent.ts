@@ -8,16 +8,16 @@ const query = groq `*[_type == "bannerImage"] {
     ...
 }`;
 
-type BannerContent = {
-    data: BannerContent[];
+type Data = {
+    images: BannerContent[];
 }
 
 export default async function handler(
     req: NextApiRequest, 
-    res: NextApiResponse<BannerContent>
+    res: NextApiResponse<Data>
 ) {
-    const data = await sanityClient.fetch(query);
-    console.log(data)
-    res.status(200).json({ data })
+    const images = await sanityClient.fetch(query);
+    console.log(images)
+    res.status(200).json({ images })
   }
   

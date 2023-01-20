@@ -5,7 +5,7 @@ export const fetchBannerContent = async () => {
 
     const data = await res.json();
     console.log(data)
-    const BannerContent: BannerContent[] = data.BannerContent
+    const BannerContent: BannerContent[] = data.bannerImages
 
     return BannerContent;
 }
