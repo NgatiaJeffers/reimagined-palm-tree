@@ -31,7 +31,7 @@ const AnnualReports = () => {
                     </div>
                     <div className="col col-md-6 d-flex justify-content-center">
                         <div className="single-post text-center" style={{ width: "250px" }}>
-                            <Image src={report} alt='Calendar Report' fill style={{ objectFit: "contain" }} />
+                            <Image src={report} alt='Calendar Report' style={{ objectFit: "cover" }} />
                         </div>
                     </div>
                 </div>
