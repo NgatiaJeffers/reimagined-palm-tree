@@ -374,6 +374,13 @@ hr {
   z-index: 99;
 }
 
+/* MAIN SILDER STYLES */
+.main-slider {
+  position: relative;
+  display: block;
+  background: #ffffff;
+}
+
 /* BANNER AREA STYLES */
 .wave {
   opacity: .4;
