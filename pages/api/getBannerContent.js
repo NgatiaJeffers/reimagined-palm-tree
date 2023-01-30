@@ -8,13 +8,13 @@ const query = groq `*[_type == "bannerImage"] {
     ...
 }`;
 
-type Data = {
-    images: BannerContent[];
-}
+// type Data = {
+//     images: BannerContent[];
+// }
 
 export default async function handler(
-    req: NextApiRequest, 
-    res: NextApiResponse<Data>
+    req, 
+    res
 ) {
     const images = await sanityClient.fetch(query);
     console.log(images)
