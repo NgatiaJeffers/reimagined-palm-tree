@@ -76,6 +76,7 @@ const Banner = () => {
                     >
                         <SwiperSlide>
                             <div className="slide">
+                                <div className="overlay"></div>
                                 <div className="image-layer" style={{ backgroundImage: 'url(/slide1.jpg)'}}></div>
                                 <div className="main-content-box">
                                     <div className="content-box">
@@ -92,12 +93,12 @@ const Banner = () => {
                                                 it is about bringing balance to the body, mind and breath.
                                             </p>
                                         </div>
-                                        <div className="banner-buttons">
+                                        <div className="banner-buttons d-grid gap-2 d-md-flex">
                                             <Link href={'/'}>
-                                                <a className="btn-one btn-one-style">HOW WE HELP</a>
+                                                <a className="btn-donate">HOW WE HELP</a>
                                             </Link>
                                             <Link href={'/'}>
-                                                 <a className="btn-one btn-one-style btn-one-color" style={{ marginLeft: '15px'}}>SUPPORT US</a>
+                                                <a className="btn-donate">SUPPORT US</a>
                                             </Link>
                                         </div>
                                     </div>
@@ -106,6 +107,7 @@ const Banner = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide">
+                                <div className="overlay"></div>
                                 <div className="image-layer" style={{ backgroundImage: 'url(/slide2.jpg)'}}></div>
                                 <div className="main-content-box">
                                     <div className="content-box">
@@ -120,12 +122,12 @@ const Banner = () => {
                                                 Hope is being able to see that there is light despite all of the darkness.
                                             </p>
                                         </div>
-                                        <div className="banner-buttons">
+                                        <div className="banner-buttons d-grid gap-2 d-md-flex">
                                             <Link href={'/'}>
-                                                <a className="btn-one btn-one-style">HOW WE HELP</a>
+                                                <a className="btn-donate">HOW WE HELP</a>
                                             </Link>
                                             <Link href={'/'}>
-                                                 <a className="btn-one btn-one-style btn-one-color" style={{ marginLeft: '15px'}}>SUPPORT US</a>
+                                                <a className="btn-donate">SUPPORT US</a>
                                             </Link>
                                         </div>
                                     </div>
@@ -134,6 +136,7 @@ const Banner = () => {
                         </SwiperSlide>
                         <SwiperSlide>
                             <div className="slide">
+                                <div className="overlay"></div>
                                 <div className="image-layer" style={{ backgroundImage: 'url(/slide4.jpg)'}}></div>
                                 <div className="main-content-box">
                                     <div className="content-box">
@@ -148,12 +151,12 @@ const Banner = () => {
                                                 The best way to predict the future of your organization is to create it.
                                             </p>
                                         </div>
-                                        <div className="banner-buttons">
+                                        <div className="banner-buttons d-grid gap-2 d-md-flex">
                                             <Link href={'/'}>
-                                                <a className="btn-one btn-one-style">HOW WE HELP</a>
+                                                <a className="btn-donate">HOW WE HELP</a>
                                             </Link>
                                             <Link href={'/'}>
-                                                 <a className="btn-one btn-one-style btn-one-color" style={{ marginLeft: '15px'}}>SUPPORT US</a>
+                                                <a className="btn-donate">SUPPORT US</a>
                                             </Link>
                                         </div>
                                     </div>
