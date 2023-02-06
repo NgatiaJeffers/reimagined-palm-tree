@@ -1,15 +1,20 @@
 import React, { useState, useEffect } from "react";
 import Head from 'next/head';
 import Image from 'next/image.js';
-
+import Link from "next/link";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-import Banner from "../components/Banner";
 import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-
+import { FaChild } from "react-icons/fa"
+import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
+import { ImQuotesLeft } from "react-icons/im"
+import Banner from "../components/Banner";
 import who from "../public/who.jpg";
-import testOne from "../public/monica.max.png";
-import quote from "../public/svgs/Saly-16.svg";
+import testOne from "../public/garoce.jpg";
+import event from "../public/event.jpg";
+import shape from "../public/shape.png"
+import shape1 from "../public/shape1.png"
 import { fetchBannerContent } from "../util/fetchBannerContent";
 
 export default function Home(images) {
@@ -27,133 +32,248 @@ export default function Home(images) {
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossOrigin="anonymous" />
       </Head>
       <Banner images={images} />
-      <section id='section-donate' className='ftco-intro'>
+
+      <section className='section-md'>
         <div className='container'>
-          <div className='row card-wrapper gx-0'>
-              <div className='col-md-6 d-flex counter-wrap'>
-                <div className='block-18 color-1 align-items-stretch'>
-                  <div className='text'>
-                    <strong className='quote'>
-                      <q>
-                        Faraja saved my life, and I will forever be grateful for the support.
-                        It has become like a second home to me and I cannot let a week pass
-                        without visiting
-                      </q>
-                    </strong>
-                    <span>Monica</span>
-                  </div>
-                </div>
-              </div>
-              <div className='col-md-6 d-flex justify-content-center counter-wrap'>
-                <div className='block-18 color-2 align-items-stretch'>
-                  <div className="intro-image" style={{ width: "450px" }}>
-                      <Image src={quote} />
-                  </div>
-                </div>
-              </div>
+          <div className='row'>
+            <div className="col-xl-11 col-11 col-md-11 col-sm-11 quote-box">
+              <h2 className="text-decorated">
+                <q>Faraja saved my life, and I will forever be grateful for the support.
+                It has become like a second home to me and I cannot let a week pass
+                without visiting</q>
+              </h2>
+              <span className="author">Monica</span>
+            </div>
           </div>
         </div>
       </section>
 
-      <section className='ftco-section'>
-        <div className='container'>
-          <div className='row'>
-            <div className='col-md-6 d-flex justify-content-center'>
-              <div className='img img-about align-self-stretch' style={{ width: "500px", height: "300px" }}>
-                <Image src={who} style={aboutStyle} />
+      <section className="about-area">
+        <div className="container">
+          <div className="about-title text-center">
+            <div className="sub-title">
+              <div className="inner text-center">
+                <h3>Aim to provide emotional, practical and healing support</h3>
               </div>
             </div>
-            <div className='col-md-6 about-details'>
-              <h2 className='mb-4 about-title'>Who we are?</h2>
-              <p>
-                The Faraja Cancer Support Trust was founded in 2010 with the aim of providing emotional,
-                practical and healing support to anyone affected by cancer. We offer cancer patients
-                and their carers information, advice, counselling and complementary therapies
-                in order to make their cancer journey a little more manageable.
-              </p>
-              <p>
-                We work alongside several institutions and hospitals that offer conventional cancer
-                treatments such as radiotherapy, chemotherapy and surgery.
-                We aim to take our patients beyond medical treatment through offering them a
-                holistic approach to coping with the challenges of cancer.
-              </p>
-              <p><a href="#">Read More  <FontAwesomeIcon icon={faAngleRight} /></a></p>
+            <h2>Our Mission & Goals</h2>
+          </div>
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="about-content">
+                <div className="shape1">
+                  <Image src={shape1} />
+                </div>
+                <div className="about-img-box" style={{ backgroundImage: 'url(/who.jpg)' }}></div>
+                <div className="text-holder">
+                  <div className="top">
+                    <div className="title">
+                      <h3>Our mission is to make the world a better place for everyone.</h3>
+                    </div>
+                  </div>
+                  <div className="text">
+                    The Faraja Cancer Support Trust was founded in 2010 with the aim of
+                    providing emotional, practical and healing support to anyone
+                    affected by cancer. We offer cancer patients and their carers 
+                    information, advice, counselling and complementary therapies 
+                    in order to make their cancer journey a little more manageable.
+                  </div>
+                  <div className="text-1">
+                    We work alongside several institutions and hospitals that offer 
+                    conventional cancer treatments such as radiotherapy, 
+                    chemotherapy and surgery. We aim to take our patients 
+                    beyond medical treatment through offering them a holistic 
+                    approach to coping with the challenges of cancer.
+                  </div>
+                  <div className="bottom">
+                      <Link href={'/'}>
+                        <a className="btn-donate">Read More</a>
+                      </Link>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donate section */}
+      <section className="donate-now-area section-bg" style={{ backgroundImage: 'url(/overlay.jpg)'}}>
+        <div className="overlay"></div>
+        <div className="container">
+          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between">
+            <AiOutlineGift className="icon-gift" />
+            <p className="text mr-auto">
+              Donate now to change life forever
+            </p>
+            <Link href={'/'}>
+              <a className="btn-donate">Make a Donation</a>
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Testimonial Section */}
-      <section className="wrapper">
-        <div className="container">
-          <div className="row">
-            <div className="col text-center mb-5 title-area">
-            <h2 className="testimonial-title">Testimonials</h2>
+      <section className="testimonial-area">
+        <div className="testimonial-bg" style={{ backgroundImage: 'url(/backbg.png)'}}>
+          <div className="container">
+            <div className="testimonial-content">
+              <div className="testimonial-carousel">
+                <Swiper
+                  spaceBetween={30}
+                  centeredSlides={true}
+                  autoplay={{
+                  delay: 4000,
+                  disableOnInteraction: false,
+                  }}
+                  // pagination={pagination}
+                  navigation={true}
+                  modules={[Autoplay, Pagination, Navigation]}
+                  className="swiper-testimonial">
+                    <SwiperSlide>
+                      <div className="single-testimonial">
+                        <div className="img-holder">
+                          <div className="inner">
+                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
+                          </div>
+                        </div>
+                        <div className="text-holder">
+                          <div className="quote">
+                            <ImQuotesLeft className="quote-icon" />
+                          </div>
+                          <div className="text">
+                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
+                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
+                            for a new life as a refugee in Uganda. But even the experience 
+                            of being a refugee would not have prepared him and his family 
+                            for the long trip that fate seemed to have planned.
+                          </div>
+                          <div className="client-info">
+                            <h4>Gacore</h4>
+                            <span>DRC Congo</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="single-testimonial">
+                        <div className="img-holder">
+                          <div className="inner">
+                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
+                          </div>
+                        </div>
+                        <div className="text-holder">
+                          <div className="quote">
+                            <ImQuotesLeft className="quote-icon" />
+                          </div>
+                          <div className="text">
+                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
+                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
+                            for a new life as a refugee in Uganda. But even the experience 
+                            of being a refugee would not have prepared him and his family 
+                            for the long trip that fate seemed to have planned.
+                          </div>
+                          <div className="client-info">
+                            <h4>Gacore</h4>
+                            <span>DRC Congo</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                      <div className="single-testimonial">
+                        <div className="img-holder">
+                          <div className="inner">
+                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
+                          </div>
+                        </div>
+                        <div className="text-holder">
+                          <div className="quote">
+                            <ImQuotesLeft className="quote-icon" />
+                          </div>
+                          <div className="text">
+                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
+                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
+                            for a new life as a refugee in Uganda. But even the experience 
+                            of being a refugee would not have prepared him and his family 
+                            for the long trip that fate seemed to have planned.
+                          </div>
+                          <div className="client-info">
+                            <h4>Gacore</h4>
+                            <span>DRC Congo</span>
+                          </div>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                </Swiper>
+              </div>
             </div>
           </div>
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="event-area">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-              <div className="card text-white card-has-bg click-col">
-                <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <small className="card-meta mb-2 text-light">An overzealous doctor led to an early diagnosis</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" href="#">I am grateful to God that I am now in remission and not begging in the streets, thanks to Faraja.</a></h4>
-                    <small><i className="far fa-clock"></i> July 25, 2022</small>
+            <div className="col-lg-5 col-md-5">
+              <div className="image-box" style={{ backgroundImage: 'url("/event.jpg")'}}></div>
+            </div>
+            <div className="col-lg-6 offset-lg-1">
+              <div className="content-box">
+                <div className="title style-two">
+                  <h4 className="content-title">A Charity with Mission</h4>
+                  <h1>Upcoming <span>Events</span></h1>
+                  <div className="text">
+                    The future is something which everyone reaches at the 
+                    rate of sixty minutes an hour, whatever he does, 
+                    whoever he is.
                   </div>
-                  <div className="card-footer">
-                    <div className="media">
-                    <Image className="mr-3 rounded-circle" src={testOne} alt="" height={"60"} width={"60"} style={{ maxWidth:"50px"}} />
-                        <div className="media-body">
-                          <h6 className="my-0 text-light d-block">Mohammed , 43 Years</h6>
-                          {/* <small>Director of UI/UX</small> */}
+                  <div className="row">
+                    <div className="col-lg-6 col-md-6 event-block">
+                      <div className="inner-box">
+                        <div className="date">
+                          24 <span>September </span>
                         </div>
+                        <div className="organizer">
+                          Organized By: <Link href={'/'}><a>Cindy</a></Link>
+                        </div>
+                        <h4>This year we plan to BE BOLD and GO GOLD for childhood cancer</h4>
+                        <ul className="post-meta">
+                          <li>
+                            <AiFillClockCircle className="post-icon" /> 08:00am - Karura Forest, Nairobi, Kenya
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-              <div className="card text-white card-has-bg click-col">
-              <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <small className="card-meta mb-2 text-light">An overzealous doctor led to an early diagnosis</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" href="#">I am grateful to God that I am now in remission and not begging in the streets, thanks to Faraja.</a></h4>
-                    <small><i className="far fa-clock"></i> July 25, 2022</small>
-                  </div>
-                  <div className="card-footer">
-                    <div className="media">
-                    <Image className="mr-3 rounded-circle" src={testOne} alt="" height={"60"} width={"60"} style={{ maxWidth:"50px"}} />
-                        <div className="media-body">
-                          <h6 className="my-0 text-light d-block">Mohammed , 43 Years</h6>
-                          {/* <small>Director of UI/UX</small> */}
+                    <div className="col-lg-6 col-md-6 event-block">
+                      <div className="inner-box">
+                        <div className="date">
+                          24 <span>September </span>
                         </div>
+                        <div className="organizer">
+                          Organized By: <Link href={'/'}><a>Cindy</a></Link>
+                        </div>
+                        <h4>This year we plan to BE BOLD and GO GOLD for childhood cancer</h4>
+                        <ul className="post-meta">
+                          <li>
+                            <AiFillClockCircle className="post-icon" /> 08:00am - Karura Forest, Nairobi, Kenya
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                </div>
-            </div>
-            </div>
-            <div className="col-sm-12 col-md-6 col-lg-4 mb-4">
-              <div className="card text-white card-has-bg click-col">
-              <div className="card-img-overlay d-flex flex-column">
-                  <div className="card-body">
-                    <small className="card-meta mb-2 text-light">An overzealous doctor led to an early diagnosis</small>
-                    <h4 className="card-title mt-0 "><a className="text-light" href="#">I am grateful to God that I am now in remission and not begging in the streets, thanks to Faraja.</a></h4>
-                    <small><i className="far fa-clock"></i> July 25, 2022</small>
-                  </div>
-                  <div className="card-footer">
-                    <div className="media">
-                    <Image className="mr-3 rounded-circle" src={testOne} alt="" height={"60"} width={"60"} style={{ maxWidth:"50px"}} />
-                        <div className="media-body">
-                          <h6 className="my-0 text-light d-block">Mohammed , 43 Years</h6>
-                          {/* <small>Director of UI/UX</small> */}
-                        </div>
+                    <div className="col-md-12">
+                      <div className="link-btn">
+                        <Link href={'/'}>
+                          <a className="btn-donate">Events Calender</a>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </section>
 
