@@ -310,12 +310,12 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let's Fight This Battle Together</h3>
+                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
-                      ground-breaking projects called 'Make-Over' and 'Let's Fight
-                      this Battle Together'. Both show the power corporate 
+                      ground-breaking projects called &apos;Make-Over&&apos; and &apos;Let&apos;s Fight
+                      this Battle Together&apos;. Both show the power corporate 
                       partnerships can have.
                     </p>
                   </div>
@@ -338,12 +338,12 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let's Fight This Battle Together</h3>
+                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
-                      ground-breaking projects called 'Make-Over' and 'Let's Fight
-                      this Battle Together'. Both show the power corporate 
+                      ground-breaking projects called &apos;Make-Over&&apos; and &apos;Let&apos;s Fight
+                      this Battle Together&apos;. Both show the power corporate 
                       partnerships can have.
                     </p>
                   </div>
@@ -366,12 +366,12 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let's Fight This Battle Together</h3>
+                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
-                      ground-breaking projects called 'Make-Over' and 'Let's Fight
-                      this Battle Together'. Both show the power corporate 
+                      ground-breaking projects called &apos;Make-Over&&apos; and &apos;Let&apos;s Fight
+                      this Battle Together&apos;. Both show the power corporate 
                       partnerships can have.
                     </p>
                   </div>
