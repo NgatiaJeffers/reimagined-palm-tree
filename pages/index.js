@@ -447,68 +447,6 @@ export default function Home(images) {
           </Swiper>
         </div>
       </section>
-
-
-
-
-
-      {/* <section className='ftco-section'>
-        <div className='container'>
-          <div className='row justify-content-center mb-5 pd-2'>
-            <div className='col-md-7 sponsors-section text-center'>
-              <h2 className='mb-4 sponsor-title'>Our Sponsors</h2>
-              <p>
-                To become a better you, remember to be grateful to
-                people who have contributed to making you who you are today.
-              </p>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img0"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img1"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img2"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img3"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img4"></div>
-                </div>
-              </div>
-            </div>
-            <div className="col-lg-2 d-flex justify-content-center mb-sm-4">
-              <div className="sponsor">
-                <div className="d-flex mb-4 text-center">
-                  <div className="img5"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </>
   )
 }
