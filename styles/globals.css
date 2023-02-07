@@ -1165,7 +1165,7 @@ hr {
   position: relative;
   display: block;
   margin-top: -4px;
-  padding-bottom: 56px;
+  padding-bottom: 50px;
 }
 
 .blog-title .sub-title {
@@ -1309,17 +1309,80 @@ hr {
 
 .single-blog .text-holder .blog-title {
   font-size: 24px;
-  line-height: 32px;
+  line-height: 25px;
   font-weight: 800;
   text-transform: none;
   word-wrap: break-word;
+}
+
+.single-blog .text-holder .blog-title a:hover {
+  text-decoration: underline;
+  transition: .1s ease;
+  color: #ee4503;
 }
 
 .single-blog .text-holder .blog-title .text {
   position: relative;
   display: block;
   padding-top: 14px;
-  padding-bottom: 32px;
+  padding-bottom: 30px;
+}
+
+
+/* SPONSOR SECTION STYLES */
+.partner-area {
+  position: relative;
+  display: block !important;
+  background: #ffffff;
+  padding: 0 0 120px;
+  z-index: 2;
+}
+
+.top-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+.partner-area .top-box .shape {
+  position: absolute;
+  top: -50px;
+  left: -120px;
+}
+
+.partner-area .top-box .title {
+  position: relative;
+  display: block;
+  margin-top: -13px;
+}
+
+.partner-area .top-box .title h2 {
+  font-size: 48px;
+  line-height: 62px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.partner-area .top-box .title h4 {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+}
+
+.single-sponsor {
+  position: relative;
+  display: block;
+  text-align: center;
+  line-height: 0;
+  z-index: 1;
+}
+
+.single-sponsor .img-box {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
 }
 
 
@@ -1345,7 +1408,6 @@ hr {
   padding: 3em 0;
   position: relative;
 }
-
 
 
 /* News Area Styling */

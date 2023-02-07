@@ -10,13 +10,14 @@ import { FaChild } from "react-icons/fa"
 import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im"
 import Banner from "../components/Banner";
-import who from "../public/who.jpg";
+
+
 import testOne from "../public/garoce.jpg";
-import event from "../public/event.jpg";
-import shape from "../public/shape.png"
 import shape1 from "../public/shape1.png";
+import shape4 from "../public/shape4.png";
 import float from "../public/shape3.png";
 import news from "../public/received.jpg";
+import logo1 from "../public/logo-2.original.png"
 import { fetchBannerContent } from "../util/fetchBannerContent";
 
 export default function Home(images) {
@@ -310,7 +311,9 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
+                  <h3 className="blog-title">
+                    <Link href={'/'}><a>Nakumatt on board - Let&apos;s Fight This Battle Together</a></Link>
+                  </h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
@@ -338,7 +341,7 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
+                  <h3 className="blog-title"><Link href={'/'}><a>Nakumatt on board - Let&apos;s Fight This Battle Together</a></Link></h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
@@ -366,7 +369,7 @@ export default function Home(images) {
                   </div>
                 </div>
                 <div className="text-holder">
-                  <h3 className="blog-title">Nakumatt on board - Let&apos;s Fight This Battle Together</h3>
+                  <h3 className="blog-title"><Link href={'/'}><a>Nakumatt on board - Let&apos;s Fight This Battle Together</a></Link></h3>
                   <div className="text">
                     <p>
                       In 2014, Nakumatt chose to partner Faraja to deliver two 
@@ -383,7 +386,73 @@ export default function Home(images) {
       </section>
 
       {/* Sponsors Section */}
-      <section className='ftco-section'>
+      <section className="partner-area">
+        <div className="container">
+          <div className="row">
+            <div className="col-xl-12">
+              <div className="top-box">
+                <div className="shape">
+                  <Image src={shape4} />
+                </div>
+                <div className="title">
+                  <h2>Become Support Partner</h2>
+                  <h4>
+                    By supporting Faraja you will become a part of the community
+                  </h4>
+                </div>
+                <div className="btn-box">
+                  <a className="btn-donate">get in touch</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <Swiper
+            slidesPerView={3}
+            spaceBetween={30}
+            loop={true}
+            autoplay={{
+            delay: 7000,
+            disableOnInteraction: false,
+            }}
+            navigation={true}
+            modules={[Autoplay, Pagination, Navigation]}>
+            <SwiperSlide>
+              <div className="single-sponsor">
+                <div className="img-box">
+                  <Image src={logo1} width={250} height={130} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="single-sponsor">
+                <div className="img-box">
+                  <Image src={logo1} width={250} height={130} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="single-sponsor">
+                <div className="img-box">
+                  <Image src={logo1} width={250} height={130} />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="single-sponsor">
+                <div className="img-box">
+                  <Image src={logo1} width={250} height={130} />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+
+
+
+
+
+      {/* <section className='ftco-section'>
         <div className='container'>
           <div className='row justify-content-center mb-5 pd-2'>
             <div className='col-md-7 sponsors-section text-center'>
@@ -439,7 +508,7 @@ export default function Home(images) {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
     </>
   )
 }
