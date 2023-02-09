@@ -3,8 +3,11 @@ export const fetchBannerContent = async () => {
         `${process.env.NEXT_PUBLIC_BASE_URL}/api/getBannerContent`
     );
 
+    if (!res.ok) return;
+
     const data = await res.json();
-    const BannerContent = data.bannerImage
+    console.log(data)
+    const BannerContent = data.bannerImage || null;
 
     return BannerContent;
 }

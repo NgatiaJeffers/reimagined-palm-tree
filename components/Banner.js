@@ -1,18 +1,23 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 // Import Swiper styles
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import required modules
+// import swiper required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { BsCheckCircle } from "react-icons/bs"
+
+// API calls
 import { fetchBannerContent } from "../util/fetchBannerContent";
 
 
-const Banner = () => {
+const Banner = (props) => {
+    const {images} = props;
+    console.log(images)
+
     // const [data, setData] = useState([
     //     [
     //         {
@@ -72,8 +77,7 @@ const Banner = () => {
                         pagination={pagination}
                         navigation={true}
                         modules={[Autoplay, Pagination, Navigation]}
-                        className="mySwiper"
-                    >
+                        className="mySwiper">
                         <SwiperSlide>
                             <div className="slide">
                                 <div className="overlay"></div>
@@ -174,3 +178,15 @@ const Banner = () => {
 }
 
 export default Banner;
+
+// Backend call for server side data
+export const getStaticProps = async () => {
+    const images = await fetchBannerContent()
+  
+    return {
+      props: {
+        images,
+      }
+    } 
+  };  
+  

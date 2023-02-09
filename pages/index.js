@@ -2,11 +2,9 @@ import React, { useState, useEffect } from "react";
 import Head from 'next/head';
 import Image from 'next/image.js';
 import Link from "next/link";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight } from '@fortawesome/free-solid-svg-icons';
-import { FaChild } from "react-icons/fa"
 import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im"
 import Banner from "../components/Banner";
@@ -17,14 +15,17 @@ import shape1 from "../public/shape1.png";
 import shape4 from "../public/shape4.png";
 import float from "../public/shape3.png";
 import news from "../public/received.jpg";
-import logo1 from "../public/logo-2.original.png"
+import logo1 from "../public/logo-2.original.png";
+
+// API CALLS
 import { fetchBannerContent } from "../util/fetchBannerContent";
+import { fetchAboutUs } from "../util/fetchHomePageContent";
+import { fetchTestimonials } from "../util/fetchTestimonials";
 
-export default function Home(images) {
+export default function Home(props) {
+  const { about, testimonial } = props;
+  console.log(testimonial)
 
-  const aboutStyle = {
-    borderRadius: "10px"
-  }
 
   return (
     <>
@@ -34,7 +35,7 @@ export default function Home(images) {
         <link rel="icon" href="/icon.png" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha256-UhQQ4fxEeABh4JrcmAJ1+16id/1dnlOEVCFOxDef9Lw=" crossOrigin="anonymous" />
       </Head>
-      <Banner images={images} />
+      <Banner />
 
       <section className='section-md'>
         <div className='container'>
@@ -63,30 +64,23 @@ export default function Home(images) {
           </div>
           <div className="row">
             <div className="col-xl-12">
-              <div className="about-content">
+              {about.map((item) => (
+              <div className="about-content" key={item?._id}>
                 <div className="shape1">
                   <Image src={shape1} />
                 </div>
-                <div className="about-img-box" style={{ backgroundImage: 'url(/who.jpg)' }}></div>
+                <div className="about-img-box" style={{ backgroundImage: `url(${item.image.url})` }}></div>
                 <div className="text-holder">
                   <div className="top">
                     <div className="title">
-                      <h3>Our mission is to make the world a better place for everyone.</h3>
+                      <h3>{item.title}</h3>
                     </div>
                   </div>
                   <div className="text">
-                    The Faraja Cancer Support Trust was founded in 2010 with the aim of
-                    providing emotional, practical and healing support to anyone
-                    affected by cancer. We offer cancer patients and their carers 
-                    information, advice, counselling and complementary therapies 
-                    in order to make their cancer journey a little more manageable.
+                    {item.bodyText}
                   </div>
                   <div className="text-1">
-                    We work alongside several institutions and hospitals that offer 
-                    conventional cancer treatments such as radiotherapy, 
-                    chemotherapy and surgery. We aim to take our patients 
-                    beyond medical treatment through offering them a holistic 
-                    approach to coping with the challenges of cancer.
+                    {item.text}
                   </div>
                   <div className="bottom">
                       <Link href={'/'}>
@@ -95,6 +89,8 @@ export default function Home(images) {
                   </div>
                 </div>
               </div>
+              ))}
+
             </div>
           </div>
         </div>
@@ -133,7 +129,32 @@ export default function Home(images) {
                   navigation={true}
                   modules={[Autoplay, Pagination, Navigation]}
                   className="swiper-testimonial">
-                    <SwiperSlide>
+                    {testimonial?.map(item => (
+                      <SwiperSlide key={item?._id}>
+                        <div className="single-testimonial">
+                          <div className="img-holder">
+                            <div className="inner">
+                              <Image className="rounded-circle" src={item?.image?.url} alt="" height={"140"} width={"140"}  />
+                            </div>
+                          </div>
+                          <div className="text-holder">
+                            <div className="quote">
+                              <ImQuotesLeft className="quote-icon" />
+                            </div>
+                            <div className="text">
+                              <h3>{item?.title}</h3>
+                              {item?.text[0]}
+                            </div>
+                            <div className="client-info">
+                              <h4>{item?.name}</h4>
+                              {/* <span>DRC Congo</span> */}
+                            </div>
+                          </div>
+                        </div>
+                      </SwiperSlide>
+                    ))}
+
+                    {/* <SwiperSlide>
                       <div className="single-testimonial">
                         <div className="img-holder">
                           <div className="inner">
@@ -157,8 +178,8 @@ export default function Home(images) {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
+                    </SwiperSlide> */}
+                    {/* <SwiperSlide>
                       <div className="single-testimonial">
                         <div className="img-holder">
                           <div className="inner">
@@ -182,32 +203,7 @@ export default function Home(images) {
                           </div>
                         </div>
                       </div>
-                    </SwiperSlide>
-                    <SwiperSlide>
-                      <div className="single-testimonial">
-                        <div className="img-holder">
-                          <div className="inner">
-                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
-                          </div>
-                        </div>
-                        <div className="text-holder">
-                          <div className="quote">
-                            <ImQuotesLeft className="quote-icon" />
-                          </div>
-                          <div className="text">
-                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
-                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
-                            for a new life as a refugee in Uganda. But even the experience 
-                            of being a refugee would not have prepared him and his family 
-                            for the long trip that fate seemed to have planned.
-                          </div>
-                          <div className="client-info">
-                            <h4>Gacore</h4>
-                            <span>DRC Congo</span>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide>
+                    </SwiperSlide> */}
                 </Swiper>
               </div>
             </div>
@@ -452,12 +448,14 @@ export default function Home(images) {
 }
 
 // Backend call for server side data
-// export const getServerSideProps: GetServerSideProps<Props> = async () => {
-//   const images = await fetchBannerContent();
+export const getStaticProps = async () => {
+  const about = await fetchAboutUs();
+  const testimonial = await fetchTestimonials();
 
-//   return {
-//     props: {
-//       images
-//     }
-//   } 
-// };  
+  return {
+    props: {
+      about,
+      testimonial
+    }
+  } 
+};  
