@@ -19,7 +19,7 @@ import logo1 from "../public/logo-2.original.png";
 
 // API CALLS
 import { fetchBannerContent } from "../util/fetchBannerContent";
-import { fetchAboutUs } from "../util/fetchHomePageContent";
+import { fetchAboutUs } from "../util/fetchAboutUs";
 import { fetchTestimonials } from "../util/fetchTestimonials";
 
 export default function Home(props) {

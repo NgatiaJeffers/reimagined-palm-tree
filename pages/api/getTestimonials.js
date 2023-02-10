@@ -11,6 +11,6 @@ const query = groq `*[_type == "testimonial"] {
 
 export default async function handler(req, res) {
     const testimonial = await sanityClient.fetch(query);
-    console.log(testimonial);
+    
     res.status(200).json({ testimonial });
 }

@@ -11,7 +11,7 @@ const query = groq `*[_type == "bannerImage"] {
 
 export default async function handler(req, res) {
     const images = await sanityClient.fetch(query);
-    console.log(images)
+    
     res.status(200).json({ images })
   }
   

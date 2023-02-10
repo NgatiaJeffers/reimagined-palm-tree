@@ -10,6 +10,6 @@ const query = groq `*[_type == "about"] {
 
 export default async function handler(req, res) {
     const about = await sanityClient.fetch(query);
-    console.log(about)
+
     res.status(200).json({ about })
 }
