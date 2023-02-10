@@ -116,97 +116,49 @@ export default function Home(props) {
       <section className="testimonial-area">
         <div className="testimonial-bg" style={{ backgroundImage: 'url(/backbg.png)'}}>
           <div className="container">
-            <div className="testimonial-content">
-              <div className="testimonial-carousel">
-                <Swiper
-                  spaceBetween={30}
-                  centeredSlides={true}
-                  autoplay={{
-                  delay: 4000,
-                  disableOnInteraction: false,
-                  }}
-                  // pagination={pagination}
-                  navigation={true}
-                  modules={[Autoplay, Pagination, Navigation]}
-                  className="swiper-testimonial">
-                    {testimonial?.map(item => (
-                      <SwiperSlide key={item?._id}>
-                        <div className="single-testimonial">
-                          <div className="img-holder">
-                            <div className="inner">
-                              <Image className="rounded-circle" src={item?.image?.url} alt="" height={"140"} width={"140"}  />
-                            </div>
-                          </div>
-                          <div className="text-holder">
-                            <div className="quote">
-                              <ImQuotesLeft className="quote-icon" />
-                            </div>
-                            <div className="text">
-                              <h3>{item?.title}</h3>
-                              {item?.text[0]}
-                            </div>
-                            <div className="client-info">
-                              <h4>{item?.name}</h4>
-                              {/* <span>DRC Congo</span> */}
-                            </div>
-                          </div>
-                        </div>
-                      </SwiperSlide>
-                    ))}
-
-                    {/* <SwiperSlide>
-                      <div className="single-testimonial">
-                        <div className="img-holder">
-                          <div className="inner">
-                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
-                          </div>
-                        </div>
-                        <div className="text-holder">
-                          <div className="quote">
-                            <ImQuotesLeft className="quote-icon" />
-                          </div>
-                          <div className="text">
-                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
-                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
-                            for a new life as a refugee in Uganda. But even the experience 
-                            of being a refugee would not have prepared him and his family 
-                            for the long trip that fate seemed to have planned.
-                          </div>
-                          <div className="client-info">
-                            <h4>Gacore</h4>
-                            <span>DRC Congo</span>
-                          </div>
-                        </div>
+                <div className="row">
+                  <div className="col-xl-12">
+                    <div className="testimonial-content">
+                      <div className="testimonial-carousel">
+                        <Swiper
+                          spaceBetween={30}
+                          centeredSlides={true}
+                          autoplay={{
+                          delay: 4000,
+                          disableOnInteraction: false,
+                          }}
+                          navigation={true}
+                          modules={[Autoplay, Pagination, Navigation]}
+                          className="swiper-testimonial">
+                            {testimonial?.map(item => (
+                              <SwiperSlide key={item?._id}>
+                                <div className="single-testimonial">
+                                  <div className="img-holder">
+                                    <div className="inner">
+                                      <Image className="rounded-circle" src={item?.image?.url} alt="" height={"140"} width={"140"}  />
+                                    </div>
+                                  </div>
+                                  <div className="text-holder">
+                                    <div className="quote">
+                                      <ImQuotesLeft className="quote-icon" />
+                                    </div>
+                                    <div className="text">
+                                      <h3>{item?.title}</h3>
+                                      {item?.text[0]}
+                                    </div>
+                                    <div className="client-info">
+                                      <h4>{item?.name}</h4>
+                                      {/* <span>DRC Congo</span> */}
+                                    </div>
+                                  </div>
+                                </div>
+                              </SwiperSlide>
+                            ))}
+                        </Swiper>
                       </div>
-                    </SwiperSlide> */}
-                    {/* <SwiperSlide>
-                      <div className="single-testimonial">
-                        <div className="img-holder">
-                          <div className="inner">
-                            <Image className="rounded-circle" src={testOne} alt="" height={"140"} width={"140"} style={{ maxWidth:"50px"}} />
-                          </div>
-                        </div>
-                        <div className="text-holder">
-                          <div className="quote">
-                            <ImQuotesLeft className="quote-icon" />
-                          </div>
-                          <div className="text">
-                            <h3>When a refugee seeks refuge and finds Faraja (comfort)</h3>
-                            18-year-old Gacore, a teenager from DRC Congo was full of hope 
-                            for a new life as a refugee in Uganda. But even the experience 
-                            of being a refugee would not have prepared him and his family 
-                            for the long trip that fate seemed to have planned.
-                          </div>
-                          <div className="client-info">
-                            <h4>Gacore</h4>
-                            <span>DRC Congo</span>
-                          </div>
-                        </div>
-                      </div>
-                    </SwiperSlide> */}
-                </Swiper>
-              </div>
-            </div>
+                    </div>
+                  </div>
+                </div>
           </div>
         </div>
       </section>
