@@ -5,8 +5,6 @@ export const fetchAboutUs = async () => {
 
     if (!res.ok) return;
 
-    console.log(res)
-
     const data = await res.json();
     const aboutContent = data.about || null;
 

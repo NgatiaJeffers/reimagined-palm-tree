@@ -18,42 +18,6 @@ const Banner = (props) => {
     const {images} = props;
     console.log(images)
 
-    // const [data, setData] = useState([
-    //     [
-    //         {
-    //           id: 1,
-    //           title: "accusamus beatae ad facilis cum similique qui sunt",
-    //           url: "https://farajacancersupport.org/media/images/slide1-wide.original.jpg",
-    //         },
-    //         {
-    //           id: 2,
-    //           title: "accusamus beatae ad facilis cum similique qui sunt",
-    //           url: "https://farajacancersupport.org/media/images/slide5-wide.original.jpg",
-    //         },
-    //         {
-    //           id: 3,
-    //           title: "accusamus beatae ad facilis cum similique qui sunt",
-    //           url: "https://farajacancersupport.org/media/images/slide2-wide.original.jpg",
-    //         },
-    //     ]
-    // ]);
-
-
-    // useEffect(() => {
-    //     fetch('https://jsonplaceholder.typicode.com/photos')
-    //       .then(response => response.json())
-    //       .then(data => setData(data));
-    //   }, []);
-
-    // const settings = {
-    //     dots: true,
-    //     infinite: false,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1,
-    //     autoplaySpeed: 20,
-    // };
-
     const pagination = {
         clickable: true,
         renderBullet: function(idx, className) {
@@ -68,13 +32,28 @@ const Banner = (props) => {
                 <div className="col-xl-12 col-12 col-md-12">
                     <div className="banner-wrapper">
                     <Swiper
-                        spaceBetween={30}
+                        slidesPerView={1}
+                        spaceBetween={10}
                         centeredSlides={true}
                         autoplay={{
                         delay: 4000,
                         disableOnInteraction: false,
                         }}
                         pagination={pagination}
+                        breakpoints={{
+                            640: {
+                              slidesPerView: 2,
+                              spaceBetween: 20,
+                            },
+                            768: {
+                              slidesPerView: 4,
+                              spaceBetween: 40,
+                            },
+                            1024: {
+                              slidesPerView: 1,
+                              spaceBetween: 50,
+                            },
+                          }}
                         navigation={true}
                         modules={[Autoplay, Pagination, Navigation]}
                         className="mySwiper">
@@ -109,7 +88,7 @@ const Banner = (props) => {
                                 </div>
                             </div>
                         </SwiperSlide>
-                        <SwiperSlide>
+                        {/* <SwiperSlide>
                             <div className="slide">
                                 <div className="overlay"></div>
                                 <div className="image-layer" style={{ backgroundImage: 'url(/slide2.jpg)'}}></div>
@@ -166,7 +145,7 @@ const Banner = (props) => {
                                     </div>
                                 </div>
                             </div>
-                        </SwiperSlide>
+                        </SwiperSlide> */}
                     </Swiper>
                     </div>
                 </div>
@@ -189,4 +168,5 @@ export const getStaticProps = async () => {
       }
     } 
   };  
+
   

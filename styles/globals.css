@@ -248,6 +248,8 @@ hr {
 	opacity: 1;
 }
 
+/* Styling dropdown */
+
 .dropdown:hover .dropdown-menu {
   display: block;
   transition: all .6s;

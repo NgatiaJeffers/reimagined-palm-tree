@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import NavItem from "./NavItem";
+import MenuItems from './MenuItems';
 import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
 import Button from "../atoms/Button";
@@ -57,82 +57,10 @@ const NavbarLayout = () => {
           
               <div className="nav-items collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav ms-auto ">
-                {/* {MENU_LIST.map((menu, idx) => (
-                  <li className="nav-item" onClick={() => {setActiveIdx(idx);}} key={menu.text}>
-                    <NavItem active={activeIdx === idx} {...menu} />                    
-                  </li>
-                ))} */}
-                  <li className="nav-item">
-                    <Link href={"/"}>
-                      <a className="nav-link mx-2">Home</a>
-                    </Link>
-                  </li>
-                  
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      About
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" data-bs-trigger="hover focus">
-                      <li>
-                        <Link href={"/about/our-work"}>
-                          <a className="dropdown-item" href="#">Our work with children</a>
-                        </Link>
-                      </li>
-                      <li>
-                        <Link href={"/about/annual-reports"}>
-                          <a className="dropdown-item" href="#">Annual reports</a>
-                        </Link>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Therapy
-                    </a>
-                    <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <span className="dropdown-title">Cancer Awareness</span>
-                        <li><a className="dropdown-item" href="#">Prostate</a></li>
-                        <li><a className="dropdown-item" href="#">Colon</a></li>
-                        <li><a className="dropdown-item" href="#">Breast</a></li>
-                        <li><a className="dropdown-item" href="#">Childhood</a></li>
-                    </ul>
-                  </li> 
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Events
-                    </a>
-                      <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Events in Nairobi</a></li>
-                        <li><a className="dropdown-item" href="#">Evenst in Eldoret</a></li>
-                      </ul>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link mx-2" href="#">Testimonials</a>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      News & Media
-                    </a>
-                      <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Updates on Faraja Support Trust</a></li>
-                      </ul>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Gallery
-                    </a>
-                      <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">Faraja videos</a></li>
-                      </ul>
-                  </li>
-                  <li className="nav-item dropdown">
-                    <a className="nav-link mx-2" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                      Support us
-                    </a>
-                      <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                        <li><a className="dropdown-item" href="#">The Faraja Medical Support Fund (FMSF)</a></li>
-                      </ul>
-                  </li> 
+                  {MENU_LIST.map((menu, idx) => {
+                    // Prop drilling
+                    return <MenuItems items={menu} key={idx} />;
+                  })}
                 </ul>
                 <ul className="navbar-nav ms-auto d-lg-inline-flex">
                 <a className="btn-donate">Make a Donation</a>

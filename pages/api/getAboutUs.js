@@ -2,7 +2,8 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../lib/sanity";
 
 const query = groq `*[_type == "about"] {
-    _id, title,
+    _id, 
+    title,
     "image": mainImage.asset->,
     "bodyText": body[0].children[0].text,
     "text": body[1].children[].text
