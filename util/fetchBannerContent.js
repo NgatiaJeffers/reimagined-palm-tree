@@ -6,7 +6,7 @@ export const fetchBannerContent = async () => {
     if (!res.ok) return;
 
     const data = await res.json();
-    const BannerContent = data.bannerImage || null;
+    const images = data?.images || null;
 
-    return BannerContent;
+    return images;
 }

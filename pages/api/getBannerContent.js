@@ -5,7 +5,8 @@ import { sanityClient } from "../../lib/sanity";
 const query = groq `*[_type == "bannerImage"] {
     _id,
     title,
-    "image": mainImage.asset->
+    "image": mainImage.asset->,
+    "text": body[].children[].text
 }`;
 
 

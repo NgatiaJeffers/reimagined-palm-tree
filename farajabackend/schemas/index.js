@@ -4,7 +4,8 @@ import post from './post'
 import author from './author'
 import bannerContent from './bannerContent'
 import about from './homePage/about';
-import testimonial from './homePage/testimonial'
+import testimonial from './homePage/testimonial';
+import event from './homePage/event'
 
 export const schemaTypes = [
     post, 
@@ -13,5 +14,6 @@ export const schemaTypes = [
     category, 
     bannerContent, 
     testimonial,
+    event,
     blockContent
 ]
