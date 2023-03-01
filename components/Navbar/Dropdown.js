@@ -1,8 +1,6 @@
 import Link from "next/link";
 
-import MenuItems from "./MenuItems";
-
-const Dropdown = ({ subMenus, dropdown, depthLevel }) => {
+const Dropdown = ({ subMenus }) => {
     // dethLevel = dethLevel++;
     // const dropdownClass = depthLevel > 1 ? 'dropdown-submenu' : "";
     return (

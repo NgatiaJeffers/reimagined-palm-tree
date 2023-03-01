@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import Head from "next/head";
 import Image from "next/image.js";
 import Link from "next/link";
@@ -9,7 +9,6 @@ import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im";
 import Banner from "../components/Banner";
 
-import testOne from "../public/garoce.jpg";
 import shape1 from "../public/shape1.png";
 import shape4 from "../public/shape4.png";
 import float from "../public/shape3.png";
@@ -464,8 +463,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      about,
       testimonial,
+      about,
       images,
       events,
     },

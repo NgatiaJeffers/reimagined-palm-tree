@@ -1,9 +1,8 @@
-import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 
 import Dropdown from "./Dropdown";
 
-const MenuItems = ({ items, depthLevel }) => {
+const MenuItems = ({ items }) => {
     return (
         <li className="nav-item dropdown">
             {items?.subMenu && items?.url ? (

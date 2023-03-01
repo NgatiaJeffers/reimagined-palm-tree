@@ -5,7 +5,6 @@ import Image from "next/image";
 import MenuItems from './MenuItems';
 import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
-import Button from "../atoms/Button";
 
 const NavbarLayout = () => {
     const [ scrollPosition, setScrollPosition ] = useState(0);
