@@ -1,34 +1,74 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Faraja Support Cancer
 
-## Getting Started
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app). Hosted on [Vercel](vercel.com) and using [Sanity](sanity.io) as the CMS platform. The purpose is to create a scalable and east-to-use website that can be managed through [Sanity.io](sanity.io) and deployed on [Vercel.com](vercel.com)
 
-First, run the development server:
+## Table of Contents
+
+- Features
+- Setup
+- Usage
+- Deployment
+- Contribution
+- License
+
+## Features
+
+- [Next.js](https://nextjs.org/) for server-side rendering and routing
+- [Sanity.io](sanity.io) for content management
+- Bootsrap CSS for styling
+- Reponsive design
+- SEO optimization
+- Continuous deployment with [Vercel.com](vercel.com)
+
+## Setup
+
+To use this project, you need to have [Node.js]() and [npm]() installed on your computer.
+
+First, clone the repository:
+
+```bash
+git clone https://github.com/NgatiaJeffers/reimagined-palm-tree.git
+```
+
+Then, install the dependencies:
+
+```bash
+cd <repostory-name>
+```
+
+Create a `.env` file at the root of the project and add your [Sanity.io](sanity.io) project ID and dateset name:
+## Usage
+
+To start the development server, run:
 
 ```bash
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+To build the project for production, run:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+npm run build
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Deployment
 
-To learn more about Next.js, take a look at the following resources:
+The project is deployed on [Vercel.com](vercel.com). To deploy your own version, you can follow these steps:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Create an account on [Vercel](vercel.com).
+2. Connect your Vercel account to your Git repository.
+3. Choose the repository you want to deploy and configure the settings for the deployment.
+4. Your project will automatically be deployed to the [Vercel](vercel.com) server.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Contributing
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Contrubutions are welcome! If you find any issues or have any suggestions for improvements, feel free to open an issue or create a pull request.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## License
+
+This project is licensed under the [MITLicense]
