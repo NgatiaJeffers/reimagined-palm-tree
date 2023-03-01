@@ -46,7 +46,7 @@ const NavbarLayout = () => {
             <div className="container">
               <Link href={"/"}>
                 <a className="navbar-brand">
-                  <Image src={logo} height="60" width={"120"}/>
+                  <Image src={logo} height="60" width={"120"} alt="Logo"/>
                 </a>
               </Link>
               <button onClick={toggleOpen} className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
