@@ -6,7 +6,7 @@ export const fetchEvents = async () => {
     if (!res.ok) return;
 
     const data = await res.json();
-    const events = data.events 
+    const events = data.events || null
 
     return events
 }

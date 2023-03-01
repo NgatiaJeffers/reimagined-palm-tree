@@ -6,7 +6,7 @@ export const fetchAboutUs = async () => {
     if (!res.ok) return;
 
     const data = await res.json();
-    const aboutContent = data.about || null;
+    const aboutContent = data?.about || null;
 
     return aboutContent;
 }

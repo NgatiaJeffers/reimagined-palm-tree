@@ -24,7 +24,7 @@ import { fetchEvents } from "../util/fetchEvents";
 
 export default function Home(props) {
   const { about, testimonial, images, events } = props;
-  console.log(events);
+
 
   return (
     <>
@@ -70,7 +70,7 @@ export default function Home(props) {
           </div>
           <div className="row">
             <div className="col-xl-12">
-              {about.map((item) => (
+              {about?.map((item) => (
                 <div className="about-content" key={item?._id}>
                   <div className="shape1">
                     <Image src={shape1} />
@@ -202,7 +202,7 @@ export default function Home(props) {
                   </div>
                   <div className="row">
                     {events?.map((event) => (
-                    <div className="col-lg-6 col-md-6 event-block">
+                    <div className="col-lg-6 col-md-6 event-block" key={event?._id}>
                       <div className="inner-box">
                         <div className="date">
                           24th <span>September </span>
@@ -214,8 +214,7 @@ export default function Home(props) {
                           </Link>
                         </div>
                         <h4>
-                          This year we plan to BE BOLD and GO GOLD for childhood
-                          cancer
+                          {event?.eventDay}
                         </h4>
                         <ul className="post-meta">
                           <li>
