@@ -463,8 +463,8 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      testimonial,
       about,
+      testimonial,
       images,
       events,
     },
