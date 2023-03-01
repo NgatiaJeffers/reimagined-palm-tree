@@ -455,7 +455,7 @@ export default function Home(props) {
 }
 
 // Backend call for server side data
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const images = await fetchBannerContent();
   const about = await fetchAboutUs();
   const testimonial = await fetchTestimonials();
