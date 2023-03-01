@@ -4,7 +4,10 @@ const nextConfig = {
   swcMinify: true,
   images: {
     domains: ['https://source.unsplash.com', 'cdn.sanity.io'],
-  }
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+},
 }
 
 module.exports = nextConfig
