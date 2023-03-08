@@ -15,6 +15,9 @@ import float from "../public/shape3.png";
 import news from "../public/received.jpg";
 import logo1 from "../public/logo-2.original.png";
 
+// HELPER FUNCTIONS
+import { getDayAndMonth } from "../util/util";
+
 // API CALLS
 import { fetchBannerContent } from "../util/fetchBannerContent";
 import { fetchAboutUs } from "../util/fetchAboutUs";
@@ -204,7 +207,7 @@ export default function Home(props) {
                     <div className="col-lg-6 col-md-6 event-block" key={event?._id}>
                       <div className="inner-box">
                         <div className="date">
-                          24th <span>September </span>
+                          {getDayAndMonth(event?.eventDatetime)}
                         </div>
                         <div className="organizer">
                           Organized By:{" "}
@@ -224,30 +227,6 @@ export default function Home(props) {
                       </div>
                     </div>
                     ))}
-
-                    <div className="col-lg-6 col-md-6 event-block">
-                      <div className="inner-box">
-                        <div className="date">
-                          24 <span>September </span>
-                        </div>
-                        <div className="organizer">
-                          Organized By:{" "}
-                          <Link href={"/"}>
-                            <a>Cindy</a>
-                          </Link>
-                        </div>
-                        <h4>
-                          This year we plan to BE BOLD and GO GOLD for childhood
-                          cancer
-                        </h4>
-                        <ul className="post-meta">
-                          <li>
-                            <AiFillClockCircle className="post-icon" /> 08:00am
-                            - Karura Forest, Nairobi, Kenya
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
                     <div className="col-md-12">
                       <div className="link-btn">
                         <Link href={"/"}>
