@@ -1,14 +1,21 @@
 import {defineField, defineType} from 'sanity'
+import { FaBlogger } from "react-icons/fa"
 
 export default defineType({
-  name: 'post',
-  title: 'Post',
+  name: 'blog',
+  title: 'Blog',
   type: 'document',
+  icon: FaBlogger,
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
+    }),
+    defineField({
+      name: 'description',
+      title: 'Description',
+      type: 'string'
     }),
     defineField({
       name: 'slug',

@@ -15,6 +15,8 @@ import float from "../public/shape3.png";
 import news from "../public/received.jpg";
 import logo1 from "../public/logo-2.original.png";
 
+import { urlFor } from "../lib/sanity";
+
 // HELPER FUNCTIONS
 import { getDayAndMonth } from "../util/util";
 
@@ -23,10 +25,12 @@ import { fetchBannerContent } from "../util/fetchBannerContent";
 import { fetchAboutUs } from "../util/fetchAboutUs";
 import { fetchTestimonials } from "../util/fetchTestimonials";
 import { fetchEvents } from "../util/fetchEvents";
+import { fetchBlog } from "../util/fetchBlog";
+import { fetchSponsors } from "../util/fetchSponsors";
 
 export default function Home(props) {
-  const { about, testimonial, images, events } = props;
-
+  const { about, testimonial, images, events, blog, sponsors } = props;
+console.log(sponsors)
 
   return (
     <>
@@ -257,13 +261,19 @@ export default function Home(props) {
             <h2>News & Happenings</h2>
           </div>
           <div className="row">
-            <div className="col-xl-4 col-lg-4">
+            {blog?.map((item) => (
+              <div className="col-xl-4 col-lg-4" key={item?._id}>
               <div className="single-blog">
                 <div className="img-holder">
                   <div className="inner">
                     <Link href={"/"}>
                       <a>
-                        <Image src={news} />
+                        <Image 
+                        src={item?.image?.url}
+                        layout="fill"
+                        objectFit="contain"
+                        style={{ position: "relative !important"}}
+                        />
                       </a>
                     </Link>
                   </div>
@@ -276,92 +286,19 @@ export default function Home(props) {
                   <h3 className="blog-title">
                     <Link href={"/"}>
                       <a>
-                        Nakumatt on board - Let&apos;s Fight This Battle
-                        Together
+                        {item?.title}
                       </a>
                     </Link>
                   </h3>
                   <div className="text">
                     <p>
-                      In 2014, Nakumatt chose to partner Faraja to deliver two
-                      ground-breaking projects called &apos;Make-Over&&apos; and
-                      &apos;Let&apos;s Fight this Battle Together&apos;. Both
-                      show the power corporate partnerships can have.
+                      {item?.description}
                     </p>
                   </div>
                 </div>
               </div>
-            </div>
-            <div className="col-xl-4 col-lg-4">
-              <div className="single-blog">
-                <div className="img-holder">
-                  <div className="inner">
-                    <Link href={"/"}>
-                      <a>
-                        <Image src={news} />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="date-box">
-                    <h2>18</h2>
-                    <p>June</p>
-                  </div>
-                </div>
-                <div className="text-holder">
-                  <h3 className="blog-title">
-                    <Link href={"/"}>
-                      <a>
-                        Nakumatt on board - Let&apos;s Fight This Battle
-                        Together
-                      </a>
-                    </Link>
-                  </h3>
-                  <div className="text">
-                    <p>
-                      In 2014, Nakumatt chose to partner Faraja to deliver two
-                      ground-breaking projects called &apos;Make-Over&&apos; and
-                      &apos;Let&apos;s Fight this Battle Together&apos;. Both
-                      show the power corporate partnerships can have.
-                    </p>
-                  </div>
-                </div>
               </div>
-            </div>
-            <div className="col-xl-4 col-lg-4">
-              <div className="single-blog">
-                <div className="img-holder">
-                  <div className="inner">
-                    <Link href={"/"}>
-                      <a>
-                        <Image src={news} />
-                      </a>
-                    </Link>
-                  </div>
-                  <div className="date-box">
-                    <h2>18</h2>
-                    <p>June</p>
-                  </div>
-                </div>
-                <div className="text-holder">
-                  <h3 className="blog-title">
-                    <Link href={"/"}>
-                      <a>
-                        Nakumatt on board - Let&apos;s Fight This Battle
-                        Together
-                      </a>
-                    </Link>
-                  </h3>
-                  <div className="text">
-                    <p>
-                      In 2014, Nakumatt chose to partner Faraja to deliver two
-                      ground-breaking projects called &apos;Make-Over&&apos; and
-                      &apos;Let&apos;s Fight this Battle Together&apos;. Both
-                      show the power corporate partnerships can have.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -398,34 +335,19 @@ export default function Home(props) {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
           >
-            <SwiperSlide>
-              <div className="single-sponsor">
-                <div className="img-box">
-                  <Image src={logo1} width={250} height={130} />
+            {sponsors?.map((image) => (
+              <SwiperSlide key={image?._id}>
+                <div className="single-sponsor">
+                  <div className="img-box">
+                    <Image 
+                      src={image?.image?.url} 
+                      layout="fill"
+                      objectFit="contain"
+                    />
+                  </div>
                 </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="single-sponsor">
-                <div className="img-box">
-                  <Image src={logo1} width={250} height={130} />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="single-sponsor">
-                <div className="img-box">
-                  <Image src={logo1} width={250} height={130} />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide>
-              <div className="single-sponsor">
-                <div className="img-box">
-                  <Image src={logo1} width={250} height={130} />
-                </div>
-              </div>
-            </SwiperSlide>
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </section>
@@ -439,6 +361,8 @@ export const getServerSideProps = async () => {
   const about = await fetchAboutUs();
   const testimonial = await fetchTestimonials();
   const events = await fetchEvents();
+  const blog = await fetchBlog();
+  const sponsors = await fetchSponsors();
 
   return {
     props: {
@@ -446,6 +370,8 @@ export const getServerSideProps = async () => {
       testimonial,
       images,
       events,
+      blog,
+      sponsors
     },
   };
 };

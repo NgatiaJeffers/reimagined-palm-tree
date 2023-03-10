@@ -1238,6 +1238,16 @@ hr {
   overflow: hidden;
 }
 
+.single-blog .img-holder .inner span {
+  position: relative !important;
+}
+
+.single-blog .img-holder .inner img {
+  position: relative !important;
+  width: inherit !important;
+  height: inherit !important;
+}
+
 .single-blog .img-holder .inner::before {
   position: absolute;
   content: '';
@@ -1408,6 +1418,16 @@ hr {
   position: relative;
   display: inline-block;
   overflow: hidden;
+}
+
+.single-sponsor .img-box span {
+  position: relative !important;
+}
+
+.single-sponsor .img-box img {
+  position: relative !important;
+  width: inherit !important;
+  height: inherit !important;
 }
 
 
