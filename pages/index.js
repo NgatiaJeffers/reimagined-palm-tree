@@ -113,7 +113,7 @@ console.log(sponsors)
       >
         <div className="overlay"></div>
         <div className="container">
-          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between">
+          <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between donate-content">
             <AiOutlineGift className="icon-gift" />
             <p className="text mr-auto">Donate now to change life forever</p>
             <Link href={"/"}>
@@ -136,10 +136,24 @@ console.log(sponsors)
                   <div className="testimonial-carousel">
                     <Swiper
                       spaceBetween={30}
-                      centeredSlides={true}
+                      // centeredSlides={true}
                       autoplay={{
                         delay: 4000,
                         disableOnInteraction: false,
+                      }}
+                      breakpoints={{
+                        640: {
+                          slidesPerView: 2,
+                          spaceBetween: 20,
+                        },
+                        768: {
+                          slidesPerView: 4,
+                          spaceBetween: 40,
+                        },
+                        1024: {
+                          slidesPerView: 1,
+                          spaceBetween: 50,
+                        },
                       }}
                       navigation={true}
                       modules={[Autoplay, Pagination, Navigation]}

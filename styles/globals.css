@@ -512,6 +512,12 @@ hr {
   counter-reset: count;
 }
 
+@media (max-width: 767px) {
+  .swiper-pagination {
+    display: none !important;
+  }
+}
+
 .swiper-pagination-bullet {
   position: relative;
   display: flex !important;
@@ -758,6 +764,20 @@ hr {
   background-size: cover;
 }
 
+@media (max-width: 767px) {
+  .about-img-box {
+    position: relative;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    min-height: 500px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
 .about-img-box::after {
   position: absolute;
   top: 0;
@@ -777,6 +797,15 @@ hr {
   right: -30px;
 }
 
+@media screen and (max-width: 768px) {
+  /* CSS rules for screens with a maximum width of 768px */
+  .about-content .shape1 {
+    position: absolute;
+    top: -30px;
+    right: unset;
+  }
+}
+
 .about-content .text-holder {
   position: absolute;
   top: 60px;
@@ -787,6 +816,19 @@ hr {
   background: #fff;
   padding: 53px 60px 63px;
   box-shadow: 0 5px 24px 6px rgb(0 0 0 / 6%);
+}
+
+@media screen and (max-width: 768px) {
+  /* CSS rules for screens with a maximum width of 768px */
+  .about-content .text-holder {
+    position: relative;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    max-width: 100%;
+    width: 100%;
+    padding: 43px 30px 63px;
+  }
 }
 
 .about-content .text-holder .top {
@@ -874,6 +916,13 @@ hr {
   bottom: 0;
   right: 0;
   z-index: unset ;
+}
+
+@media screen and (max-width: 768px) {
+  .donate-content {
+    text-align: center;
+    align-items: center;
+  }
 }
 
 .section-bg {
@@ -1094,6 +1143,14 @@ hr {
   position: relative;
   display: block;
   padding-left: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .testimonial-carousel .swiper-slide {
+    width: 500px !important;
+    margin-right: 50px !important;
+    font-size: 1rem;
+  }
 }
 
 .single-testimonial .img-holder {
