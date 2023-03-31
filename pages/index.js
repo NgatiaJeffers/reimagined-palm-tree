@@ -136,7 +136,7 @@ console.log(sponsors)
                   <div className="testimonial-carousel">
                     <Swiper
                       spaceBetween={30}
-                      // centeredSlides={true}
+                      centeredSlides={true}
                       autoplay={{
                         delay: 4000,
                         disableOnInteraction: false,

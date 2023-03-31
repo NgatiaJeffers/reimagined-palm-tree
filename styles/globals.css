@@ -448,7 +448,7 @@ hr {
 .main-content-box {
   position: relative;
   max-width: 1200px;
-  padding: 0px 120px;
+  /* padding: 0px 120px; */
   margin: 0 auto;
 }
 
@@ -1113,7 +1113,7 @@ hr {
   position: relative;
   display: block;
   background: #eef1f7;
-  padding: 250px 0 150px;
+  padding: 250px 0 300px;
   z-index: 1;
 }
 
@@ -1130,9 +1130,9 @@ hr {
   z-index: -1;
 }
 
-.testimonial-carousel {
+/* .testimonial-carousel {
   padding-right: 100px;
-}
+} */
 
 .swiper-testimonial {
   width: 100%;
