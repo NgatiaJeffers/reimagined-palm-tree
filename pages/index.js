@@ -8,11 +8,12 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im";
 import Banner from "../components/Banner";
+import TruncatedParagraph from "../components/atoms/TruncatedText"
 
 import shape1 from "../public/shape1.png";
 import shape4 from "../public/shape4.png";
 import float from "../public/shape3.png";
-import news from "../public/received.jpg";
+import avatar from "../public/avatar.png";
 import logo1 from "../public/logo-2.original.png";
 
 import { urlFor } from "../lib/sanity";
@@ -30,7 +31,7 @@ import { fetchSponsors } from "../util/fetchSponsors";
 
 export default function Home(props) {
   const { about, testimonial, images, events, blog, sponsors } = props;
-console.log(sponsors)
+  console.log(sponsors);
 
   return (
     <>
@@ -124,76 +125,42 @@ console.log(sponsors)
       </section>
 
       {/* Testimonial Section */}
-      <section className="testimonial-area">
-        <div
-          className="testimonial-bg"
-          style={{ backgroundImage: "url(/backbg.png)" }}
-        >
-          <div className="container">
-            <div className="row">
-              <div className="col-xl-12">
-                <div className="testimonial-content">
-                  <div className="testimonial-carousel">
-                    <Swiper
-                      spaceBetween={30}
-                      centeredSlides={true}
-                      autoplay={{
-                        delay: 4000,
-                        disableOnInteraction: false,
-                      }}
-                      breakpoints={{
-                        640: {
-                          slidesPerView: 2,
-                          spaceBetween: 20,
-                        },
-                        768: {
-                          slidesPerView: 4,
-                          spaceBetween: 40,
-                        },
-                        1024: {
-                          slidesPerView: 1,
-                          spaceBetween: 50,
-                        },
-                      }}
-                      navigation={true}
-                      modules={[Autoplay, Pagination, Navigation]}
-                      className="swiper-testimonial"
-                    >
-                      {testimonial?.map((item) => (
-                        <SwiperSlide key={item?._id}>
-                          <div className="single-testimonial">
-                            <div className="img-holder">
-                              <div className="inner">
-                                <Image
-                                  className="rounded-circle"
-                                  src={item?.image?.url}
-                                  alt=""
-                                  height={"140"}
-                                  width={"140"}
-                                />
-                              </div>
-                            </div>
-                            <div className="text-holder">
-                              <div className="quote">
-                                <ImQuotesLeft className="quote-icon" />
-                              </div>
-                              <div className="text">
-                                <h3>{item?.title}</h3>
-                                {item?.text[0]}
-                              </div>
-                              <div className="client-info">
-                                <h4>{item?.name}</h4>
-                                {/* <span>DRC Congo</span> */}
-                              </div>
-                            </div>
-                          </div>
-                        </SwiperSlide>
-                      ))}
-                    </Swiper>
+      <section className="section-primary t-bordered">
+        <div className="about-title text-center">
+          <div className="sub-title">
+            <div className="inner text-center">
+              <h3>Don't just take it from us, let our clients do the talking!</h3>
+            </div>
+          </div>
+          <h2>Testimonials</h2>
+        </div>
+        <div className="container">
+          <div className="row testimonial-three testimonial-three--col-three">
+            {testimonial?.map((item) => (
+              <div className="col-md-4 testimonial-three-col" key={item?.id}>
+                <div className="testimonial-inner">
+                  <div className="testimonial-image">
+                    <Image
+                      height="180"
+                      weight="180"
+                      src={item?.image?.url}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <div className="testimonial-content">
+                    <TruncatedParagraph text={item.text[0]} limit={200} />
+                  </div>
+                  <div className="testimonial-meta">
+                    <Link href={"/testimonials"}>
+                      <a>
+                        <strong className="testimonial-name">{item?.name}</strong>
+                      </a>
+                    </Link>
                   </div>
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
@@ -222,28 +189,29 @@ console.log(sponsors)
                   </div>
                   <div className="row">
                     {events?.map((event) => (
-                    <div className="col-lg-6 col-md-6 event-block" key={event?._id}>
-                      <div className="inner-box">
-                        <div className="date">
-                          {getDayAndMonth(event?.eventDatetime)}
+                      <div
+                        className="col-lg-6 col-md-6 event-block"
+                        key={event?._id}
+                      >
+                        <div className="inner-box">
+                          <div className="date">
+                            {getDayAndMonth(event?.eventDatetime)}
+                          </div>
+                          <div className="organizer">
+                            Organized By:{" "}
+                            <Link href={"/"}>
+                              <a>Cindy</a>
+                            </Link>
+                          </div>
+                          <h4>{event?.eventDay}</h4>
+                          <ul className="post-meta">
+                            <li>
+                              <AiFillClockCircle className="post-icon" />{" "}
+                              08:00am - Karura Forest, Nairobi, Kenya
+                            </li>
+                          </ul>
                         </div>
-                        <div className="organizer">
-                          Organized By:{" "}
-                          <Link href={"/"}>
-                            <a>Cindy</a>
-                          </Link>
-                        </div>
-                        <h4>
-                          {event?.eventDay}
-                        </h4>
-                        <ul className="post-meta">
-                          <li>
-                            <AiFillClockCircle className="post-icon" /> 08:00am
-                            - Karura Forest, Nairobi, Kenya
-                          </li>
-                        </ul>
                       </div>
-                    </div>
                     ))}
                     <div className="col-md-12">
                       <div className="link-btn">
@@ -277,40 +245,36 @@ console.log(sponsors)
           <div className="row">
             {blog?.map((item) => (
               <div className="col-xl-4 col-lg-4" key={item?._id}>
-              <div className="single-blog">
-                <div className="img-holder">
-                  <div className="inner">
-                    <Link href={"/"}>
-                      <a>
-                        <Image 
-                        src={item?.image?.url}
-                        layout="fill"
-                        objectFit="contain"
-                        style={{ position: "relative !important"}}
-                        />
-                      </a>
-                    </Link>
+                <div className="single-blog">
+                  <div className="img-holder">
+                    <div className="inner">
+                      <Link href={"/"}>
+                        <a>
+                          <Image
+                            src={item?.image?.url}
+                            layout="fill"
+                            objectFit="contain"
+                            style={{ position: "relative !important" }}
+                          />
+                        </a>
+                      </Link>
+                    </div>
+                    <div className="date-box">
+                      <h2>18</h2>
+                      <p>June</p>
+                    </div>
                   </div>
-                  <div className="date-box">
-                    <h2>18</h2>
-                    <p>June</p>
-                  </div>
-                </div>
-                <div className="text-holder">
-                  <h3 className="blog-title">
-                    <Link href={"/"}>
-                      <a>
-                        {item?.title}
-                      </a>
-                    </Link>
-                  </h3>
-                  <div className="text">
-                    <p>
-                      {item?.description}
-                    </p>
+                  <div className="text-holder">
+                    <h3 className="blog-title">
+                      <Link href={"/"}>
+                        <a>{item?.title}</a>
+                      </Link>
+                    </h3>
+                    <div className="text">
+                      <p>{item?.description}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
               </div>
             ))}
           </div>
@@ -353,8 +317,8 @@ console.log(sponsors)
               <SwiperSlide key={image?._id}>
                 <div className="single-sponsor">
                   <div className="img-box">
-                    <Image 
-                      src={image?.image?.url} 
+                    <Image
+                      src={image?.image?.url}
                       layout="fill"
                       objectFit="contain"
                     />
@@ -385,7 +349,7 @@ export const getServerSideProps = async () => {
       images,
       events,
       blog,
-      sponsors
+      sponsors,
     },
   };
 };

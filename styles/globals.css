@@ -949,6 +949,93 @@ hr {
   z-index: 1;
 }
 
+/* TESTIMONIAL STYLING */
+.section-primary {
+  position: relative;
+  padding: 100px 0px;
+}
+
+.t-bordered {
+  border-top: 1px solid #eaeaea;
+}
+
+.testimonial-three .testimonial-image {
+  float: left;
+  margin: 0 20px 0 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 100px;
+  overflow: hidden;
+}
+
+.testimonial-three .testimonial-image span,
+.testimonial-three .testimonial-image span img {
+  position: unset !important;
+  height: inherit !important;
+}
+
+.testimonial-three .testimonial-content {
+  overflow: hidden;
+}
+
+.testimonial-three .testimonial-meta {
+  position: relative;
+  overflow: hidden;
+  margin-left: 100px;
+}
+
+.testimonial-three .testimonial-name {
+  display: block;
+}
+
+.testimonial-three .testimonial-three-col {
+  padding-bottom: 35px;
+}
+
+.testimonial-three .testimonial-three-col {
+  border-right-style: dashed;
+  border-right-width: 1px;
+  border-bottom-style: dashed;
+  border-bottom-width: 1px;
+  border-right-color: #ddd;
+  border-bottom-color: #ddd;
+  padding: 25px;
+}
+
+.testimonial-three .testimonial-three-col:hover {
+  background-color: #f7f7f7;
+}
+
+.alternate-color .testimonial-three .testimonial-three-col:hover {
+  background-color: white;
+}
+
+.testimonial-three.testimonial-three--col-two
+  .testimonial-three-col:nth-child(2n) {
+  border-right: none;
+}
+
+.testimonial-three.testimonial-three--col-two
+  .testimonial-three-col:nth-last-child(-n + 2),
+.testimonial-three.testimonial-three--col-two
+  .testimonial-three-col:last-child {
+  border-bottom: none;
+}
+
+.testimonial-three.testimonial-three--col-three
+  .testimonial-three-col:nth-child(3n) {
+  border-right: none;
+}
+
+.testimonial-three.testimonial-three--col-three
+  .testimonial-three-col:nth-last-child(-n + 3),
+.testimonial-three.testimonial-three--col-three
+  .testimonial-three-col:nth-last-child(-n + 2),
+.testimonial-three.testimonial-three--col-three
+  .testimonial-three-col:last-child {
+  border-bottom: none;
+}
+
 /* EVENTS SECTION STYLES */
 .event-area {
   position: relative;
@@ -1926,7 +2013,7 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 109px 0 115px;
-  /* z-index: 10; */
+  z-index: 10;
 }
 
 .breadcrumb-area::before {
@@ -1935,11 +2022,101 @@ hr {
   left: 0;
   bottom: 0;
   right: 0;
-  background: #0e131e;
+  background: #0e131e !important;
   opacity: 0.75;
   content: "";
   z-index: -1;
 }
+
+.breadcrumb-area .about-title {
+  position: relative;
+  display: block;
+  margin-top: unset !important;
+  padding-bottom: unset !important;
+}
+
+.breadcrumb-area .testimonial-title {
+  color: #ffffff !important;
+}
+
+.breadcrumb-area .border-box {
+  position: relative;
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #ffffff;
+  margin: 19px auto 24px;
+}
+
+.breadcrumb-area .border-box::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,173,237,1) 0%, rgba(11,125,168,1) 100%);
+  /* background: #ff8040; */
+}
+
+.testimonial-cards .single-testimonial {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  border-radius: 4px;
+  padding: 40px 30px 50px;
+  box-shadow: 0 5px 24px 6px rgba(0, 0, 0, .06);
+  margin-bottom: 50px;
+}
+
+.testimonial-cards .single-testimonial .text-holder {
+  position: relative;
+  display: block;
+  padding-bottom: 20px;
+}
+
+.testimonial-cards .single-testimonial .text-holder p {
+  margin: 0;
+  line-height: 30px;
+}
+
+.testimonial-cards .client-info {
+  position: relative;
+  display: flex;
+  padding-top: 20px;
+  border-top: 1px solid #e8e9e9;
+}
+
+.testimonial-cards .client-info .quote-icon {
+  position: relative;
+  display: block;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(6,173,237,1) 0%, rgba(11,125,168,1) 100%);
+  color: #ffffff;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.testimonial-cards .client-info .client-name {
+  position: relative;
+  display: block;
+  padding-left: 20px;
+}
+
+.testimonial-cards .client-info .client-name h5 {
+font-size: 14px;
+line-height: 18px;
+font-weight: 700;
+}
+
+.testimonial-cards .client-info .client-name span {
+  font-size: 14px;
+  text-transform: uppercase;
+  }
+  
 
 
 
