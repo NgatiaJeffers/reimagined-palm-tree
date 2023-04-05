@@ -2,7 +2,7 @@ import React from 'react'
 import Link from 'next/link';
 import Image from 'next/image';
 
-import icon from "../../public/donate_.png"
+import icon from "../../public/hand.png"
 
 const DonateSidebar = () => {
   return (
@@ -36,6 +36,16 @@ const DonateSidebar = () => {
                         <Image src={icon} />
                     </div>
                     <p>Small Donation Bigger Impact</p>
+                    <h2>
+                        Faraja Cancer 
+                        <br />
+                        Support Trust
+                    </h2>
+                    <div className='btn-box'>
+                        <Link href={"/"}>
+                            <a className="btn-donate">Make a Donation</a>
+                        </Link>
+                    </div>
                 </div>
             </div>
         </div>

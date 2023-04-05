@@ -27,7 +27,7 @@ const ProstatePage = () => {
                     <div className="text-area">
                       <div className="text-1">
                         <div className="title">
-                          <h3>Prostate</h3>
+                          <h3>Prostate Cancer</h3>
                           <div className="title-shape">
                             <Image src={shape} />
                           </div>
