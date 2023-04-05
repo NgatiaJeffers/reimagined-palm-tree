@@ -4,19 +4,12 @@ import { AiOutlineBarChart } from "react-icons/ai";
 import { BiCalendar } from "react-icons/bi";
 
 import report from "../../public/svgs/report.svg";
+import BreadCrumb from "../../components/atoms/Breadcrumb";
 
 const AnnualReports = () => {
   return (
     <>
-      <section className="breadcrumb-area page-breadcrumb">
-        <div className="container">
-          <div className="about-title text-center">
-            <div className="sub-title">
-            </div>
-            <h2>Annual Reports</h2>
-          </div>
-        </div>
-      </section>
+      <BreadCrumb title={"Annual Reports"} />
       <section className="annual-reports-section">
         <div className="container">
           <div className="row">

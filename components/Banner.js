@@ -78,10 +78,10 @@ const Banner = (images) => {
                           </div>
                           <div className="banner-buttons d-grid gap-2 d-md-flex">
                             <Link href={"/"}>
-                              <a className="btn-donate">HOW WE HELP</a>
+                              <a className="btn-main">HOW WE HELP</a>
                             </Link>
                             <Link href={"/"}>
-                              <a className="btn-donate">SUPPORT US</a>
+                              <a className="btn-main">SUPPORT US</a>
                             </Link>
                           </div>
                         </div>

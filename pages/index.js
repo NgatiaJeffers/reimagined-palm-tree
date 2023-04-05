@@ -96,7 +96,7 @@ export default function Home(props) {
                     <div className="text-1">{item.text}</div>
                     <div className="bottom">
                       <Link href={"/"}>
-                        <a className="btn-donate">Read More</a>
+                        <a className="btn-main">Read More</a>
                       </Link>
                     </div>
                   </div>
@@ -216,7 +216,7 @@ export default function Home(props) {
                     <div className="col-md-12">
                       <div className="link-btn">
                         <Link href={"/"}>
-                          <a className="btn-donate">Events Calender</a>
+                          <a className="btn-main">Events Calender</a>
                         </Link>
                       </div>
                     </div>
@@ -297,7 +297,7 @@ export default function Home(props) {
                   </h4>
                 </div>
                 <div className="btn-box">
-                  <a className="btn-donate">get in touch</a>
+                  <a className="btn-main">get in touch</a>
                 </div>
               </div>
             </div>
