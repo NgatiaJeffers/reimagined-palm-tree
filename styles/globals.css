@@ -704,6 +704,107 @@ hr {
 }
 
 /* ABOUT SECTION AREA STYLES */
+.about-section {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 120px 0 0;
+}
+
+.about-content-box {
+  position: relative;
+  display: block;
+  max-width: 570px;
+}
+
+.about-content-box .shape-box {
+  position: absolute;
+  top: -60px;
+  left: -70px;
+  opacity: 0.10;
+}
+
+.about-content-box .shape-box img {
+  height: auto;
+  max-width: 100%;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  animation-name: rotateme;
+  animation-duration: 24s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  -webkit-animation-name: rotateme;
+  -webkit-animation-duration: 24s;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-name: rotateme;
+  -moz-animation-duration: 24s;
+  -moz-animation-iteration-count: infinite;
+  -moz-animation-timing-function: linear;
+  -ms-animation-name: rotateme;
+  -ms-animation-duration: 24s;
+  -ms-animation-iteration-count: infinite;
+  -ms-animation-timing-function: linear;
+  -o-animation-name: rotateme;
+  -o-animation-duration: 24s;
+  -o-animation-iteration-count: infinite;
+  -o-animation-timing-function: linear;
+}
+
+@keyframes rotateme{
+  from{ transform: rotate(-360deg); }
+  to{ transform: rotate(360deg); }
+}
+
+.about-content-box .title {
+  position: relative;
+  display: block;
+  margin-top: -4px;
+  padding-bottom: 32px;
+}
+
+.about-content-box .title h2 {
+  font-size: 48px;
+  line-height: 1.3em;
+  font-weight: 800;
+  text-transform: none;
+}
+
+.about-content-box .sub-title {
+  position: relative;
+  display: block;
+  margin-top: 0;
+  padding-bottom: 11px;
+}
+
+.about-content-box .sub-title .inner {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+
+.about-content-box .sub-title .inner h3 {
+  color: #ee4503;
+  font-size: 25px;
+  line-height: 1.4em;
+  font-weight: 400;
+  font-family: "Gotcha" !important;
+}
+
+.about-content-box .inner-content {
+  position: relative;
+  display: block;
+}
+
+.about-content-box .image-box {
+  position: relative;
+  display: block;
+  margin-left: -28px;
+  margin-top: 50px;
+}
+
 .about-area {
   position: relative;
   display: block;
@@ -2343,6 +2444,149 @@ hr {
   display: block;
   padding-top: 30px;
 }
+
+
+/* EVENTS SECTION STYLING */
+.events-page {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 120px 0 120px;
+  z-index: 1;
+}
+
+.event-card {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  border: 1px px solid #e3e9f4;
+  margin-bottom: 60px;
+  z-index: 1;
+  padding: 45px 40px 45px;
+  transition: all 200ms linear;
+  transition-delay: 0.1s;
+}
+
+.event-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 1px;
+  border: 1px solid #e3e9f4;
+  z-index: -1;
+}
+
+.card-content {
+  position: relative;
+  display: block;
+  transition: .5s;
+}
+
+.card-content .date-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-bottom: 13px;
+}
+
+.card-content .date-box .left {
+  position: relative;
+  display: block;
+  width: 55px;
+  height: 55px;
+  text-align: center;
+  background: #03acee;
+}
+
+.card-content .date-box .left h2 {
+  color: #ffffff;
+  font-size: 36px;
+  line-height: 55px;
+  font-weight: 800;
+}
+
+.card-content .date-box .right {
+  position: relative;
+  display: block;
+  padding-left: 15px;
+}
+
+.card-content .date-box .right h3 {
+  font-size: 22px;
+  line-height: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.card-content .meta-info {
+  position: relative;
+  display: block;
+}
+
+.card-content .meta-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin: 0;
+}
+
+.card-content .meta-info p a {
+  position: relative;
+  display: inline-block;
+  color: #fa8f3d;
+  padding-left: 5px;
+}
+
+.card-content .title {
+  position: relative;
+  display: block;
+  margin-top: 16px;
+}
+
+.card-content .title h2 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+}
+
+.card-content .title h2 a {
+  color: #000000;
+}
+
+.card-content .inner-text {
+  position: relative;
+  display: block;
+  padding: 14px 0 0px;
+}
+
+.card-content .inner-text p {
+  margin: 0;
+}
+
+.card-content .border-box {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: #e3e9f4;
+  margin-top: 32px;
+}
+
+.card-content .border-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  background: #fa8f3d;
+}
+
+
+
+
+
+
 
 /* FOOTER STYLING */
 .footer {

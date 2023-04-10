@@ -3,8 +3,8 @@ import Image from "next/image";
 import { AiOutlineBarChart } from "react-icons/ai";
 import { BiCalendar } from "react-icons/bi";
 
-import report from "../../public/svgs/report.svg";
-import BreadCrumb from "../../components/atoms/Breadcrumb";
+import report from "../../../public/svgs/report.svg";
+import BreadCrumb from "../../../components/atoms/Breadcrumb";
 
 const AnnualReports = () => {
   return (
