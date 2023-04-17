@@ -3,36 +3,48 @@ import Link from "next/link";
 import Image from "next/image";
 
 import BreadCrumb from '../../components/atoms/Breadcrumb';
+import TruncatedParagraph from '../../components/atoms/TruncatedText';
+import { getDayAndMonth } from '../../util/util';
 
 // API CALLS
 import { fetchEvents } from '../../util/fetchEvents';
 
 const EventsPage = (props) => {
     const { events } = props;
-    console.log(events)
+    const groupedEvents = events.reduce((acc, event) => {
+        if(!acc[event?.eventLocation?.slug?.current]) {
+            acc[event?.eventLocation?.slug?.current] = [];
+        }
+        acc[event?.eventLocation?.slug?.current].push(event);
+        return acc;
+    }, {});
+
   return (
     <>
       <BreadCrumb title={"Upcoming Events"} />
       <section className='events-page'>
         <div className='container'>
-            <div className='row'>
+        {Object.entries(groupedEvents)?.map(([slug, events]) => (
+            <div className='row' key={slug}>
+                <div className='col col-xl-12 col-lg-12 col-md-12' >
+                    <div className='title'>
+                    <h2>{slug.split('-').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')}</h2>
+                    </div>
+                </div>
                 {events?.map((item) => (
-                <div className='col-xl-4 col-lg-6 col-md-6' key={item?._id}>
+                    <div className='col-xl-4 col-lg-6 col-md-6' key={item?._id}>
                     <div className='event-card'>
                         <div className='card-content'>
                             <div className='date-box'>
                                 <div className='left'>
-                                    <h2>25</h2>
-                                </div>
-                                <div className='right'>
-                                    <h3>May</h3>
+                                    <h2>{getDayAndMonth(item?.eventDatetime)}</h2>
                                 </div>
                             </div>
                             <div className='meta-info'>
                                 <p>Organized By:
                                     <Link
                                         href={"/"}>
-                                        <a>Faraja</a>
+                                        <a>{item?.organizedBy?.name}</a>
                                     </Link>
                                 </p>
                             </div>
@@ -46,7 +58,7 @@ const EventsPage = (props) => {
                                 </h2>
                             </div>
                             <div className='inner-text'>
-                                <p>This year we plan to BE BOLD and GO GOLD for childhood cancer by organizing a fundraising run/walk on Saturday 24th September 2022 at the Karura Forest.</p>
+                                <p><TruncatedParagraph text={item?.eventDetails.join(" ")} limit={200} /></p>
                             </div>
                             <div className='border-box'></div>
                         </div>
@@ -54,6 +66,7 @@ const EventsPage = (props) => {
                 </div>
                 ))}
             </div>
+            ))}
         </div>
       </section>
     </>

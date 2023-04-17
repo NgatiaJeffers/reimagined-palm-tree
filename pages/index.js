@@ -188,7 +188,7 @@ export default function Home(props) {
                     he is.
                   </div>
                   <div className="row">
-                    {events?.map((event) => (
+                    {events?.slice(0, 2).map((event) => (
                       <div
                         className="col-lg-6 col-md-6 event-block"
                         key={event?._id}
@@ -200,14 +200,14 @@ export default function Home(props) {
                           <div className="organizer">
                             Organized By:{" "}
                             <Link href={"/"}>
-                              <a>Cindy</a>
+                              <a>{event?.organizedBy?.name}</a>
                             </Link>
                           </div>
-                          <h4>{event?.eventDay}</h4>
+                          <h4>{event?.title}</h4>
                           <ul className="post-meta">
                             <li>
                               <AiFillClockCircle className="post-icon" />{" "}
-                              08:00am - Karura Forest, Nairobi, Kenya
+                              {event?.eventDay}
                             </li>
                           </ul>
                         </div>
@@ -215,7 +215,7 @@ export default function Home(props) {
                     ))}
                     <div className="col-md-12">
                       <div className="link-btn">
-                        <Link href={"/"}>
+                        <Link href={"/events"}>
                           <a className="btn-main">Events Calender</a>
                         </Link>
                       </div>

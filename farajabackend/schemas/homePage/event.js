@@ -22,6 +22,12 @@ export default defineType({
             },
         }),
         defineField({
+            name: "eventLocation",
+            title: "Event In",
+            type: "reference",
+            to: {type: "eventLocation"}
+        }),
+        defineField({
             name: "eventDay",
             title: "Event Day",
             type: "string"
@@ -37,8 +43,8 @@ export default defineType({
             type: "datetime",
         }),
         defineField({
-            name: 'author',
-            title: 'Author',
+            name: 'organizedBy',
+            title: 'Organized By',
             type: 'reference',
             to: {type: 'author'},
         }),
