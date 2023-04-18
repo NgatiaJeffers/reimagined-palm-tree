@@ -51,7 +51,7 @@ h6 {
 p {
   font-family: "Galano Grotesque", cursivec !important;
   color: #000;
-  /* font-size: 16px; */
+  font-size: 16px;
   line-height: 1.5;
   margin: 0;
 }
@@ -1299,6 +1299,23 @@ hr {
 .event-area .content-box .link-btn {
   display: block;
   margin-top: 10px;
+}
+
+/* Styles for desktop devices with a screen width of 1024px or larger */
+@media screen and (min-width: 1024px) {
+  /* Your desktop styles here */
+}
+
+/* Styles for tablets with a screen width between 768px and 1023px */
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+  /* Your tablet styles here */
+
+}
+
+/* Styles for mobile devices with a screen width of 767px or smaller */
+@media screen and (max-width: 767px) {
+  /* Your mobile styles here */
+
 }
 
 /* TESTIMONIAL STYLES */
@@ -2597,6 +2614,13 @@ hr {
   position: relative;
   display: block;
   overflow: hidden;
+  height: 100%;
+}
+
+.events-img-box span,
+.events-img-box img {
+  height: 100% !important;
+  position: relative !important;
 }
 
 .events-img-box .tags {
@@ -2721,6 +2745,75 @@ hr {
 .events-details-text-box .bottom-box .btn-one {
   position: relative;
   display: inline-block;
+}
+
+.events-details-box {
+  position: relative;
+  margin-top: 50px;
+  margin-bottom: 0px;
+  padding: 0px 0px 0px 0px;
+}
+
+.events-details-box p {
+  font-size: 14px;
+}
+
+.events-sponsor-details {
+  position: relative;
+  display: block;
+  padding-top: 30px;
+}
+
+.events-sponsor-details .title {
+  position: relative;
+  display: block;
+  padding-top: 15px;
+}
+
+.events-sponsor-details .title h3 {
+  color: #222222;
+  font-size: 23px;
+  line-height: 30px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.events-sponsor-details .shape {
+  position: absolute;
+  top: -10px;
+  left: -20px;
+  opacity: 0.10;
+  z-index: -1;
+}
+
+.sponsors-img-box .sponsor1 {
+  box-shadow: 0px 5px 24px 6px rgba(0, 0, 0, 0.06);
+  margin-top: 30px;
+  border-radius: 10px;
+}
+
+.partnership-title {
+  margin-top: 20px;
+}
+
+.sponsors-img-box .sponsor2 {
+  box-shadow: 0px 5px 24px 6px rgba(0, 0, 0, 0.06);
+  border-radius: 10px;
+}
+
+.sponsors-img-box .sponsor3 {
+  box-shadow: 0px 5px 24px 6px rgba(0, 0, 0, 0.06);
+  align-items: center;
+  align-content: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.sponsors-img-box .powered-title {
+  margin-top: 30px;
 }
 
 

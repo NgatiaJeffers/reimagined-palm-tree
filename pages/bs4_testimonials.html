@@ -641,5 +641,138 @@
     <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.bundle.min.js"></script>
     <script type="text/javascript"></script>
+    <script>
+      
+// pages/events/events-in-nairobi/[slug].js
+
+// import { getEventSlugs, getEventData } from '...'; // import your data fetching functions
+
+// export async function getStaticPaths() {
+//   // Fetch the slugs for all events
+//   const eventSlugs = await getEventSlugs();
+
+//   // Map the slugs to the format expected by Next.js
+//   const paths = eventSlugs.map(slug => ({
+//     params: { slug: slug }
+//   }));
+
+//   // Return the paths for pre-generation
+//   return {
+//     paths,
+//     fallback: false // or 'blocking' or 'true' depending on your use case
+//   };
+// }
+
+// export async function getStaticProps({ params }) {
+//   // Fetch the event data for the specific slug
+//   const eventData = await getEventData(params.slug);
+
+//   // Return the event data as props
+//   return {
+//     props: {
+//       eventData
+//     }
+//   };
+// }
+
+// // Rest of your component code
+
+// import { useEffect, useRef, useState } from "react";
+// import { useRouter } from 'next/router'
+
+// const apikey = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
+// const butter = require('buttercms')(apikey);
+
+// function BlogPost(props) {
+//   const router = useRouter()
+//   const { slug }  = router.query
+//   const [blogPost, setBlogPost] = useState({})
+
+//   // Function to the blog post
+//   function fetchBlogPost() {
+//     butter.post.retrieve(slug)
+//     .then(response => {
+//       const blogPostData = response.data.data
+//       setBlogPost(blogPostData)
+//     })
+//   }
+
+//   useEffect(() => {
+//     // We need to add this if condition because the router wont grab the query in the first render
+//     if(!router.isReady) return;
+//     fetchBlogPost()
+//   }, [router.isReady])
+
+//   return (
+//     <>
+//       # Render post with the data fetched
+//     </>
+//   )
+// }
+
+
+// import { useEffect, useRef, useState } from "react";
+// import { useRouter } from 'next/router'
+
+// const apikey = process.env.NEXT_PUBLIC_BUTTER_CMS_API_KEY;
+// const butter = require('buttercms')(apikey);
+
+// export const getStaticPaths = async () => {
+//     try {
+//         // You can query for all blog posts here to build out the cached files during application build
+
+//         return {
+//             paths:[], // this would be all of the paths returned from your query above
+//             fallback: true, // allows the component to render with a fallback (loading) state while the app creates a static file if there isn't one available.
+//         }
+//     } catch (err) {
+//         return {
+//             paths: [],
+//             fallback: false,
+//         }
+//     }
+// }
+
+
+// export const getStaticProps = async ctx => {
+//     try {
+//         const { slug } = ctx.params || {}
+//         const response = await butter.post.retrieve(slug)
+
+//         if(!response.data?.data) throw new Error('No post data found') // This will cause a 404 for this slug
+
+//         return {
+//             notFound: false,
+//             props: {
+//                 postData: response.data.data,
+//                 slug,
+//             },
+//             revalidate: 5, // determines how long till the cached static file is invalidated.
+//         }
+//     } catch (err) {
+//         return {
+//             notFound: true,
+//             revalidate: 5,
+//         }
+//     }
+// }
+
+
+
+// function BlogPost(props) {
+//   const {isFallback} = useRouter() // We can render a loading state while the server creates a new page (or returns a 404).
+
+//   const {postData} = props
+//   // NOTE: postData might be undefined if isFallback is true
+
+//   return (
+//     <>
+//       # Render post with the data fetched
+//     </>
+//   )
+// }
+
+// export default BlogPost;
+    </script>
   </body>
 </html>
