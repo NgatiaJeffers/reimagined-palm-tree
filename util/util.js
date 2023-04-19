@@ -20,3 +20,16 @@ export const rgbDataURL = (r, g, b) =>
   `data:image/gif;base64,R0lGODlhAQABAPAA${
     triplet(0, r, g) + triplet(b, 255, 255)
   }/yH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==`;
+
+// Check value is null or undefined
+/**
+ * self-described
+ * @param item
+ */
+export const isNullUndefined = (item) => {
+  try {
+    return item === null || item === undefined;
+  } catch (err) {
+    return true;
+  }
+};

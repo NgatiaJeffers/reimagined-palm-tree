@@ -1,20 +1,23 @@
 import { groq } from "next-sanity";
 import { sanityClient } from "../../lib/sanity";
 
-const query = groq `*[_type == "event"] {
+const query = groq`*[_type == "event"] {
     _id,
     title,
     slug,
-    eventDatetime,
-    eventDay,
+    dateCreated,
+    eventDate,
+    image,
     "eventDetails": body[].children[].text,
+    sponsorImages,
     organizedBy -> {
         name,
         slug {
             current
         }
     },
-    eventLocation -> {
+    eventLocation,
+    eventIn-> {
         name,
         slug {
             current
@@ -22,9 +25,8 @@ const query = groq `*[_type == "event"] {
     },
 }`;
 
-
 export default async function handler(req, res) {
-    const events = await sanityClient.fetch(query);
+  const events = await sanityClient.fetch(query);
 
-    res.status(200).json({ events });
+  res.status(200).json({ events });
 }

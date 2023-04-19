@@ -9,18 +9,13 @@ import { urlFor } from "../../../lib/sanity";
 
 import BreadCrumb from "../../../components/atoms/Breadcrumb";
 import DonateSidebar from "../../../components/shared";
-import nature from "../../../public/nature1.jpg";
 import shape from "../../../public/shape.png";
-import program from "../../../public/program-shape.png";
-import sponsor1 from "../../../public/sponsors/VCB.png"
-import sponsor2 from "../../../public/sponsors/safaricom-logo.png";
-import sponsor3 from "../../../public/sponsors/Fitness-with-David-Website-Logo.png";
-import sponsor4 from "../../../public/sponsors/git_green_bg.png";
 
 // API CALLS
 import { fetchEvents } from "../../../util/fetchEvents";
 import { fetchEvent } from "../../../util/fetchEvent";
-import { rgbDataURL } from "../../../util/util";
+import { isNullUndefined, rgbDataURL } from "../../../util/util";
+import EventSponsors from "../eventSponsors";
 
 
 const Event = (props) => {
@@ -60,7 +55,7 @@ const Event = (props) => {
                       </div>
                       <div className="text">
                         <p>Event Date</p>
-                        <h3>{eventData?.eventDay}</h3>
+                        <h3>{eventData?.eventDate}</h3>
                       </div>
                     </li>
                     <li>
@@ -72,7 +67,7 @@ const Event = (props) => {
                       </div>
                       <div className="text">
                         <p>Event Location</p>
-                        <h3>{eventData?.eventDay}</h3>
+                        <h3>{eventData?.eventLocation}</h3>
                       </div>
                     </li>
                   </ul>
@@ -93,76 +88,7 @@ const Event = (props) => {
               <div className="events-details-box">
                 <p>{eventData?.eventDetails.join(" ")}</p>
               </div>
-              <div className="events-sponsor-details">
-                <div className="title">
-                    <h3>THE BE BOLD GO GOLD WALK/RUN IS PROUDLY SPONSORED BY</h3>
-                    <div className="shape">
-                        <Image src={program} />
-                    </div>
-                </div>
-                <div className="sponsors-img-box">
-                    <div className="row">
-                        <div className="col col-xl-12 col-lg-12 col-md-12">
-                            <div className="sponsor1">
-                            <Image 
-                                src={urlFor(eventData?.sponsorImages[0]?.asset).url()} 
-                                width={742}
-                                height={523}
-                                // layout="fill"
-                                // objectFit="cover"
-                                blurDataURL={rgbDataURL(237, 181, 6)}
-                                placeholder="blur"
-                            />
-                            </div>
-                        </div>
-                        <div className="col col-md-6">
-                            <div className="partnership-title">
-                                <p>
-                                    <em>In partnership with:</em>
-                                </p>
-                            </div>
-                            <div className="sponsor2">
-                                    <Image 
-                                        src={urlFor(eventData?.sponsorImages[1]?.image?.asset).url()} 
-                                        width={362}
-                                        height={121}
-                                        // layout="fill"
-                                        // objectFit="cover"
-                                        blurDataURL={rgbDataURL(237, 181, 6)}
-                                        placeholder="blur"
-                                    />
-                            </div>
-                        </div>
-                        <div className="col col-md-6">
-                            <div className="sponsor3">
-                                <Image 
-                                    src={urlFor(eventData?.sponsorImages[2]?.image?.asset).url()} 
-                                    width={192}
-                                    height={83}
-                                    // layout="fill"
-                                    // objectFit="cover"
-                                    blurDataURL={rgbDataURL(237, 181, 6)}
-                                    placeholder="blur"
-                                />
-                            </div>
-                        </div>
-                        <div className="col col-md-12">
-                            <div className="powered-title">
-                                <p>
-                                    <em>Powered By:</em>
-                                </p>
-                            </div>
-                            <div className="sponsor4">
-                                <Image 
-                                    src={sponsor4}
-                                    width={175}
-                                    height={55}
-                                />
-                            </div>
-                        </div>
-                    </div>
-                </div>
-              </div>
+              {!isNullUndefined(eventData?.sponsorImages) && (<EventSponsors sponsors={eventData} />)}
             </div>
             <DonateSidebar />
           </div>

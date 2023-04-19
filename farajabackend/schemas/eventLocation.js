@@ -2,8 +2,8 @@ import {defineField, defineType} from 'sanity';
 import { GoLocation } from 'react-icons/go'
 
 export default defineType({
-  name: 'eventLocation',
-  title: 'Event Location',
+  name: 'eventLocatedIn',
+  title: 'Event Located In',
   type: 'document',
   icon: GoLocation,
   fields: [

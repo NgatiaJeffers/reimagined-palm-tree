@@ -22,19 +22,24 @@ export default defineType({
       },
     }),
     defineField({
-      name: 'eventLocation',
-      title: 'Event In',
+      name: 'eventIn',
+      title: 'Event In (Nairobi or Eldoret)',
       type: 'reference',
-      to: {type: 'eventLocation'},
+      to: {type: 'eventLocatedIn'},
     }),
     defineField({
-      name: 'eventDay',
-      title: 'Event Day',
+      name: 'eventDate',
+      title: 'Event Date',
+      type: 'string',
+    }),
+    defineField({
+      name: 'eventLocation',
+      title: 'Event Location',
       type: 'string',
     }),
     defineField({
       name: 'image',
-      title: 'Event Image',
+      title: 'Event Main Image',
       type: 'image',
       options: {
         hotspot: true,
@@ -46,8 +51,8 @@ export default defineType({
       type: 'blockContent',
     }),
     defineField({
-      name: 'eventDatetime',
-      title: 'Date and Time',
+      name: 'dateCreated',
+      title: 'Date and Time Created',
       type: 'datetime',
     }),
     defineField({

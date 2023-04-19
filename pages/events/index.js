@@ -11,11 +11,12 @@ import { fetchEvents } from "../../util/fetchEvents";
 
 const EventsPage = (props) => {
   const { events } = props;
+  console.log(events)
   const groupedEvents = events.reduce((acc, event) => {
-    if (!acc[event?.eventLocation?.slug?.current]) {
-      acc[event?.eventLocation?.slug?.current] = [];
+    if (!acc[event?.eventIn?.slug?.current]) {
+      acc[event?.eventIn?.slug?.current] = [];
     }
-    acc[event?.eventLocation?.slug?.current].push(event);
+    acc[event?.eventIn?.slug?.current].push(event);
     return acc;
   }, {});
 
@@ -44,7 +45,7 @@ const EventsPage = (props) => {
                     <div className="card-content">
                       <div className="date-box">
                         <div className="left">
-                          <h2>{getDayAndMonth(item?.eventDatetime)}</h2>
+                          <h2>{item?.eventDate}</h2>
                         </div>
                       </div>
                       <div className="meta-info">
@@ -58,7 +59,7 @@ const EventsPage = (props) => {
                       <div className="title">
                         <h2>
                           <Link
-                            as={`/events/events-in-nairobi/${item?.slug.current}`}
+                            as={`/events/events-in-nairobi/${item?.slug?.current}`}
                             href={"/events/events-in-nairobi/[slug]"}
                           >
                             <a>{item?.title}</a>

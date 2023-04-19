@@ -2,31 +2,32 @@ import { groq } from "next-sanity";
 import { sanityClient } from "../../lib/sanity";
 
 const query = groq`*[_type == "event" && slug.current == $slug][0] {
-    _id,
-    title,
-    slug,
-    eventDatetime,
-    eventDay,
-    image,
-    "eventDetails": body[].children[].text,
-    sponsorImages,
-    organizedBy -> {
-        name,
-        slug {
-            current
-        }
-    },
-    eventLocation -> {
-        name,
-        slug {
-            current
-        }
-    },
+  _id,
+  title,
+  slug,
+  image,
+  eventDate,
+  eventLocation,
+  "eventDetails": body[].children[].text,
+  sponsorImages,
+  organizedBy -> {
+      name,
+      slug {
+          current
+      }
+  },
+  eventIn -> {
+      name,
+      slug {
+          current
+      }
+  },
+  dateCreated
 }`;
 
 export default async function handler(req, res) {
   try {
-    const slug = req.query.query
+    const slug = req.query.query;
     const event = await sanityClient.fetch(query, { slug });
 
     if (!event) {

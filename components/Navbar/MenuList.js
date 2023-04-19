@@ -53,10 +53,10 @@ export const MENU_LIST = [
         }
       ]
     },
-    {
-      title: "Testimonials",
-      url: "/testimonials"
-    },
+    // {
+    //   title: "Testimonials",
+    //   url: "/testimonials"
+    // },
     {
       title: "News & Media",
       url: "/news-and-media",

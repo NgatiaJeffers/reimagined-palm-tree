@@ -375,6 +375,42 @@ hr {
   z-index: 99;
 }
 
+/* LAYOUT STYLING */
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.layout main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+.loader-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(8, 155, 213);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* GENERAL */
 .overlay {
   width: 100%;
@@ -1315,7 +1351,16 @@ hr {
 /* Styles for mobile devices with a screen width of 767px or smaller */
 @media screen and (max-width: 767px) {
   /* Your mobile styles here */
+  .event-area .image-box {
+    position: absolute;
+    margin-left: unset !important;
+    background-attachment: fixed !important;
+  }
 
+  .event-area .content-box {
+    padding: 58px 15px 50px !important;
+    background: #fff;
+  }
 }
 
 /* TESTIMONIAL STYLES */
@@ -2018,7 +2063,7 @@ hr {
 
 /* TESTIMONIALS STYLING */
 .breadcrumb-area {
-  background-image: url("/testimonial-banner.jpg");
+  background-image: url("/about.jpg");
   position: relative;
   /* display: block;
   overflow: hidden; */
