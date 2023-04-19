@@ -42,16 +42,16 @@ export const MENU_LIST = [
     {
       title: "Events",
       url: "/events",
-      subMenu: [
-        {
-          title: "Events in Nairobi",
-          url: "/events/events-in-nairobi",
-        },
-        {
-          title: "Events in Eldoret",
-          url: "/events/events-in-eldoret",
-        }
-      ]
+      // subMenu: [
+      //   {
+      //     title: "Events in Nairobi",
+      //     url: "/events/events-in-nairobi",
+      //   },
+      //   {
+      //     title: "Events in Eldoret",
+      //     url: "/events/events-in-eldoret",
+      //   }
+      // ]
     },
     // {
     //   title: "Testimonials",

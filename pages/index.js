@@ -31,6 +31,7 @@ import { fetchSponsors } from "../util/fetchSponsors";
 
 export default function Home(props) {
   const { about, testimonial, images, events, blog, sponsors } = props;
+  console.log(events)
 
   return (
     <>
@@ -210,7 +211,7 @@ export default function Home(props) {
                           <ul className="post-meta">
                             <li>
                               <AiFillClockCircle className="post-icon" />{" "}
-                              {event?.eventDay}
+                              {event?.eventDate}
                             </li>
                           </ul>
                         </div>
@@ -335,7 +336,7 @@ export default function Home(props) {
 }
 
 // Backend call for server side data
-export const getServerSideProps = async () => {
+export const getStaticProps = async () => {
   const images = await fetchBannerContent();
   const about = await fetchAboutUs();
   const testimonial = await fetchTestimonials();
