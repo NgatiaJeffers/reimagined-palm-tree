@@ -62,7 +62,9 @@ const NavbarLayout = () => {
                   })}
                 </ul>
                 <ul className="navbar-nav ms-auto d-lg-inline-flex">
-                <a className="btn-donate">Make a Donation</a>
+                  <Link href={"/donate"}>
+                    <a className="btn-donate">Make a Donation</a>
+                  </Link>
                 </ul>
               </div>
             </div>

@@ -77,10 +77,10 @@ const Banner = (images) => {
                             <p>{image?.text}</p>
                           </div>
                           <div className="banner-buttons d-grid gap-2 d-md-flex">
-                            <Link href={"/"}>
+                            <Link href={"/support-us/faraja-medical-support-fund"}>
                               <a className="btn-main">HOW WE HELP</a>
                             </Link>
-                            <Link href={"/"}>
+                            <Link href={"/support-us"}>
                               <a className="btn-main">SUPPORT US</a>
                             </Link>
                           </div>

@@ -83,7 +83,7 @@ export const MENU_LIST = [
       subMenu: [
         {
           title: "The Faraja Medical Support Fund (FMSF)",
-          url: "/support-us/the-faraja-medical-support-fund"
+          url: "/support-us/faraja-medical-support-fund"
         }
       ]
     },

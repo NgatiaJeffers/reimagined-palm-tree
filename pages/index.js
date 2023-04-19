@@ -94,7 +94,7 @@ export default function Home(props) {
                     <div className="text">{item.bodyText}</div>
                     <div className="text-1">{item.text}</div>
                     <div className="bottom">
-                      <Link href={"/"}>
+                      <Link href={"/about"}>
                         <a className="btn-main">Read More</a>
                       </Link>
                     </div>
@@ -116,7 +116,7 @@ export default function Home(props) {
           <div className="d-flex flex-column flex-lg-row align-items-center justify-content-between donate-content">
             <AiOutlineGift className="icon-gift" />
             <p className="text mr-auto">Donate now to change life forever</p>
-            <Link href={"/"}>
+            <Link href={"/donate"}>
               <a className="btn-donate">Make a Donation</a>
             </Link>
           </div>
@@ -151,7 +151,11 @@ export default function Home(props) {
                     <TruncatedParagraph text={item.text[0]} limit={200} />
                   </div>
                   <div className="testimonial-meta">
-                    <Link href={"/testimonials"}>
+                  <Link
+                      href={"https://farajacancersupport.wordpress.com"}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <a>
                         <strong className="testimonial-name">{item?.name}</strong>
                       </a>
@@ -296,7 +300,9 @@ export default function Home(props) {
                   </h4>
                 </div>
                 <div className="btn-box">
-                  <a className="btn-main">get in touch</a>
+                  <Link href={"/contact-us"}>
+                    <a className="btn-main">get in touch</a>
+                  </Link>
                 </div>
               </div>
             </div>
