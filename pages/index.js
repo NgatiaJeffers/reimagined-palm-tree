@@ -262,10 +262,6 @@ export default function Home(props) {
                         </a>
                       </Link>
                     </div>
-                    <div className="date-box">
-                      <h2>18</h2>
-                      <p>June</p>
-                    </div>
                   </div>
                   <div className="text-holder">
                     <h3 className="blog-title">
