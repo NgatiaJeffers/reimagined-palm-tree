@@ -42,21 +42,7 @@ export const MENU_LIST = [
     {
       title: "Events",
       url: "/events",
-      // subMenu: [
-      //   {
-      //     title: "Events in Nairobi",
-      //     url: "/events/events-in-nairobi",
-      //   },
-      //   {
-      //     title: "Events in Eldoret",
-      //     url: "/events/events-in-eldoret",
-      //   }
-      // ]
     },
-    // {
-    //   title: "Testimonials",
-    //   url: "/testimonials"
-    // },
     {
       title: "News & Media",
       url: "/news-and-media",
@@ -64,16 +50,6 @@ export const MENU_LIST = [
         {
           title: "Updates on Faraja Cancer Support Trust",
           url: "/news-and-media/updates-on-faraja-cancer-support-trust",
-        }
-      ]
-    },
-    {
-      title: "Gallery",
-      url: "/gallery",
-      subMenu: [
-        {
-          title: "Faraja Videos",
-          url: "/gallery/faraja-videos"
         }
       ]
     },

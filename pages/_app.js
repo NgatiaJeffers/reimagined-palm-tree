@@ -1,4 +1,6 @@
 import React, { useEffect, useState } from "react";
+import { createTheme, ThemeProvider } from "@mui/material";
+import CssBaseline from "@mui/material/CssBaseline";
 import Head from "next/head";
 import '../styles/globals.css';
 import "swiper/css"
@@ -12,6 +14,7 @@ config.autoAddCss = false;
 import Layout from "../components/Layout";
 
 function MyApp({ Component, pageProps }) {
+  const theme = createTheme();
   const [showing, setShowing] = useState(false);
 
   useEffect(() => {
@@ -27,11 +30,12 @@ function MyApp({ Component, pageProps }) {
     <></>
   } else {
     return (
-      <>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
         <Layout>
           <Component {...pageProps} />
         </Layout>
-      </>
+      </ThemeProvider>
     );
   }
   

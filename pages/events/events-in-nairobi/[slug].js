@@ -16,10 +16,12 @@ import { fetchEvents } from "../../../util/fetchEvents";
 import { fetchEvent } from "../../../util/fetchEvent";
 import { isNullUndefined, rgbDataURL } from "../../../util/util";
 import EventSponsors from "../eventSponsors";
+import BeBoldGoGoldForm from "../../../components/Form/BeBoldGoBold/BeBoldGoGold";
 
 
 const Event = (props) => {
     const { isFallback } = useRouter();
+    const [showRegistartionForm, setShowRegistrationForm] = useState(false);
     const { eventData } = props
     console.log(eventData)
     
@@ -73,15 +75,16 @@ const Event = (props) => {
                   </ul>
                   <div className="bottom-box">
                     <div className="btns">
-                      <Link href={"/"}>
-                        <a className="btn-one">
+                        <a className="btn-one" onClick={() => setShowRegistrationForm(true)}>
                           <span className="txt">
                             <AiFillCheckCircle className="check" />
                             join this event
                           </span>
                         </a>
-                      </Link>
                     </div>
+                  </div>
+                  <div className="form-area">
+                    {showRegistartionForm && <BeBoldGoGoldForm />}
                   </div>
                 </div>
               </div>
