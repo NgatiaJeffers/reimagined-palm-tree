@@ -2017,6 +2017,64 @@ hr {
   background-size: 100% 5%;
 }
 
+.widget .socials {
+  margin-left: 0 !important;
+  list-style-type: none;
+  margin: 0;
+}
+
+.widget .socials li {
+  position: relative;
+  margin-bottom: 12px;
+  overflow: hidden;
+  color: #000;
+  padding-left: 18px;
+  font-weight: 500;
+  font-size: 15px;
+  margin-bottom: 19px !important;
+  padding-bottom: 19px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding-left: 0 !important;
+}
+
+.widget .socials li a {
+  color: #000;
+}
+
+.widget .socials li a:hover {
+  color: #bd432c;
+}
+
+.widget .socials li a .icon-wrap {
+  width: 34px;
+  height: 34px;
+  line-height: 39px;
+  margin-right: 14px;
+  text-align: center;
+  transition: .5s;
+  background: #ffeeeb;
+}
+.widget .socials li a:hover .icon-wrap {
+  background-color: #bd432c;
+  color: #fff !important;
+}
+
+.widget .socials li a .icon-wrap .icon {
+  color: #3B5998;
+}
+
+.widget .socials li a:hover .icon-wrap .icon {
+  color: #fff !important;
+}
+
+.widget .socials li a .icon-wrap .icon-link {
+  color: #bd432c;
+}
+
+.widget .socials li a:hover .icon-wrap .icon-link {
+  color: #fff !important;
+}
+
 
 
 

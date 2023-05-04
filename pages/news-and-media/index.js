@@ -3,7 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiExternalLink } from "react-icons/fi";
+import { AiFillFacebook } from "react-icons/ai";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
 
@@ -30,6 +31,47 @@ const NewsAndMedia = () => {
                         <div className="col-lg-8 col-md-12 blog-post-list-with-pagination">
                             <div className="row">
                                 <div className="col-lg-12 col-md-12">
+                                    <div className="single-blog-post bg-white">
+                                        <div className="row">
+                                            <div className="col-lg-5 col-md-5">
+                                                <div className="image-for-blog"
+                                                    style={{ backgroundImage: `url(/nature.jpg)`}}
+                                                >
+                                                    <Image src={nature}/>
+                                                </div>
+                                            </div>
+                                            <div className="col-lg-7 col-md-7">
+                                                <div className="content">
+                                                    <ul className="meta ps-0">
+                                                        <li>
+                                                            <BsFillCalendar2CheckFill className="icon" />
+                                                            <span>April 14, 2023</span>
+                                                        </li>
+                                                        <li>
+                                                            <BiTimeFive className="icon" />
+                                                            <span>2 min read</span>
+                                                        </li>
+                                                    </ul>
+                                                    <h3>
+                                                        <Link href={'/'}>
+                                                            <a>The White Water Rafting Challenge</a>
+                                                        </Link>
+                                                    </h3>
+                                                    <p>
+                                                        Faraja’s annual White Water Rafting Challenge is an annual 
+                                                        event organized by Faraja Cancer Support Trust in 
+                                                        partnership with Savage Wilderness Camp.
+                                                    </p>
+                                                    <Link href={"/"}>
+                                                        <a className="post-btn">
+                                                            <span>Continue Reading</span>
+                                                            <FiArrowUpRight className="icon" />
+                                                        </a>
+                                                    </Link>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                     <div className="single-blog-post bg-white">
                                         <div className="row">
                                             <div className="col-lg-5 col-md-5">
@@ -111,6 +153,34 @@ const NewsAndMedia = () => {
                                             </h4>
                                         </div>
                                     </article>
+                                </div>
+                                <div className="widget bg-white">
+                                    <h2>
+                                        Follow Us
+                                        <Image src={titleShape} />
+                                    </h2>
+                                    <ul className="socials ps-0 mb-0">
+                                        <li className="d-flex align-items-center justify-content-between">
+                                            <Link href={"/"}>
+                                                <a className="d-flex align-items-center">
+                                                    <span className="icon-wrap">
+                                                        <AiFillFacebook className="icon" />
+                                                    </span>
+                                                    Facebook
+                                                </a>
+                                            </Link>
+                                            <span className="text-gray-color">
+                                                <Link href={"/"}>
+                                                    <a className="d-flex align-items-center">
+                                                        <span className="icon-wrap">
+                                                            <FiExternalLink className="icon-link" />
+                                                        </span>
+                                                        Facebook
+                                                    </a>
+                                                </Link>
+                                            </span>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
