@@ -5,18 +5,18 @@ import Image from "next/image";
 import { BsCalendar2CheckFill } from "react-icons/bs";
 import { MdLocationOn } from "react-icons/md";
 import { AiFillCheckCircle } from "react-icons/ai";
-import { urlFor } from "../../../lib/sanity";
+import { urlFor } from "../../lib/sanity";
 
-import BreadCrumb from "../../../components/atoms/Breadcrumb";
-import DonateSidebar from "../../../components/shared";
-import shape from "../../../public/shape.png";
+import BreadCrumb from "../../components/atoms/Breadcrumb";
+import DonateSidebar from "../../components/shared";
+import shape from "../../public/shape.png";
 
 // API CALLS
-import { fetchEvents } from "../../../util/fetchEvents";
-import { fetchEvent } from "../../../util/fetchEvent";
-import { isNullUndefined, rgbDataURL } from "../../../util/util";
-import EventSponsors from "../eventSponsors";
-import BeBoldGoGoldForm from "../../../components/Form/BeBoldGoBold/BeBoldGoGold";
+import { fetchEvents } from "../../util/fetchEvents";
+import { fetchEvent } from "../../util/fetchEvent";
+import { isNullUndefined, rgbDataURL } from "../../util/util";
+import EventSponsors from "./eventSponsors";
+import BeBoldGoGoldForm from "../../components/Form/BeBoldGoBold/BeBoldGoGold";
 
 
 const Event = (props) => {

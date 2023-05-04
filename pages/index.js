@@ -201,12 +201,6 @@ export default function Home(props) {
                           <div className="date">
                             {getDayAndMonth(event?.eventDatetime)}
                           </div>
-                          <div className="organizer">
-                            Organized By:{" "}
-                            <Link href={"/"}>
-                              <a>{event?.organizedBy?.name}</a>
-                            </Link>
-                          </div>
                           <h4>{event?.title}</h4>
                           <ul className="post-meta">
                             <li>

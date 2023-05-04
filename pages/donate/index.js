@@ -8,9 +8,9 @@ const DonatePage = () => {
     <Fragment>
     <BreadCrumb title={"Make a Donation"} />
     <section className="donate-area"></section>
-    {/* <section>
+    <section>
       <MultiPageForm />
-    </section> */}
+    </section>
 </Fragment>
   ) 
 }

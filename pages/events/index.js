@@ -11,7 +11,7 @@ import { fetchEvents } from "../../util/fetchEvents";
 
 const EventsPage = (props) => {
   const { events } = props;
-  console.log(events)
+
   const groupedEvents = events.reduce((acc, event) => {
     if (!acc[event?.eventIn?.slug?.current]) {
       acc[event?.eventIn?.slug?.current] = [];
@@ -59,8 +59,8 @@ const EventsPage = (props) => {
                       <div className="title">
                         <h2>
                           <Link
-                            as={`/events/events-in-nairobi/${item?.slug?.current}`}
-                            href={"/events/events-in-nairobi/[slug]"}
+                            as={`/events/${item?.slug?.current}`}
+                            href={"/events/[slug]"}
                           >
                             <a>{item?.title}</a>
                           </Link>
