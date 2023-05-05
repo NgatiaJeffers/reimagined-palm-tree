@@ -1,7 +1,7 @@
 import { groq } from "next-sanity";
 import { sanityClient } from "../../lib/sanity";
 
-const query = groq `*[_type == 'blog'] {
+const query = groq`*[_type == 'blog'] {
     _id,
     title,
     slug,
