@@ -126,9 +126,8 @@ const AboutPage = () => {
             >
               <Tab label="Our Story" {...allyProps(0)} />
               <Tab label="Our Mission" {...allyProps(1)} />
-              <Tab label="Our Vision" {...allyProps(2)} />
-              <Tab label="Our Services" {...allyProps(3)} />
-              <Tab label="Meet The Team" {...allyProps(4)} />
+              <Tab label="Our Services" {...allyProps(2)} />
+              <Tab label="Meet The Team" {...allyProps(3)} />
             </Tabs>
           </AppBar>
           <SwipeableViews
@@ -143,12 +142,9 @@ const AboutPage = () => {
               <OurMission />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              <OurVision />
-            </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
               <OurServices />
             </TabPanel>
-            <TabPanel value={value} index={4} dir={theme.direction}>
+            <TabPanel value={value} index={3} dir={theme.direction}>
               <MeetTheTean />
             </TabPanel>
           </SwipeableViews>

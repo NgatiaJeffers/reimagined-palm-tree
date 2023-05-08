@@ -144,6 +144,75 @@ hr {
 }
 
 
+/* GENERAL */
+.overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: rgb(43 39 39 / 33%);
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+.section {
+  position: relative;
+  display: block;
+  background: #fff;
+  padding: 105px 0px 110px 0px;
+}
+
+.section-content {
+  max-width: 800px;
+}
+
+.section-content .title h2 {
+  font-size: 48px;
+  font-weight: 800;
+}
+
+.section-content .content p {
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  text-transform: none;
+  color: #919191;
+  margin-top: 0;
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.card-wrapper {
+  margin: 5px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  z-index: 1;
+}
+
+.card-wrapper .section-card {
+  margin: 0;
+  padding: 57px 39px 60px 35px;
+  height: 350px;
+}
+
+.card-wrapper .section-card .card-bg-wrap {
+  position: absolute;
+  background-color: #000 !important;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -2;
+  transition: border-color 300ms,border-width 100ms;
+  -moz-transition: border-color 300ms,border-width 100ms;
+  -o-transition: border-color 300ms,border-width 100ms;
+  -webkit-transition: border-color 300ms,border-width 100ms;
+}
+
+
+
 
 
 
@@ -419,18 +488,6 @@ hr {
   align-items: center;
 }
 
-/* GENERAL */
-.overlay {
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgb(43 39 39 / 33%);
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
-}
 
 /* MAIN SILDER STYLES */
 .main-slider {
@@ -759,10 +816,12 @@ hr {
   position: relative;
   display: block;
   max-width: 570px;
+  margin-top: 100px;
 }
 
 .about-content-box .shape-box {
   position: absolute;
+  width: 190px;
   top: -60px;
   left: -70px;
   opacity: 0.10;
