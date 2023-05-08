@@ -8,7 +8,7 @@ import { AiFillCheckCircle } from "react-icons/ai";
 import { urlFor } from "../../lib/sanity";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
-import DonateSidebar from "../../components/shared";
+import DonateSidebar from "../../components/shared/DonateSidebar";
 import shape from "../../public/shape.png";
 
 // API CALLS

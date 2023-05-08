@@ -5,7 +5,7 @@ import { FaRibbon } from "react-icons/fa";
 import BreadCrumb from "../../../components/atoms/Breadcrumb";
 import common from "../../../public/common.jpg";
 import shape from "../../../public/shape.png";
-import DonateSidebar from "../../../components/shared";
+import DonateSidebar from "../../../components/shared/DonateSidebar";
 
 
 const ProstatePage = () => {
