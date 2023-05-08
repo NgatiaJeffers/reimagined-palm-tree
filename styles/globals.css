@@ -165,8 +165,8 @@ hr {
   display: block;
   position: fixed !important;
   /* Glassmorphism */
-  background: rgba(255, 255, 255, 0.2) !important;
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.1) !important;
+  /* background: rgba(255, 255, 255, 0.2) !important; */
+  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.4) !important;
   backdrop-filter: blur(6.5px) !important;
   -webkit-backdrop-filter: blur(6.5px) !important;
 }

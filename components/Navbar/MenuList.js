@@ -44,12 +44,12 @@ export const MENU_LIST = [
       url: "/events",
     },
     {
-      title: "News & Media",
-      url: "/news-and-media",
+      title: "What's Happening",
+      url: "/whats-happening",
       submMenu: [
         {
           title: "Updates on Faraja Cancer Support Trust",
-          url: "/news-and-media/updates-on-faraja-cancer-support-trust",
+          url: "/whats-happening/updates-on-faraja-cancer-support-trust",
         }
       ]
     },

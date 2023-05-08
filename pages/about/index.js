@@ -1,61 +1,158 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from "next/image";
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { useTheme } from "@mui/material/styles";
+import { makeStyles } from "@mui/styles"
+import { AppBar, Tabs, Tab, Typography, Box } from "@mui/material";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
+import OurStory from "../components/about-children/OurStory";
 
 import shape from "../../public/shape2.png";
 import image from "../../public/diff.jpg";
+import OurMission from "../components/about-children/OurMission";
+import OurVision from "../components/about-children/OurVision";
+import OurServices from "../components/about-children/OurServices";
+import MeetTheTean from "../components/about-children/MeetTheTeam";
+
+
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+    role="tabpanel"
+    hidden={value !== index}
+    id={`full-width-tabpanel-${index}`}
+    aria-labelly={`full-width-tab-${index}`}
+    {...other}
+    >
+      {value === index && (
+        <Box sx={{ p: 3}}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.PropTypes = {
+  children: PropTypes.node,
+  index: PropTypes.number.isRequired,
+  value: PropTypes.number.isRequired,
+};
+
+function allyProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  }
+}
+
+const useStyles = makeStyles({
+  root: {
+    background: "linear-gradient(90deg, rgba(58,202,232,1) 7%, rgba(224,116,74,1) 50%, rgba(58,202,232,1) 100%)"
+  },
+
+  isSticky: {
+    position: "fixed !important",
+    top: "100px",
+    zIndex: "1",
+  },
+
+  tabBar: {
+    "& .MuiTabs-flexContainer": {
+      height: "70px !important"
+    },
+
+    "& .MuiButtonBase-root.MuiTab-root": {
+      fontSize: "15px",
+      textTransform: "none",
+      fontWeight: "700",
+      transition: ".5s",
+    },
+
+    "& .MuiTabs-indicator": {
+      background: "radial-gradient(circle, rgba(255,131,27,1) 0%, rgba(3,173,236,1) 100%)"
+    }
+  }
+})
 
 const AboutPage = () => {
+  const theme = useTheme();
+  const classes = useStyles();
+  const [value, setValue] = useState(0);
+  const [isSticky, setIsSticky] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 100) {
+        setIsSticky(true);
+      } else {
+        setIsSticky(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.addEventListener('scroll', handleScroll)
+    };
+  }, []);
+
+  const handleChange= (event, newValue) => {
+    setValue(newValue);
+  }
+
+  const handleChangeIndex = (index) => {
+    setValue(index)
+  }
   return (
     <>
       <BreadCrumb title={"About Us"} />
-      <section className="about-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-xl-7">
-              <div className="about-content-box">
-                <div className="shape-box">
-                  <Image src={shape} />
-                </div>
-                <div className="title">
-                  <div className="sub-title">
-                    <div className="inner">
-                      <h3>Give a little, change a lot</h3>
-                    </div>
-                  </div>
-                  <h2>
-                    Our Mission Is To Make The World A Better Place For Everyone
-                  </h2>
-                </div>
-                <div className="inner-content">
-                  <p>
-                    The Faraja Cancer Support Trust was founded in 2010 with the
-                    aim of providing emotional, practical and healing support to
-                    anyone affected by cancer. We offer cancer patients and
-                    their carers information, advice, counselling and
-                    complementary therapies in order to make their cancer
-                    journey a little more manageable.
-                  </p>
-                  <p>
-                    We work alongside several institutions and hospitals that
-                    offer conventional cancer treatments such as radiotherapy,
-                    chemotherapy and surgery. We aim to take our patients beyond
-                    medical treatment through offering them a holistic approach
-                    to coping with the challenges of cancer.
-                  </p>
-                </div>
-              </div>
-            </div>
-            <div className="col-xl-5">
-              <div className="image-box">
-                <Image 
-                src={image}
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+      <section>
+        <Box>
+          <AppBar className={`${classes.root} ${isSticky ? classes.isSticky : ""}`} position="static">
+            <Tabs
+              className={classes.tabBar}
+              value={value}
+              onChange={handleChange}
+              indicatorColor="secondary"
+              textColor="inherit"
+              variant="fullWidth"
+              aria-label="full width"
+              centered
+            >
+              <Tab label="Our Story" {...allyProps(0)} />
+              <Tab label="Our Mission" {...allyProps(1)} />
+              <Tab label="Our Vision" {...allyProps(2)} />
+              <Tab label="Our Services" {...allyProps(3)} />
+              <Tab label="Meet The Team" {...allyProps(4)} />
+            </Tabs>
+          </AppBar>
+          <SwipeableViews
+            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            index={value}
+            onChangeIndex={handleChangeIndex}
+          >
+            <TabPanel value={value} index={0} dir={theme.direction}>
+              <OurStory />
+            </TabPanel>
+            <TabPanel value={value} index={1} dir={theme.direction}>
+              <OurMission />
+            </TabPanel>
+            <TabPanel value={value} index={2} dir={theme.direction}>
+              <OurVision />
+            </TabPanel>
+            <TabPanel value={value} index={3} dir={theme.direction}>
+              <OurServices />
+            </TabPanel>
+            <TabPanel value={value} index={4} dir={theme.direction}>
+              <MeetTheTean />
+            </TabPanel>
+          </SwipeableViews>
+        </Box>
       </section>
     </>
   );

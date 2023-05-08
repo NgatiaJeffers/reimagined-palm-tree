@@ -28,10 +28,10 @@ const NavbarLayout = () => {
         const header = document.querySelector("#sticky-header");
         const position = window.pageYOffset;
 
-        if (position < 400) {
+        if (position < 100) {
             header.classList.remove("is-active");
         }
-        if (position > 401) {
+        if (position > 101) {
             header.classList.add("is-active");
         }
 

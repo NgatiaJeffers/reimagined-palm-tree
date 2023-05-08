@@ -238,7 +238,7 @@ export default function Home(props) {
                 <h3>We Change Your Life & World</h3>
               </div>
             </div>
-            <h2>News & Happenings</h2>
+            <h2>What's Happening</h2>
           </div>
           <div className="row">
             {blog?.map((item) => (
