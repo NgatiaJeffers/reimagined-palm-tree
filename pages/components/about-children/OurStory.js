@@ -2,7 +2,7 @@ import React, { Fragment } from "react";
 import Image from "next/image";
 
 import shape from "../../../public/shape2.png";
-import image from "../../../public/diff.jpg";
+import image from "../../../public/New content/Donation in Kind.jpeg";
 import Support from "../../../components/shared/Support";
 
 const OurStory = () => {

@@ -52,7 +52,12 @@ function allyProps(index) {
 
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(90deg, rgba(58,202,232,1) 7%, rgba(224,116,74,1) 50%, rgba(58,202,232,1) 100%)"
+    background: "linear-gradient(90deg, rgba(58,202,232,1) 7%, rgba(224,116,74,1) 50%, rgba(58,202,232,1) 100%)",
+    boxShadow: "none !important",
+
+    "& .MuiPaper-root.MuiAppBar-root": {
+      boxShadow: "none"
+    },
   },
 
   isSticky: {
