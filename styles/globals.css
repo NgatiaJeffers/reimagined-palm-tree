@@ -186,31 +186,65 @@ hr {
 
 .card-wrapper {
   margin: 5px 0px 0px 0px;
-  padding: 0px 0px 0px 0px;
+  padding: 0px 0px 80px 0px;
   z-index: 1;
 }
 
-.card-wrapper .section-card {
+.card-wrapper .card {
   margin: 0;
   padding: 57px 39px 60px 35px;
   height: 350px;
+  cursor: pointer;
+  border-radius: unset !important;
 }
 
-.card-wrapper .section-card .card-bg-wrap {
+.card-wrapper .card:hover {
+  /* background-color: #000 !important; */
+  background: #ff88177d;
+  color: #fff !important;
+  transition: .5s;
+}
+
+
+.card-wrapper .card-border {
+  position: relative;
+  display: block;
+  width: 90px;
+  height: 5px;
+  z-index: 1;
+  margin-bottom: 10px;
+}
+
+.card-wrapper .card-border::before {
+  content: "";
   position: absolute;
-  background-color: #000 !important;
   top: 0;
-  right: 0;
-  bottom: 0;
   left: 0;
-  overflow: hidden;
-  z-index: -2;
-  transition: border-color 300ms,border-width 100ms;
-  -moz-transition: border-color 300ms,border-width 100ms;
-  -o-transition: border-color 300ms,border-width 100ms;
-  -webkit-transition: border-color 300ms,border-width 100ms;
+  bottom: 0;
+  width: 50%;
+  background: #03abec;
 }
 
+.card-wrapper .card-body .card-title {
+  font-size: 31px;
+  font-weight: 600;
+}
+
+.card-wrapper .card-body .card-text {
+  font-size: 16px;
+  font-weight: 400;
+  text-transform: none;
+}
+
+.card-wrapper .card:hover .card-text,
+.card-wrapper .card:hover .card-title {
+  color: #fff !important;
+  transition: .5s;
+}
+
+.card-wrapper .card-body .section-btn {
+  margin-top: 15px;
+}
 
 
 
@@ -3959,7 +3993,7 @@ hr {
   cursor: pointer;
   border-width: 0;
   border-style: solid;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   text-decoration: none;
   outline: none;
   -webkit-backface-visibility: hidden;
@@ -3994,7 +4028,7 @@ hr {
   cursor: pointer;
   border-width: 0;
   border-style: solid;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   text-decoration: none;
   outline: none;
   -webkit-backface-visibility: hidden;
@@ -4035,7 +4069,7 @@ hr {
   line-height: 60px;
   font-weight: 700;
   text-transform: uppercase;
-  border-radius: 10px;
+  /* border-radius: 10px; */
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
@@ -4049,7 +4083,7 @@ hr {
   bottom: 0px;
   right: 45%;
   height: 50%;
-  border-radius: 8px;
+  /* border-radius: 8px; */
   background: #191f2d;
   opacity: 0;
   content: "";
