@@ -236,9 +236,8 @@ hr {
   text-transform: none;
 }
 
-.card-wrapper .card:hover .card-text,
-.card-wrapper .card:hover .card-title {
-  color: #fff !important;
+.card-wrapper .card:hover .card-border::before {
+  background: #fff;
   transition: .5s;
 }
 
