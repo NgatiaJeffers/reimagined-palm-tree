@@ -1168,12 +1168,54 @@ hr {
   text-align: center;
 }
 
-
-.mission-area.bg-image {
-  padding: 120px 0 0;
-  background-size: cover;
-  background:rgb(2, 0, 36);
+.services-area {
+  background-color: #000 !important;
 }
+
+.services-area h2 {
+  color: #fff !important;
+}
+
+.service-section {
+  background-color: rgba(249, 249, 249, 1) !important
+}
+
+.service-section .image-bg {
+  height: 500px;
+  width: 100%;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
+.service-section .content-box {
+  padding: 100px 70px 52px 60px;
+}
+
+.service-section .content-box .heading-box {
+  margin-bottom: 30px;
+}
+
+.service-section .content-box .heading-box .heading-title {
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  color: #111;
+  font-size: 48px;
+}
+
+.service-section .content-box .heading-box p {
+  font-size: 18px;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.react-swipeable-view-container div.MuiBox-root {
+  padding: unset !important;
+}
+
+
+
 
 
 /* DONATE NOW STYLES */
@@ -3426,7 +3468,9 @@ hr {
   background-color: #27304b;
 }
 
-.therapy-wrap h1.heading-main, p {
+.therapy-wrap h1.heading-main,
+.therapy-wrap p
+{
   color: #fff;
   position: relative;
 }
@@ -3489,7 +3533,7 @@ hr {
 .panel-content {
   margin: 5px 25px 25px;
   font-size: 14px;
-  color: #ff8d15;
+  color: #ff8d15 !important;
   opacity: 0;
   transition: opacity 0.3s linear 0.18s;
 }

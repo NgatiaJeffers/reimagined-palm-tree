@@ -8,7 +8,6 @@ import image1 from "../../../public/about1.jpg"
 const OurMission = () => {
   return (
     <Fragment>
-      <section className="mission-area bg-image"></section>
       <section className="about-section">
         <div className="container">
           <div className="row">

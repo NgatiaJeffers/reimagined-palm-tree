@@ -115,7 +115,7 @@ const AboutPage = () => {
   }
   return (
     <>
-      <BreadCrumb title={"About Us"} />
+      {/* <BreadCrumb title={"About Us"} /> */}
       <section>
         <Box>
           <AppBar className={`${classes.root} ${isSticky ? classes.isSticky : ""}`} position="static">
