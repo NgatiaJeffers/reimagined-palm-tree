@@ -26,14 +26,6 @@ const MeetTheTean = () => {
               </div>
               <h4>Dr Noelle Orata</h4>
               <h5>Trustee</h5>
-              <div className="more-info">
-              <p>
-                  Dr. Noelle Orata, a practicing consultant Pathologist and
-                  health systems specialist with over 10 years uninterrupted
-                  clinical and medical management practice.
-                </p>
-
-              </div>
             </div>
           </div>
           <div className="col-12 col-lg-3 col-sm-6">
