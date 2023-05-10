@@ -14,7 +14,7 @@ const FarajaMedicalSupportFund = () => {
                         <h3>Giving hope and a real chance of recovery</h3>
                     </div>
                 </div>
-                <h2>The faraja Medical Support Fund</h2>
+                <h2>The Faraja Medical Support Fund</h2>
             </div>
         </div>
     </section>

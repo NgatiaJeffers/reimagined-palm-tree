@@ -1219,6 +1219,73 @@ hr {
   padding: unset !important;
 }
 
+.team-section-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0px 0px 97px 0px rgba(0, 0, 0, 0.12);
+  padding: 1.5rem;
+  border-radius: 7px;
+  margin-bottom: 3rem;
+  cursor: pointer;
+}
+
+.team-section-wrap .more-info {
+  /* position: absolute; */
+  transition: .5s;
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+
+.team-section-wrap:hover .more-info {
+  width: 100%;
+}
+
+.team-section-wrap .img {
+  text-align: center;
+  margin: 1.5rem auto 2.5rem;
+  position: relative;
+  border-radius: 50%;
+  height: 160px;
+  width: 160px;
+  overflow: hidden;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.team-section-wrap .img.green {
+  box-shadow: 0px 0px 0px 20px rgba(0, 166, 118, 0.1);
+}
+
+.team-section-wrap .img img {
+  width: 160px !important;
+  height: 160px !important;
+  margin: 0 auto 25px;
+  border-radius: 50%!important;
+  object-fit: cover;
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.team-section-wrap h4 {
+  color: #bd432c;
+  font-weight: 800;
+  font-size: 1.25rem;
+}
+
+.team-section-wrap h5 {
+  color: #6e7c90;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
 
 
 
@@ -3541,11 +3608,19 @@ hr {
 }
 
 .therapy-area .panel {
-  color: #fff ;
+  color: #fff !important;
 }
 
 .therapy-area .panel-content {
   color: #ff8d15 !important;
+}
+
+.therapy-area .panel-label:after, .therapy-area .panel-label:before {
+  background-color: #fff !important;
+}
+
+.therapy-area .panel[aria-expanded='true'] .panel-label {
+  color: #fff !important;
 }
 
 
