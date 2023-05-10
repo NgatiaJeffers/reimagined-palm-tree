@@ -170,6 +170,11 @@ hr {
   opacity: 0.8;
 }
 
+.underline {
+  background-image: linear-gradient(to bottom,rgba(0,0,0,0) 80%,#ff980e 80%); 
+  background-size: 100px 1.2em;
+}
+
 
 /* GENERAL */
 .overlay {
@@ -617,7 +622,7 @@ hr {
   position: relative;
   display: block;
   width: 100%;
-  z-index: 10 !important;
+  z-index: 1 !important;
 }
 
 .content-box .title h3 {
@@ -1218,7 +1223,62 @@ hr {
 
 
 
-/* DONATE NOW STYLES */
+
+
+
+/* =====================SUPPORT US PAGE STYLES==================== */
+.support-area {
+  position: relative;
+  display: block;
+  background: #ffffff;
+  padding: 120px 0 60px;
+}
+
+.support-area .content-box {
+  margin-bottom: 30px;
+}
+
+.support-area .content-box .heading-title {
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  color: #111;
+  font-size: 48px;
+}
+
+.support-area .content-box p {
+  font-size: 18px;
+  margin-top: 30px;
+  line-height: 1.6;
+}
+
+.support-area .sub-heading {
+  font-weight: 700;
+  text-decoration: none;
+  font-style: normal;
+  color: #111;
+  font-size: 2rem;
+}
+
+.support-area .panel {
+  border-bottom: 1px solid #777;
+}
+
+.support-area .content-box .panel-label {
+  color: #000 !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* =======================DONATE NOW STYLES =============================*/
 .donate-now-area {
   position: relative;
   display: block;
@@ -3484,62 +3544,11 @@ hr {
   color: #fff ;
 }
 
-.panel-label {
-  position: relative;
-  display: block;
-  width: 100%;
-  background: none;
-  border: none;
-  text-align: left;
-  padding: 25px 60px 25px 25px;
-  font-weight: 500;
-  font-size: 17px;
-  font-family: inherit;
-  transition: color 0.2s linear;
-  cursor: pointer;
-}
-.panel-label:focus {
-  outline: none;
-}
-.panel-label:after,
-.panel-label:before {
-  content: '';
-  position: absolute;
-  right: 25px;
-  top: 50%;
-  width: 22px;
-  height: 2px;
-  margin-top: -2px;
-  background-color: #ffffff;
-}
-.panel-label:before {
-  transform: rotate(-90deg);
-  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-.panel[aria-expanded='true'] .panel-content {
-  opacity: 1;
-}
-.panel[aria-expanded='true'] .panel-label {
-  color: #fff;
-}
-.panel[aria-expanded='true'] .panel-label:before {
-  transform: rotate(0deg);
-}
-.panel-inner {
-  overflow: hidden;
-  will-change: height;
-  transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
-}
-.panel-content {
-  margin: 5px 25px 25px;
-  font-size: 14px;
+.therapy-area .panel-content {
   color: #ff8d15 !important;
-  opacity: 0;
-  transition: opacity 0.3s linear 0.18s;
 }
-.panel:not(:last-child) {
-  margin-bottom: 3px;
-}
+
+
 
 
 
@@ -4279,4 +4288,61 @@ hr {
   font-size: 30px;
   padding-right: 10px;
   z-index: 1;
+}
+
+.panel-label {
+  position: relative;
+  display: block;
+  width: 100%;
+  background: none;
+  border: none;
+  text-align: left;
+  padding: 25px 60px 25px 25px;
+  font-weight: 500;
+  font-size: 17px;
+  font-family: inherit;
+  transition: color 0.2s linear;
+  cursor: pointer;
+}
+.panel-label:focus {
+  outline: none;
+}
+.panel-label:after,
+.panel-label:before {
+  content: '';
+  position: absolute;
+  right: 25px;
+  top: 50%;
+  width: 22px;
+  height: 2px;
+  margin-top: -2px;
+  background-color: #000000;
+}
+.panel-label:before {
+  transform: rotate(-90deg);
+  transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel[aria-expanded='true'] .panel-content {
+  opacity: 1;
+}
+.panel[aria-expanded='true'] .panel-label {
+  color: #000000;
+}
+.panel[aria-expanded='true'] .panel-label:before {
+  transform: rotate(0deg);
+}
+.panel-inner {
+  overflow: hidden;
+  will-change: height;
+  transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
+}
+.panel-content {
+  margin: 5px 25px 25px;
+  font-size: 14px;
+  color: #000000 !important;
+  opacity: 0;
+  transition: opacity 0.3s linear 0.18s;
+}
+.panel:not(:last-child) {
+  margin-bottom: 3px;
 }
