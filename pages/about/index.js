@@ -3,7 +3,7 @@ import Image from "next/image";
 import PropTypes from "prop-types";
 import SwipeableViews from "react-swipeable-views";
 import { useTheme } from "@mui/material/styles";
-import { makeStyles } from "@mui/styles"
+import { makeStyles } from "@mui/styles";
 import { AppBar, Tabs, Tab, Typography, Box } from "@mui/material";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
@@ -16,20 +16,19 @@ import OurVision from "../components/about-children/OurVision";
 import OurServices from "../components/about-children/OurServices";
 import MeetTheTean from "../components/about-children/MeetTheTeam";
 
-
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
   return (
     <div
-    role="tabpanel"
-    hidden={value !== index}
-    id={`full-width-tabpanel-${index}`}
-    aria-labelly={`full-width-tab-${index}`}
-    {...other}
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelly={`full-width-tab-${index}`}
+      {...other}
     >
       {value === index && (
-        <Box sx={{ p: 3}}>
+        <Box sx={{ p: 3 }}>
           <Typography>{children}</Typography>
         </Box>
       )}
@@ -46,17 +45,18 @@ TabPanel.PropTypes = {
 function allyProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
-  }
+    "aria-controls": `full-width-tabpanel-${index}`,
+  };
 }
 
 const useStyles = makeStyles({
   root: {
-    background: "linear-gradient(90deg, rgba(58,202,232,1) 7%, rgba(224,116,74,1) 50%, rgba(58,202,232,1) 100%)",
+    background:
+      "linear-gradient(90deg, rgba(58,202,232,1) 7%, rgba(224,116,74,1) 50%, rgba(58,202,232,1) 100%)",
     boxShadow: "none !important",
 
     "& .MuiPaper-root.MuiAppBar-root": {
-      boxShadow: "none"
+      boxShadow: "none",
     },
   },
 
@@ -68,7 +68,7 @@ const useStyles = makeStyles({
 
   tabBar: {
     "& .MuiTabs-flexContainer": {
-      height: "70px !important"
+      height: "70px !important",
     },
 
     "& .MuiButtonBase-root.MuiTab-root": {
@@ -79,10 +79,11 @@ const useStyles = makeStyles({
     },
 
     "& .MuiTabs-indicator": {
-      background: "radial-gradient(circle, rgba(255,131,27,1) 0%, rgba(3,173,236,1) 100%)"
-    }
-  }
-})
+      background:
+        "radial-gradient(circle, rgba(255,131,27,1) 0%, rgba(3,173,236,1) 100%)",
+    },
+  },
+});
 
 const AboutPage = () => {
   const theme = useTheme();
@@ -99,26 +100,29 @@ const AboutPage = () => {
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.addEventListener('scroll', handleScroll)
+      window.addEventListener("scroll", handleScroll);
     };
   }, []);
 
-  const handleChange= (event, newValue) => {
+  const handleChange = (event, newValue) => {
     setValue(newValue);
-  }
+  };
 
   const handleChangeIndex = (index) => {
-    setValue(index)
-  }
+    setValue(index);
+  };
   return (
     <>
       {/* <BreadCrumb title={"About Us"} /> */}
       <section>
         <Box>
-          <AppBar className={`${classes.root} ${isSticky ? classes.isSticky : ""}`} position="static">
+          <AppBar
+            className={`${classes.root} ${isSticky ? classes.isSticky : ""}`}
+            position="static"
+          >
             <Tabs
               className={classes.tabBar}
               value={value}
@@ -130,13 +134,12 @@ const AboutPage = () => {
               centered
             >
               <Tab label="Our Story" {...allyProps(0)} />
-              <Tab label="Our Mission" {...allyProps(1)} />
-              <Tab label="Our Services" {...allyProps(2)} />
-              <Tab label="Meet The Team" {...allyProps(3)} />
+              <Tab label="Our Services" {...allyProps(1)} />
+              <Tab label="Meet The Team" {...allyProps(2)} />
             </Tabs>
           </AppBar>
           <SwipeableViews
-            axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+            axis={theme.direction === "rtl" ? "x-reverse" : "x"}
             index={value}
             onChangeIndex={handleChangeIndex}
           >
@@ -144,12 +147,9 @@ const AboutPage = () => {
               <OurStory />
             </TabPanel>
             <TabPanel value={value} index={1} dir={theme.direction}>
-              <OurMission />
-            </TabPanel>
-            <TabPanel value={value} index={2} dir={theme.direction}>
               <OurServices />
             </TabPanel>
-            <TabPanel value={value} index={3} dir={theme.direction}>
+            <TabPanel value={value} index={2} dir={theme.direction}>
               <MeetTheTean />
             </TabPanel>
           </SwipeableViews>

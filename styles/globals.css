@@ -1219,6 +1219,18 @@ hr {
   padding: unset !important;
 }
 
+.our-story-area .our-story-content {
+  padding: 100px 70px 50px 60px;
+}
+
+.our-story-area .box-bg {
+  height: 500px;
+  width: 100%;
+  background-size: contain !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+}
+
 .team-section-wrap {
   background: #fff;
   box-shadow: 0px 0px 97px 0px rgba(0, 0, 0, 0.12);
@@ -2364,8 +2376,8 @@ hr {
 .partner-area {
   position: relative;
   display: block !important;
-  background: #ffffff;
-  padding: 0 0 120px;
+  background: #f3fcf8;
+  padding: 100px 0 100px;
   z-index: 2;
 }
 
@@ -2414,6 +2426,11 @@ hr {
   position: relative;
   display: inline-block;
   overflow: hidden;
+
+  background: #FFF;
+  border-radius: 7px;
+  padding: 2rem;
+  text-align: center;
 }
 
 .single-sponsor .img-box span {
