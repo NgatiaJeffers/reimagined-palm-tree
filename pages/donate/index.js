@@ -4,7 +4,7 @@ import Image from "next/image";
 import BreadCrumb from "../../components/atoms/Breadcrumb";
 import DonateForm from "../../components/Form/DonateForm";
 
-import mpesa from "../../public/mpesa.png";
+import mpesa from "../../public/Mpesa.png";
 import amazon from "../../public/smile-amazon.png";
 import Link from "next/link";
 
