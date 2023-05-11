@@ -1344,6 +1344,54 @@ hr {
 
 
 /* =======================DONATE NOW STYLES =============================*/
+.donate-area {
+  background-color: #ff871908;
+}
+
+.donation-wrap {
+  background: #FFF;
+  border-radius: 20px;
+  padding: 2.5rem;
+  margin-top: 2rem;
+}
+
+.donation-wrap .form-control {
+  border: 2px solid #e9eaed;
+  background-color: #e9eaed;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.donation-wrap .form-control,
+.donation-wrap .form-select {
+  font-size: 0.9375rem;
+  outline: none;
+  color: #5b5b5b;
+  height: auto;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0px 0px 147px 0px rgba(0, 0, 0, 0.07);
+  -webkit-transition: all 400ms ease-in-out;
+  -moz-transition: all 400ms ease-in-out;
+  -o-transition: all 400ms ease-in-out;
+  -ms-transition: all 400ms ease-in-out;
+  transition: all 400ms ease-in-out;
+}
+
+.more-donate-info {
+  background-color: #fff;
+  padding: 1.8rem;
+
+  background: url("") no-repeat center center;
+  background-size: cover;
+  padding: 1.8rem;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+
 .donate-now-area {
   position: relative;
   display: block;
