@@ -173,6 +173,7 @@ hr {
 .underline {
   background-image: linear-gradient(to bottom,rgba(0,0,0,0) 80%,#ff980e 80%); 
   background-size: 100px 1.2em;
+  color: inherit;
 }
 
 
@@ -1353,6 +1354,7 @@ hr {
   border-radius: 20px;
   padding: 2.5rem;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 .donation-wrap .form-control {
@@ -1380,16 +1382,98 @@ hr {
   transition: all 400ms ease-in-out;
 }
 
+.amazon-donate-card {
+  padding: 20px;
+  background-color: #274472;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 13px 16px -8px rgba(0,0,0,0.29);
+-moz-box-shadow: -2px 13px 16px -8px rgba(0,0,0,0.29);
+box-shadow: -2px 13px 16px -8px rgba(0,0,0,0.29);
+}
+
+.amazon-donate-card .amazon-img {
+  justify-content: center;
+  display: flex;
+}
+
+.amazon-donate-card .amazon-img img {
+  margin: auto;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.amazon-donate-card .text,
+.amazon-donate-card .text p {
+  font-size: 1rem;
+  color: #fff !important;
+}
+
 .more-donate-info {
   background-color: #fff;
   padding: 1.8rem;
-
-  background: url("") no-repeat center center;
+  background: url("/donate.jpg") no-repeat center center;
   background-size: cover;
   padding: 1.8rem;
   border-radius: 10px;
   overflow: hidden;
 }
+
+.more-donate-info .card-big-shadow {
+  position: relative;
+  max-width: 315px;
+  margin-bottom: 30px;
+}
+
+.more-donate-info .card-big-shadow .card {
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+  max-height: 600px;
+}
+
+.card-big-shadow .card .content {
+  padding: 20px 40px;
+  text-align: left;
+}
+
+.card-big-shadow .card .content h3 {
+  font-size: 1.5rem;
+  position: relative;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+.card-big-shadow .card .content .btn-donate {
+  padding: 10px 20px !important;
+}
+
+.card-big-shadow .card .banks-info {
+  padding: 20px 40px;
+  text-align: left;
+  overflow: auto;
+}
+
+.card-big-shadow .card .banks-info ol {
+  margin-bottom: 1rem;
+}
+
+.card-big-shadow .card .banks-info h3 {
+  font-size: 1rem;
+  position: relative;
+  font-weight: 800;
+  margin-bottom: 1rem;
+}
+
+
+
+
 
 
 .donate-now-area {
@@ -4304,7 +4388,7 @@ hr {
   cursor: pointer;
   border-width: 0;
   border-style: solid;
-  /* border-radius: 8px; */
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   -webkit-backface-visibility: hidden;
@@ -4339,7 +4423,7 @@ hr {
   cursor: pointer;
   border-width: 0;
   border-style: solid;
-  /* border-radius: 8px; */
+  border-radius: 5px;
   text-decoration: none;
   outline: none;
   -webkit-backface-visibility: hidden;
@@ -4380,7 +4464,7 @@ hr {
   line-height: 60px;
   font-weight: 700;
   text-transform: uppercase;
-  /* border-radius: 10px; */
+  border-radius: 5px;
   -webkit-transition: all 0.3s linear;
   -o-transition: all 0.3s linear;
   transition: all 0.3s linear;
