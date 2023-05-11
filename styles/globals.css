@@ -4556,3 +4556,21 @@ box-shadow: -2px 13px 16px -8px rgba(0,0,0,0.29);
 .panel:not(:last-child) {
   margin-bottom: 3px;
 }
+
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+/* Style the thumb of the scrollbar */
+::-webkit-scrollbar-thumb {
+  background-color: #03adec;
+  border-radius: 10px;
+}
+
+/* Style the track of the scrollbar */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  border-radius: 10px;
+}
