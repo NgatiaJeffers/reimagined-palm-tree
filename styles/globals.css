@@ -305,7 +305,7 @@ hr {
   position: fixed !important;
   /* Glassmorphism */
   /* background: rgba(255, 255, 255, 0.2) !important; */
-  box-shadow: 0 10px 15px rgba(25, 25, 25, 0.4) !important;
+  box-shadow: 0 0px 5px rgba(25, 25, 25, 0.4) !important;
   backdrop-filter: blur(6.5px) !important;
   -webkit-backdrop-filter: blur(6.5px) !important;
 }
@@ -708,7 +708,7 @@ hr {
 .banner-wrapper {
   width: 100%;
   position: relative;
-  /* margin-top: 105px; */
+  margin-top: 105px;
 }
 
 .mySwiper {
@@ -3054,6 +3054,7 @@ box-shadow: -2px 13px 16px -8px rgba(0,0,0,0.29);
   background-size: cover;
   padding: 109px 0 115px;
   z-index: 1;
+  margin-top: 100px;
 }
 
 .breadcrumb-area::before {

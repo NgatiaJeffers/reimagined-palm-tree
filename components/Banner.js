@@ -80,9 +80,6 @@ const Banner = (images) => {
                             <Link href={"/support-us/faraja-medical-support-fund"}>
                               <a className="btn-main">HOW WE HELP</a>
                             </Link>
-                            <Link href={"/support-us"}>
-                              <a className="btn-main">SUPPORT US</a>
-                            </Link>
                           </div>
                         </div>
                       </div>

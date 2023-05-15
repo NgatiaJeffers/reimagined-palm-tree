@@ -2,8 +2,8 @@ import {defineField, defineType} from 'sanity'
 import { BsImage } from 'react-icons/bs'
 
 export default defineType({
-  name: 'bannerImage',
-  title: 'Banner Image',
+  name: 'bannerContent',
+  title: 'Banner Content',
   type: 'document',
   icon: BsImage,
   fields: [

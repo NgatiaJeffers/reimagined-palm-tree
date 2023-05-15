@@ -2,7 +2,7 @@
 import { groq } from "next-sanity";
 import { sanityClient } from "../../lib/sanity";
 
-const query = groq `*[_type == "bannerImage"] {
+const query = groq `*[_type == "bannerContent"] {
     _id,
     title,
     "image": mainImage.asset->,
