@@ -4,39 +4,68 @@ export const MENU_LIST = [
       url: "/" 
     },
     { 
-      title: "About", 
-      url: "/about",
-      subMenu: [
+      title: "Our Story", 
+      subMenu:  [
         {
-          title: "Our work with children",
-          url: "/about/our-work"
+          name: "About",
+          subItems: [
+            {
+              title: "Our Mission",
+              url: "/about",
+              description: "Our mission is to make the world a better place for everyone."
+            },
+            {
+              title: "Our Vision",
+              url: "/about",
+              description: "A safe haven accessible to anyone affected by cancer."
+            },
+            {
+              title: "Meet The Team",
+              url: "/about",
+              description: "Get a glimpse of our able team and staff."
+            },
+            {
+              title: "Our work with children",
+              url: "/about/our-work",
+              description: "Faraja ensures that our services reach children and their families."
+            },
+            {
+              title: "Annual Reports",
+              url: "/about/annual-reports",
+              description: "Our annual reports show how, with your support, we have achieved our strategic objectives of giving hope."
+            }
+          ],
         },
         {
-          title: "Annual Reports",
-          url: "/about/annual-reports"
-        }
-      ]
-    },
-    { 
-      title: "Therapy", 
-      url: "/therapy",
-      subMenu: [
-        {
-          title: "Prostate",
-          url: "/therapy/prostate",
+          name: "Our Services",
+          subItems: [
+            {
+              title: "Complementary Therapies",
+              url: "/therapy",
+              description: "Complementary therapies are used to help cancer patients manage symptoms, reduce side effects and restore a sense of control and vitality."
+            },
+            {
+              title: "Support Groups",
+              url: "/about",
+              description: "We conduct hybrid support groups for patients and caregivers to share experiences, peer learning, and also the benefit of information on such issues"
+            },
+            {
+              title: "Crafts for Cure",
+              url: "/about/our-work",
+              description: "This is an outreach therapy program of art, crafts and music therapy that we carry out at Kenyatta National Hospital (KNH) and at the Moi Teaching and Referral Hospital (MTRH) at the Children’s Oncology Wards"
+            },
+            {
+              title: "Our work with children",
+              url: "/about/our-work",
+              description: "Faraja ensures that our services reach children and their families."
+            },
+            {
+              title: "Faraja Medical Support Fund",
+              url: "/faraja-medical-support-fund",
+              description: "At inception, Faraja’s main mandate was to provide information and complementary therapies to support patients as they went through their chemotherapy and radiotherapy treatments."
+            }
+          ],
         },
-        {
-          title: "Colon",
-          url: "/therapy/colon",
-        },
-        {
-          title: "Breast",
-          url: "/therapy/breast",
-        },
-        {
-          title: "Childhood",
-          url: "/therapy/childhood",
-        }
       ]
     },
     {
@@ -46,22 +75,10 @@ export const MENU_LIST = [
     {
       title: "What's Happening",
       url: "/whats-happening",
-      submMenu: [
-        {
-          title: "Updates on Faraja Cancer Support Trust",
-          url: "/whats-happening/updates-on-faraja-cancer-support-trust",
-        }
-      ]
     },
     {
       title: "Support Us",
       url: "/support-us",
-      subMenu: [
-        {
-          title: "The Faraja Medical Support Fund (FMSF)",
-          url: "/support-us/faraja-medical-support-fund"
-        }
-      ]
     },
     {
       title: "Contact Us",

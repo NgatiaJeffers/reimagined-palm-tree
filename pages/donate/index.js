@@ -60,7 +60,7 @@ const DonatePage = () => {
                     </p>
                     <ol className="list-group list-group-numbered">
                       <li className="list-group-item">
-                        Simply go to <Link href={""}><a className="underline">smile.amazon.co.uk</a></Link>
+                        Simply go to <Link href={"/"}><a className="underline">smile.amazon.co.uk</a></Link>
                         on your web browser or activate AmazonSmile on your
                         Amazon app (look in 'settings').
                       </li>

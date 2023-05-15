@@ -120,7 +120,7 @@ const AboutPage = () => {
       <section>
         <Box>
           <AppBar
-            className={`${classes.root} ${isSticky ? classes.isSticky : ""}`}
+            className={`${classes.root} ${classes.isSticky}`}
             position="static"
           >
             <Tabs

@@ -133,7 +133,7 @@ const OurServices = () => {
                   <h2 className="heading-title">Medical Assistance </h2>
                   <p>
                     Faraja has an endowment medical fund and provides financial
-                    assistance for medical treatment for cancer patients
+                    assistance for medical treatment for cancer patients.
                   </p>
                 </div>
               </div>

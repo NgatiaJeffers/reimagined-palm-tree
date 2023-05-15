@@ -1,6 +1,6 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
-import BreadCrumb from "../../../components/atoms/Breadcrumb";
+import BreadCrumb from "../../components/atoms/Breadcrumb";
 
 const FarajaMedicalSupportFund = () => {
   return (

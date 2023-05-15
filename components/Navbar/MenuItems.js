@@ -1,26 +1,48 @@
+import { useState } from "react";
 import Link from "next/link";
 
 import Dropdown from "./Dropdown";
+import { useRouter } from "next/router";
 
-const MenuItems = ({ items }) => {
-    return (
-        <li className="nav-item dropdown">
-            {items?.subMenu && items?.url ? (
-                <>
-                    <Link href={items?.url}>
-                        <a className="nav-link">
-                            {items?.title}
-                        </a>
-                    </Link>
-                    <Dropdown subMenus={items?.subMenu} />
-                </>
-            ) : (
-                <Link href={items?.url}>
-                    <a className="nav-link">{items?.title}</a>
-                </Link>
-            )}
-        </li>
-    );
+const MenuItems = ({ activeRoute, setActiveRoute, items }) => {
+  const router = useRouter();
+  const [activeSubMenu, setActiveSubMenu] = useState(null);
+
+  const handleDropDownSelect = (route) => {
+    setActiveRoute(route);
+    router.push(route);
+    setActiveSubMenu(route);
+  };
+
+  const { subMenu, title, url } = items;
+  console.log(url)
+
+  return (
+    <li className="nav-item dropdown position-static">
+      {subMenu ? (
+        <>
+          <a
+            className={`nav-link dropdown-toggle ${
+              activeRoute === activeSubMenu ? "active" : ""
+            }`}
+            data-bs-toggle="dropdown"
+          >
+            {title}
+          </a>
+          <Dropdown
+            subMenus={subMenu}
+            handleDropDownSelect={handleDropDownSelect}
+          />
+        </>
+      ) : (
+        <Link href={url}>
+          <a className={`nav-link ${activeRoute === url ? "active" : ""}`}>
+            {title}
+          </a>
+        </Link>
+      )}
+    </li>
+  );
 };
 
 export default MenuItems;

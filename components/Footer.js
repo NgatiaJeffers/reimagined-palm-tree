@@ -86,7 +86,7 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link href={"/news-and-media"}>
-                      <a>Latest News</a>
+                      <a>What's Happening</a>
                     </Link>
                   </li>
                   <li>
