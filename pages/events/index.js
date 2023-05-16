@@ -48,14 +48,6 @@ const EventsPage = (props) => {
                           <h2>{item?.eventDate}</h2>
                         </div>
                       </div>
-                      <div className="meta-info">
-                        <p>
-                          Organized By:
-                          <Link href={"/"}>
-                            <a>{item?.organizedBy?.name}</a>
-                          </Link>
-                        </p>
-                      </div>
                       <div className="title">
                         <h2>
                           <Link

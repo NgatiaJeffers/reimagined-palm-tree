@@ -14,7 +14,7 @@ const Dropdown = ({ subMenus, handleDropDownSelect }) => {
               const { name, subItems } = item;
 
               return (
-                <div className="col-12 col-sm-6 col-md-4" key={idx}>
+                <div className="col-12 col-sm-6 col-md-6" key={idx}>
                   <div className="item-box">
                     <h3>{name}</h3>
                     <div className="content">

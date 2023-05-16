@@ -16,8 +16,8 @@ import challenge from "../../public/challenge.jpg";
 import { fetchBlog } from "../../util/fetchBlog";
 
 const NewsAndMedia = (props) => {
-  const { blog } = props;
-  const recentBlog = blog[2];
+  const { blogs } = props;
+  const recentBlog = blogs[2];
   return (
     <Fragment>
       <BreadCrumb title={"What's Happening"} />
@@ -36,18 +36,20 @@ const NewsAndMedia = (props) => {
             <div className="col-lg-8 col-md-12 blog-post-list-with-pagination">
               <div className="row">
                 <div className="col-lg-12 col-md-12">
-                  {blog?.map((item) => (
-                    <div className="single-blog-post bg-white" key={item?._id}>
+                  {blogs?.map((item) => {
+                    const { _id, image, title, description, slug } = item
+                    return (
+                      <div className="single-blog-post bg-white" key={_id}>
                       <div className="row">
                         <div className="col-lg-5 col-md-5">
                           <div
                             className="image-for-blog"
                             style={{
-                              backgroundImage: `url(${item?.image?.url})`,
+                              backgroundImage: `url(${image?.url})`,
                             }}
                           >
                             <Image
-                              src={item?.image?.url}
+                              src={image?.url}
                               layout="fill"
                               objectFit="contain"
                               style={{ position: "relative !important" }}
@@ -67,12 +69,14 @@ const NewsAndMedia = (props) => {
                               </li>
                             </ul>
                             <h3>
-                              <Link href={"/"}>
-                                <a>{item?.title}</a>
+                              <Link as={`/whats-happening/${slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
+                                <a>{title}</a>
                               </Link>
                             </h3>
-                            <p>{item?.description}</p>
-                            <Link href={"/"}>
+                            <p>{description}</p>
+                            <Link as={`/whats-happening/${slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
                               <a className="post-btn">
                                 <span>Continue Reading</span>
                                 <FiArrowUpRight className="icon" />
@@ -82,7 +86,8 @@ const NewsAndMedia = (props) => {
                         </div>
                       </div>
                     </div>
-                  ))}
+                    )
+                  })}
                 </div>
               </div>
             </div>
@@ -105,19 +110,22 @@ const NewsAndMedia = (props) => {
                         April 14, 2023
                       </span>
                       <h3 className="mb-0">
-                        <Link href={"/"}>
+                      <Link as={`/whats-happening/${recentBlog?.slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
                           <a>{recentBlog?.title}</a>
                         </Link>
                       </h3>
                     </div>
                   </div>
-                  {blog.map((item) => {
-                    if (blog.title !== "White Water Rafting") {
+                  {blogs.map((item) => {
+                    const { _id, image, title, slug } = item;
+
+                    if (blogs.title !== "White Water Rafting") {
                       return (
-                        <article className="post-item" key={item?._id}>
+                        <article className="post-item" key={_id}>
                           <div className="thumb">
                             <Image
-                              src={item?.image?.url}
+                              src={image?.url}
                               layout="fill"
                               objectFit="contain"
                               style={{ position: "relative !important" }}
@@ -129,8 +137,9 @@ const NewsAndMedia = (props) => {
                               April 14, 2023
                             </span>
                             <h4 className="post-item-title">
-                              <Link href={"/"}>
-                                <a>{item?.title}</a>
+                            <Link as={`/whats-happening/${slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
+                                <a>{title}</a>
                               </Link>
                             </h4>
                           </div>
@@ -180,11 +189,11 @@ export default NewsAndMedia;
 
 // Backend Call for server side data
 export const getStaticProps = async () => {
-  const blog = await fetchBlog();
+  const blogs = await fetchBlog();
 
   return {
     props: {
-      blog,
+      blogs,
     },
   };
 };

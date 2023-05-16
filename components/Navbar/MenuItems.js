@@ -15,7 +15,6 @@ const MenuItems = ({ activeRoute, setActiveRoute, items }) => {
   };
 
   const { subMenu, title, url } = items;
-  console.log(url)
 
   return (
     <li className="nav-item dropdown position-static">
