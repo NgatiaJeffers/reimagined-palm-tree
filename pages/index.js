@@ -200,15 +200,9 @@ export default function Home(props) {
                       >
                         <div className="inner-box">
                           <div className="date">
-                            {getDayAndMonth(event?.eventDatetime)}
+                          {event?.eventDate}
                           </div>
                           <h4>{event?.title}</h4>
-                          <ul className="post-meta">
-                            <li>
-                              <AiFillClockCircle className="post-icon" />{" "}
-                              {event?.eventDate}
-                            </li>
-                          </ul>
                         </div>
                       </div>
                     ))}
@@ -242,15 +236,18 @@ export default function Home(props) {
             <h2>What&apos;s Happening</h2>
           </div>
           <div className="row">
-            {blog?.map((item) => (
-              <div className="col-xl-4 col-lg-4" key={item?._id}>
+            {blog?.map((item) => {
+              const {_id, image, title, description, slug } = item
+              return (
+                <div className="col-xl-4 col-lg-4" key={_id}>
                 <div className="single-blog">
                   <div className="img-holder">
                     <div className="inner">
-                      <Link href={"/"}>
+                    <Link as={`/whats-happening/${slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
                         <a>
                           <Image
-                            src={item?.image?.url}
+                            src={urlFor(image?.asset).url()}
                             layout="fill"
                             objectFit="contain"
                             style={{ position: "relative !important" }}
@@ -261,17 +258,19 @@ export default function Home(props) {
                   </div>
                   <div className="text-holder">
                     <h3 className="blog-title">
-                      <Link href={"/"}>
-                        <a>{item?.title}</a>
+                    <Link as={`/whats-happening/${slug?.current}`}
+                              href={"/whats-happening/[slug]"}>
+                        <a>{title}</a>
                       </Link>
                     </h3>
                     <div className="text">
-                      <p>{item?.description}</p>
+                      <p>{description}</p>
                     </div>
                   </div>
                 </div>
               </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>

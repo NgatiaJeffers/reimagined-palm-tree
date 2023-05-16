@@ -41,7 +41,7 @@ const DonateSidebar = () => {
             Support Trust
           </h2>
           <div className="btn-box">
-            <Link href={"/"}>
+            <Link href={"/donate"}>
               <a className="btn-donate">Make a Donation</a>
             </Link>
           </div>

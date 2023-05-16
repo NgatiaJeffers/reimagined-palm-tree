@@ -41,11 +41,11 @@ const NewsAndMedia = (props) => {
                           <div
                             className="image-for-blog"
                             style={{
-                              backgroundImage: `url(${image?.url})`,
+                              backgroundImage: `url(${urlFor(image?.asset).url()})`,
                             }}
                           >
                             <Image
-                              src={image?.url}
+                              src={urlFor(image?.asset).url()}
                               layout="fill"
                               objectFit="contain"
                               style={{ position: "relative !important" }}

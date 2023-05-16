@@ -9,7 +9,7 @@ const query = groq`*[_type == 'blog'] {
     name,
     image
   }, 
-  "image": mainImage.asset ->,
+  "image": mainImage,
   description
   }`;
 

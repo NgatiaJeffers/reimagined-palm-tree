@@ -73,16 +73,18 @@ const Event = (props) => {
                       </div>
                     </li>
                   </ul>
-                  <div className="bottom-box">
-                    <div className="btns">
-                        <a className="btn-one" onClick={() => setShowRegistrationForm(true)}>
-                          <span className="txt">
-                            <AiFillCheckCircle className="check" />
-                            join this event
-                          </span>
-                        </a>
+                  {eventData?.title === "BE BOLD GO GOLD" && (
+                    <div className="bottom-box">
+                      <div className="btns">
+                          <a className="btn-one" onClick={() => setShowRegistrationForm(true)}>
+                            <span className="txt">
+                              <AiFillCheckCircle className="check" />
+                              join this event
+                            </span>
+                          </a>
+                      </div>
                     </div>
-                  </div>
+                  )}
                   <div className="form-area">
                     {showRegistartionForm && <BeBoldGoGoldForm />}
                   </div>
