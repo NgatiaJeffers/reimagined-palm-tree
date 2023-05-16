@@ -5,11 +5,14 @@ import { fetchBlogItem } from "../../util/fetchBlogItem";
 import Image from "next/image";
 import { urlFor } from "../../lib/sanity";
 import { rgbDataURL } from "../../util/util";
+import BlogSideBar from "../components/BlogSideBar";
 
 const BlogItem = (props) => {
-  const { blog } = props;
+  const { blog, blogs } = props;
+  console.log(blogs)
   const { _id, title, blogDetails, publishedAt, slug, image } = blog;
-  console.log(blog);
+  const recentBlog = blogs[2]
+
   return (
     <Fragment>
       <section className="wide-tb-100 bg-color">
@@ -57,6 +60,7 @@ const BlogItem = (props) => {
                   </div>
                 </div>
               </div>
+              <BlogSideBar recentBlog={recentBlog} blogs={blogs} />
             </div>
           </div>
         </div>
@@ -94,11 +98,13 @@ export const getStaticProps = async (ctx) => {
   try {
     const { slug } = ctx.params || {};
     const blog = await fetchBlogItem(slug);
+    const blogs = await fetchBlog()
 
     if (!blog) throw new Error("No blog data found");
 
     return {
       props: {
+        blogs,
         blog,
         slug,
       },
