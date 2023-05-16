@@ -6,6 +6,7 @@ import Image from "next/image";
 import MenuItems from "./MenuItems";
 import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
+import HamburgerMenu from "./HamburgerMenu";
 
 const NavbarLayout = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -91,11 +92,12 @@ const NavbarLayout = () => {
                 );
               })}
             </ul>
-            <ul className="navbar-nav ms-auto d-lg-inline-flex">
-              <Link href={"/donate"}>
-                <a className="btn-donate">Make a Donation</a>
-              </Link>
-            </ul>
+            {/* <ul className="navbar-nav ms-auto d-lg-inline-flex">
+                <button type="button" id="sidebarCollapse" class="btn btn-primary">
+                  <i class="fa fa-bars"></i>
+                  <span class="sr-only">Toggle Menu</span>
+              </button>
+            </ul> */}
           </div>
         </div>
       </nav>
