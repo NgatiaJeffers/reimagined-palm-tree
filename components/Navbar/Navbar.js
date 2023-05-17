@@ -2,11 +2,15 @@ import React, { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
+import { AiFillHeart } from "react-icons/ai";
+import { BiDonateHeart } from "react-icons/bi";
+import { GiReceiveMoney } from "react-icons/gi";
+import { TbHeartHandshake } from "react-icons/tb";
+import { MdEventNote } from "react-icons/md";
 
 import MenuItems from "./MenuItems";
 import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
-import HamburgerMenu from "./HamburgerMenu";
 
 const NavbarLayout = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -92,12 +96,53 @@ const NavbarLayout = () => {
                 );
               })}
             </ul>
-            {/* <ul className="navbar-nav ms-auto d-lg-inline-flex">
-                <button type="button" id="sidebarCollapse" class="btn btn-primary">
-                  <i class="fa fa-bars"></i>
-                  <span class="sr-only">Toggle Menu</span>
-              </button>
-            </ul> */}
+            <ul className="navbar-nav ms-auto d-lg-inline-flex">
+              <div className="row justify-content-center">
+                <div className="col-md-6 d-flex justify-content-center">
+                  <div className="btn-group support-us-dropdown">
+                    <button
+                      id="navbarDropdown"
+                      type="button"
+                      className="btn-donate dropdown-toggle text-start"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      <AiFillHeart className="icon" />
+                      Support Us
+                    </button>
+                    <div
+                      className="dropdown-menu dropdown-menu-end"
+                      aria-labelledby="navbarDropdown"
+                    >
+                      <Link href={"/fundraise"}>
+                        <a className="dropdown-item color-1" href="#">
+                          <GiReceiveMoney className="icon" />
+                          Fundraise
+                        </a>
+                      </Link>
+                      <Link href={"/volunteer"}>
+                        <a className="dropdown-item color-2" href="#">
+                          <TbHeartHandshake className="icon" />
+                          Volunteer
+                        </a>
+                      </Link>
+                      <Link href={"/events"}>
+                        <a className="dropdown-item color-3" href="#">
+                          <MdEventNote className="icon" />
+                          Find Event
+                        </a>
+                      </Link>
+                      <Link href={"/donate"}>
+                        <a className="dropdown-item color-4" href="#">
+                          <BiDonateHeart className="icon" />
+                          In Kind Donation
+                        </a>
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </ul>
           </div>
         </div>
       </nav>

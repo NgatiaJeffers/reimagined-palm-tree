@@ -131,7 +131,9 @@ ul {
   padding: 0px;
 }
 
-p, ul li, ol li {
+p,
+ul li,
+ol li {
   font-weight: 300;
 }
 
@@ -140,11 +142,19 @@ ul {
   padding: 0 !important;
 }
 
-p, ul li, ol li {
+p,
+ul li,
+ol li {
   font-weight: 300;
 }
 
-a, h1, h2, h3, h4, h5, h6 {
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 400;
 }
 
@@ -153,11 +163,14 @@ ul {
   padding: 0;
 }
 
-p, ul li, ol li {
+p,
+ul li,
+ol li {
   font-weight: 300;
 }
 
-ol li, ul li {
+ol li,
+ul li {
   list-style: outside none none;
 }
 
@@ -166,7 +179,9 @@ ul {
   padding: 0;
 }
 
-p, ul li, ol li {
+p,
+ul li,
+ol li {
   font-weight: 300;
 }
 
@@ -619,6 +634,116 @@ hr {
 
 .dropdown-item:hover {
   background-color: unset !important;
+}
+
+.btn-group.support-us-dropdown .btn-donate .icon {
+  font-size: 22px;
+  margin-right: 1.5rem;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu {
+  position: absolute;
+  will-change: transform;
+  top: 0px;
+  left: 0px;
+  transform: translate3d(5px, 59px, 0px);
+  border: none;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+  -moz-box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+  box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
+  padding: 0;
+  min-width: 17rem;
+  margin-top: 15px;
+  position: relative;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item .icon {
+  font-size: 20px;
+  margin-right: 1.5rem;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu::before {
+  top: -0.6em;
+  border-bottom-color: rgba(0, 0, 0, 0.03);
+}
+
+.btn-group.support-us-dropdown .dropdown-menu::after,
+.btn-group.support-us-dropdown .dropdown-menu::before {
+  content: " ";
+  display: block;
+  border-style: solid;
+  border-width: 0 0.7em 0.6em 0.7em;
+  border-color: transparent;
+  position: absolute;
+  right: 0;
+  margin-right: 16px;
+  z-index: -1;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item {
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.7);
+  font-weight: 400;
+  padding: 15px 30px;
+  position: relative;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item::after {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  content: "";
+  width: 4px;
+  -webkit-transition: 0.3s;
+  -o-transition: 0.3s;
+  transition: 0.3s;
+  opacity: 0;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item:hover,
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item:focus {
+  color: #16181b;
+  text-decoration: none;
+  background-color: #f8f9fa !important;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-1 .icon {
+  color: #5edfff;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-1:hover:after {
+  opacity: 1;
+  background: #5edfff;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-2 .icon {
+  color: #ff8080;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-2:hover:after {
+  opacity: 1;
+  background: #ff8080;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-3 .icon {
+  color: #4d80e4;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-3:hover:after {
+  opacity: 1;
+  background: #4d80e4;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-4 .icon {
+  color: #f9e090;
+}
+
+.btn-group.support-us-dropdown .dropdown-menu .dropdown-item.color-4:hover:after {
+  opacity: 1;
+  background: #f9e090;
 }
 
 @media (max-width: 991px) {
@@ -1541,29 +1666,28 @@ hr {
 }
 
 .pdf-area .modal {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-
 .pdf-area .modal-header {
-  height:30px;
+  height: 30px;
   padding: 20px;
-  background-color:#18456b;
-  color:white;
+  background-color: #18456b;
+  color: white;
 }
 
 .pdf-area .modal-title {
-  margin-top:-10px;
-  font-size:16px;
+  margin-top: -10px;
+  font-size: 16px;
 }
 
 .pdf-area .modal-header .close {
-  margin-top:-10px;
-  color:#fff;
+  margin-top: -10px;
+  color: #fff;
 }
 
 .pdf-area .modal-body {
-  color:#888;
+  color: #888;
   padding: 5px 35px 20px;
 }
 
@@ -1572,7 +1696,7 @@ hr {
 }
 
 .pdf-area .modal-body p {
-  padding-top:10px;
+  padding-top: 10px;
   font-size: 1.1em;
 }
 
@@ -4161,7 +4285,6 @@ hr {
   font-weight: 800;
 }
 
-
 /*********FOOTER STYLING*******************/
 .footer_area {
   position: relative;
@@ -4191,7 +4314,12 @@ hr {
   left: 0;
   bottom: 0;
   right: 0;
-  background: radial-gradient(circle, rgba(0,0,0,1) 0%, rgba(0,0,0,0.7231267507002801) 0%, rgba(0,0,0,1) 100%);
+  background: radial-gradient(
+    circle,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(0, 0, 0, 0.7231267507002801) 0%,
+    rgba(0, 0, 0, 1) 100%
+  );
 }
 
 .section_padding_100_70 {
@@ -4312,7 +4440,7 @@ top-15 {
   border-radius: 6px;
   text-align: center;
   position: relative;
-  box-shadow: 0 2px 3px rgba(0,0,0,0.2);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 
 .footer_part .thumb-wrapper .img-box {
@@ -4742,7 +4870,3 @@ top-15 {
   background-color: #f1f1f1;
   border-radius: 10px;
 }
-
-
-
-
