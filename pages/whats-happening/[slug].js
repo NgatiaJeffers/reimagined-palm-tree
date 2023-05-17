@@ -9,7 +9,6 @@ import BlogSideBar from "../components/BlogSideBar";
 
 const BlogItem = (props) => {
   const { blog, blogs } = props;
-  console.log(blogs)
   const { _id, title, blogDetails, publishedAt, slug, image } = blog;
   const recentBlog = blogs[2]
 

@@ -3,9 +3,6 @@ import React, { useState, useEffect, useRef } from "react";
 function Panel({ title, bodyText, activeTab, index, activateTab }) {
   const [height, setHeight] = useState(0);
   const innerRef = useRef(null);
-  console.log(title);
-  console.log(bodyText);
-  console.log(index);
 
   useEffect(() => {
     const el = innerRef.current;
@@ -42,7 +39,6 @@ function Panel({ title, bodyText, activeTab, index, activateTab }) {
 
 const Accordion = ({ panels }) => {
   const [activeTab, setActiveTab] = useState(0);
-  console.log(panels);
 
   function activateTab(index) {
     setActiveTab((prevActiveTab) => (prevActiveTab === index ? -1 : index));
@@ -50,7 +46,6 @@ const Accordion = ({ panels }) => {
   return (
     <div className="accordion" role="tablist">
       {panels.map((panel, index) => {
-        console.log("Panel", panel);
         return (
           <Panel
             key={index}

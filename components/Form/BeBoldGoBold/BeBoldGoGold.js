@@ -32,12 +32,10 @@ const BeBoldGoGoldForm = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log();
   }
 
   const handleChange = () => {
     const { name, value } = e.target;
-    console.log(name)
   }
 
   const getStepCount = (stepIdx) => {

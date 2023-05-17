@@ -8,7 +8,6 @@ import { rgbDataURL } from "../../util/util";
 
 const EventSponsors = (props) => {
   const {sponsors} = props;
-  console.log(sponsors)
 
   return (
     <React.Fragment>

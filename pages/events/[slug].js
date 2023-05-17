@@ -23,7 +23,6 @@ const Event = (props) => {
     const { isFallback } = useRouter();
     const [showRegistartionForm, setShowRegistrationForm] = useState(false);
     const { eventData } = props
-    console.log(eventData)
     
   return (
     <>
