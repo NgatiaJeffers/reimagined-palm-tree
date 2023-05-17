@@ -4,12 +4,13 @@ import Image from "next/image";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
 import { FiArrowUpRight } from "react-icons/fi";
+import { urlFor } from "../../lib/sanity";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
+import BlogSideBar from "../components/BlogSideBar";
 
 // API CALLS
 import { fetchBlog } from "../../util/fetchBlog";
-import BlogSideBar from "../components/BlogSideBar";
 
 const NewsAndMedia = (props) => {
   const { blogs } = props;
