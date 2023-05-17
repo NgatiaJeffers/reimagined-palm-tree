@@ -34,7 +34,7 @@ const Dropdown = ({ subMenus, handleDropDownSelect }) => {
                                 <span className="summary">
                                   <TruncatedParagraph
                                     text={description}
-                                    limit={100}
+                                    limit={50}
                                   />
                                 </span>
                               </li>
