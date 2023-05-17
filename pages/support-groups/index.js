@@ -21,8 +21,6 @@ const SupportGroups = (props) => {
     setShowModal(true);
   };
 
-  console.log(supportGroup);
-
   return (
     <Fragment>
       {supportGroup?.map((item) => {
@@ -102,7 +100,7 @@ const SupportGroups = (props) => {
 
 export default SupportGroups;
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
   const supportGroup = await fetchSupportGroup();
 
   return {
