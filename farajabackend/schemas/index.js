@@ -7,7 +7,8 @@ import bannerContent from './bannerContent'
 import about from './homePage/about';
 import testimonial from './homePage/testimonial';
 import event from './homePage/event';
-import sponsors from './homePage/sponsors'
+import sponsors from './homePage/sponsors';
+import supportGroup from './supportGroup';
 
 export const schemaTypes = [
     blog, 
@@ -19,5 +20,6 @@ export const schemaTypes = [
     testimonial,
     event,
     sponsors,
+    supportGroup,
     blockContent
 ]

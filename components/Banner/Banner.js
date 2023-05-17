@@ -77,6 +77,7 @@ const Banner = (images) => {
                             className="banner-text"
                             data-swiper-parallax="-100"
                           >
+                            
                             <p>{text}</p>
                           </div>
                           {slug?.current !== "information-and-awareness" && (

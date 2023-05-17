@@ -56,7 +56,7 @@ const PersonalInfo = () => {
       </Typography>
       <Grid container spacing={matchDownSm ? 0 : 2}>
         <Grid item xs={12} sm={12}>
-          <FormControl sx={{ m: 1, width: 300 }}>
+          {/* <FormControl sx={{ m: 1, width: 300 }}>
             <InputLabel id="demo-simple-select-label">Name</InputLabel>
             <Select
             labelId="demo-simple-select-label"
@@ -74,7 +74,7 @@ const PersonalInfo = () => {
             )}
             MenuProps={MenuProps}
             ></Select>
-          </FormControl>
+          </FormControl> */}
           <TextField
             required
             name="fullName"
