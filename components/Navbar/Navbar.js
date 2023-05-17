@@ -7,6 +7,7 @@ import { BiDonateHeart } from "react-icons/bi";
 import { GiReceiveMoney } from "react-icons/gi";
 import { TbHeartHandshake } from "react-icons/tb";
 import { MdEventNote } from "react-icons/md";
+import { FcDonate } from "react-icons/fc";
 
 import MenuItems from "./MenuItems";
 import { MENU_LIST } from "./MenuList";
@@ -114,26 +115,32 @@ const NavbarLayout = () => {
                       className="dropdown-menu dropdown-menu-end"
                       aria-labelledby="navbarDropdown"
                     >
-                      <Link href={"/fundraise"}>
+                      <Link href={"/donate"}>
                         <a className="dropdown-item color-1" href="#">
+                          <FcDonate className="icon" />
+                          Donate
+                        </a>
+                      </Link>
+                      <Link href={"/fundraise"}>
+                        <a className="dropdown-item color-2" href="#">
                           <GiReceiveMoney className="icon" />
                           Fundraise
                         </a>
                       </Link>
                       <Link href={"/volunteer"}>
-                        <a className="dropdown-item color-2" href="#">
+                        <a className="dropdown-item color-3" href="#">
                           <TbHeartHandshake className="icon" />
                           Volunteer
                         </a>
                       </Link>
                       <Link href={"/events"}>
-                        <a className="dropdown-item color-3" href="#">
+                        <a className="dropdown-item color-4" href="#">
                           <MdEventNote className="icon" />
                           Find Event
                         </a>
                       </Link>
-                      <Link href={"/donate"}>
-                        <a className="dropdown-item color-4" href="#">
+                      <Link href={"/in-kind-donation"}>
+                        <a className="dropdown-item color-5" href="#">
                           <BiDonateHeart className="icon" />
                           In Kind Donation
                         </a>
