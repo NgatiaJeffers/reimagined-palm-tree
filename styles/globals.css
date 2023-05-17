@@ -517,7 +517,6 @@ hr {
 
 .dropdown-menu .item-box .content ul {
   display: flex;
-  justify-content: space-between;
   flex-direction: row;
   flex-wrap: wrap;
   padding: 0 !important;
@@ -774,7 +773,7 @@ hr {
 }
 
 .banner-wrapper .slide {
-  padding: 136px 0px 140px;
+  padding: 100px 0px 140px;
 }
 
 .banner-wrapper .slide .image-layer {
@@ -831,7 +830,7 @@ hr {
 
 .swiper-slide .subtitle h2 {
   color: #ffffff;
-  font-size: 80px;
+  font-size: 40px;
   line-height: 1.1em;
   font-weight: 700;
   text-transform: none;
@@ -904,7 +903,7 @@ hr {
 .main-content-box .content-box .border-box {
   position: relative;
   display: block;
-  max-width: 600px !important;
+  max-width: 400px !important;
   height: 2px;
   background: #ffffff;
   -webkit-transition: all 1000ms ease;
@@ -938,7 +937,7 @@ hr {
 
 .main-content-box .content-box .banner-text p {
   color: #ffffff;
-  font-size: 22px;
+  font-size: 15px;
   line-height: 30px;
   font-weight: 500;
   margin: 0;

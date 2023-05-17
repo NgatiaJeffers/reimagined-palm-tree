@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 // import swiper required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { urlFor } from "../../lib/sanity";
 
 
 const Banner = (images) => {
@@ -53,13 +54,15 @@ const Banner = (images) => {
                 modules={[Autoplay, Pagination, Navigation]}
                 className="mySwiper"
               >
-                {newImages?.map((image) => (
-                  <SwiperSlide key={image?._id}>
+                {newImages?.map((image) => {
+                  const { _id, bannerImage, title, text, slug } = image;
+                  return (
+                    <SwiperSlide key={_id}>
                     <div className="slide">
                       <div className="overlay"></div>
                       <div
                         className="image-layer"
-                        style={{ backgroundImage: `url(${image?.image?.url})` }}
+                        style={{ backgroundImage: `url(${urlFor(bannerImage?.asset).url()})` }}
                       ></div>
                       <div className="main-content-box">
                         <div className="content-box">
@@ -67,25 +70,29 @@ const Banner = (images) => {
                             <h3>Change life, change World</h3>
                           </div>
                           <div className="subtitle" data-swiper-parallax="-200">
-                            <h2>{image?.title}</h2>
+                            <h2>{title}</h2>
                           </div>
                           <div className="border-box"></div>
                           <div
                             className="banner-text"
                             data-swiper-parallax="-100"
                           >
-                            <p>{image?.text}</p>
+                            <p>{text}</p>
                           </div>
-                          <div className="banner-buttons d-grid gap-2 d-md-flex">
-                            <Link href={"/support-us/faraja-medical-support-fund"}>
-                              <a className="btn-main">HOW WE HELP</a>
-                            </Link>
-                          </div>
+                          {slug?.current !== "information-and-awareness" && (
+                            <div className="banner-buttons d-grid gap-2 d-md-flex">
+                              <Link as={`/${slug?.current}`}
+                                href={"/[slug]"}>
+                                <a className="btn-main">Read More</a>
+                              </Link>
+                            </div>
+                          )}
                         </div>
                       </div>
                     </div>
                   </SwiperSlide>
-                ))}
+                  )
+                })}
               </Swiper>
             </div>
           </div>

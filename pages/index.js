@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
 import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im";
-import Banner from "../components/Banner";
+import Banner from "../components/Banner/Banner";
 import TruncatedParagraph from "../components/atoms/TruncatedText"
 import SponsorsLogo from "./components/SponsorsLogos";
 

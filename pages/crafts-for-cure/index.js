@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import pageBanner from "../../../public/svgs/sit.svg";
-import ourWork from "../../../public/our-work.jpg";
-import craftforCure from "../../../public/crafts_for_cure.jpg";
-import FarajaFruity from "../../../public/Faraja_fruity.jpg";
-import received from "../../../public/received.jpg";
+import pageBanner from "../../public/svgs/sit.svg";
+import ourWork from "../../public/our-work.jpg";
+import craftforCure from "../../public/crafts_for_cure.jpg";
+import FarajaFruity from "../../public/Faraja_fruity.jpg";
+import received from "../../public/received.jpg";
 
 const OurWork = () => {
     return (

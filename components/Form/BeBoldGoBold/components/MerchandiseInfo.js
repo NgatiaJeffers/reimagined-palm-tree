@@ -9,7 +9,9 @@ import {
   FormControl,
   FormLabel,
   MenuItem,
+  useMediaQuery,
 } from "@mui/material";
+import { useTheme } from '@mui/material/styles';
 
 const shirtSize = [
   {
@@ -39,12 +41,17 @@ const shirtSize = [
 ];
 
 const MerchandiseInfo = () => {
+  const theme = useTheme()
+  const matchDownSM = useMediaQuery(theme.breakpoints.down('md'))
+
+
+
   return (
     <Fragment>
       <Typography className="section-title" variant="h4" gutterBottom>
         Merchandise Info
       </Typography>
-      <Grid container spacing={3}>
+      <Grid container spacing={matchDownSM ? 0 : 2}>
         <Grid item xs={12} sm={12}>
           <TextField
             required

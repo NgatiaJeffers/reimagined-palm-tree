@@ -25,11 +25,6 @@ export const MENU_LIST = [
               description: "Get a glimpse of our able team and staff."
             },
             {
-              title: "Our work with children",
-              url: "/about/our-work",
-              description: "Faraja ensures that our services reach children and their families."
-            },
-            {
               title: "Annual Reports",
               url: "/about/annual-reports",
               description: "Our annual reports show how, with your support, we have achieved our strategic objectives of giving hope."
@@ -41,23 +36,18 @@ export const MENU_LIST = [
           subItems: [
             {
               title: "Complementary Therapies",
-              url: "/therapy",
+              url: "/complementary-therapies",
               description: "Complementary therapies are used to help cancer patients manage symptoms, reduce side effects and restore a sense of control and vitality."
             },
             {
               title: "Support Groups",
-              url: "/about",
+              url: "/support-groups",
               description: "We conduct hybrid support groups for patients and caregivers to share experiences, peer learning, and also the benefit of information on such issues"
             },
             {
               title: "Crafts for Cure",
               url: "/about/our-work",
               description: "This is an outreach therapy program of art, crafts and music therapy that we carry out at Kenyatta National Hospital (KNH) and at the Moi Teaching and Referral Hospital (MTRH) at the Children’s Oncology Wards"
-            },
-            {
-              title: "Our work with children",
-              url: "/about/our-work",
-              description: "Faraja ensures that our services reach children and their families."
             },
             {
               title: "Faraja Medical Support Fund",

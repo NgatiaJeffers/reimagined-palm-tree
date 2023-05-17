@@ -2,7 +2,7 @@ import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 
-import Childhood from "../public/Childhood.png";
+import Childhood from "../../public/Childhood.png";
 
 import { 
   AiFillFacebook, 

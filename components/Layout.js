@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 
 import NavbarLayout from "./Navbar/Navbar";
-import Footer from "./Footer.js";
+import Footer from "./Footer/Footer";
 import Loader from "./atoms/loader";
 
 const Layout = ({ children }) => {
