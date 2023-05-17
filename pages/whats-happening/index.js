@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import moment from "moment";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { BiTimeFive } from "react-icons/bi";
 import { FiArrowUpRight } from "react-icons/fi";
@@ -34,7 +35,7 @@ const NewsAndMedia = (props) => {
               <div className="row">
                 <div className="col-lg-12 col-md-12">
                   {blogs?.map((item) => {
-                    const { _id, image, title, description, slug } = item
+                    const { _id, image, title, description, slug, publishedAt } = item
                     return (
                       <div className="single-blog-post bg-white" key={_id}>
                       <div className="row">
@@ -58,7 +59,7 @@ const NewsAndMedia = (props) => {
                             <ul className="meta ps-0">
                               <li>
                                 <BsFillCalendar2CheckFill className="icon" />
-                                <span>April 14, 2023</span>
+                                <span>{moment(publishedAt).format("dddd, MMMM Do YYYY")}</span>
                               </li>
                               <li>
                                 <BiTimeFive className="icon" />

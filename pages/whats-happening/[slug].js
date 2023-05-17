@@ -1,4 +1,5 @@
 import React, { Fragment } from "react";
+import moment from "moment";
 import { AiFillCalendar } from "react-icons/ai";
 import { fetchBlog } from "../../util/fetchBlog";
 import { fetchBlogItem } from "../../util/fetchBlogItem";
@@ -46,7 +47,7 @@ const BlogItem = (props) => {
                     <ul className="d-flex meta ps-0 mb-0 list-unstyled">
                       <li>
                         <AiFillCalendar />
-                        {publishedAt}
+                        {moment(publishedAt).format("dddd, MMMM Do YYYY")}
                       </li>
                       <li>
                         <i className="flaticon-time"></i>2 min read{" "}
@@ -55,7 +56,9 @@ const BlogItem = (props) => {
                   </div>
 
                   <div className="blog-details-content post-desc">
-                    <p>{blogDetails}</p>
+                    {blogDetails.map((text, index) => (
+                        <p key={index}>{text.text}</p>
+                      ))}
                   </div>
                 </div>
               </div>

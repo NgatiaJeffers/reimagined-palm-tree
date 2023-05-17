@@ -1,6 +1,7 @@
 import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
+import moment from "moment";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillFacebook } from "react-icons/ai";
@@ -9,7 +10,7 @@ import { urlFor } from "../../../lib/sanity";
 import titleShape from "../../../public/shapes/title-shape.webp";
 
 const BlogSideBar = ({ recentBlog, blogs }) => {
-  const { image, slug, title } = recentBlog
+  const { image, slug, title, publishedAt } = recentBlog
   return (
     <Fragment>
       <div className="col-lg-4 col-md-12">
@@ -24,7 +25,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
               <div className="content">
                 <span className="date d-block text-gray-color">
                   <BsFillCalendar2CheckFill className="icon" />
-                  April 14, 2023
+                  {moment(publishedAt).format("dddd, MMMM Do YYYY")}
                 </span>
                 <h3 className="mb-0">
                   <Link
@@ -37,7 +38,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
               </div>
             </div>
             {blogs.map((item) => {
-              const { _id, image, title, slug } = item;
+              const { _id, image, title, slug, publishedAt } = item;
 
               if (blogs.title !== "White Water Rafting") {
                 return (
@@ -53,7 +54,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
                     <div className="info">
                       <span className="date">
                         <BsFillCalendar2CheckFill className="icon" />
-                        April 14, 2023
+                        {moment(publishedAt).format("dddd, MMMM Do YYYY")}
                       </span>
                       <h4 className="post-item-title">
                         <Link

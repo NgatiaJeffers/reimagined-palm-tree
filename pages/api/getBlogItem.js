@@ -6,7 +6,7 @@ const query = groq`*[_type == "blog" && slug.current == $slug][0] {
     title,
     slug,
     publishedAt,
-    "blogDetails": body[].children[].text,
+    "blogDetails": body[].children[],
     "image": mainImage
   }`;
 
