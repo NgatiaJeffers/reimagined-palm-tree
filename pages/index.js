@@ -32,7 +32,7 @@ import { fetchSponsors } from "../util/fetchSponsors";
 
 export default function Home(props) {
   const { about, testimonial, images, events, blog, sponsors } = props;
-  console.log(events)
+  console.log(images)
 
   return (
     <>

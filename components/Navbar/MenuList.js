@@ -46,7 +46,7 @@ export const MENU_LIST = [
             },
             {
               title: "Crafts for Cure",
-              url: "/about/our-work",
+              url: "/crafts-for-cure",
               description: "This is an outreach therapy program of art, crafts and music therapy that we carry out at Kenyatta National Hospital (KNH) and at the Moi Teaching and Referral Hospital (MTRH) at the Children’s Oncology Wards"
             },
             {
