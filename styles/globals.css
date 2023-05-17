@@ -467,6 +467,7 @@ hr {
   width: 100%;
   top: auto !important;
   overflow: hidden;
+  transition: .5s;
 }
 
 .mega-content {
@@ -481,6 +482,7 @@ hr {
 .dropdown-menu .item-box {
   padding-bottom: 20px;
   margin: 40px 75px 0 0;
+  transition: .5s;
 }
 
 .dropdown-menu .item-box h3 {
@@ -748,8 +750,59 @@ hr {
 
 @media (max-width: 991px) {
   .navbar-nav {
-    text-align: center !important;
-    align-items: center !important;
+    align-items: flex-end;
+  }
+}
+
+@media screen and (max-width: 768px) { 
+  .navbar-nav {
+    align-items: flex-end;
+  }
+
+  .nav-items li:not(:last-of-type) {
+    margin-right: 0;  
+  }
+
+  .nav-items ul li a {
+    font-size: 20px;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+
+  .nav-items li a::before {
+    bottom: 0;
+  }
+
+  .onMobile.nav-item {
+    display: contents;
+  }
+
+  .dropdown-menu.dropdown-mobile {
+    max-height: 300px;
+    overflow-y: scroll;
+    border-radius: unset !important;
+    border: 0;
+  }
+
+  .dropdown-menu .item-box {
+    margin: 40px 0 0 75px;
+    text-align: end;
+  }
+
+  .dropdown-menu .item-box h3 {
+    font-size: 15px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  } 
+
+  .btn-group.support-us-dropdown {
+    display: block !important;
+  }
+
+  .btn-group.support-us-dropdown .dropdown-menu {
+    transform: unset !important;
+    margin-top: 0px !important;
   }
 }
 
@@ -1118,6 +1171,14 @@ hr {
     padding: 0px 20px;
     padding-left: 20px;
   }
+
+  .banner-wrapper .slide {
+    padding: 60px 0px 140px;
+}
+
+.swiper-slide {
+  padding: 13px !important;
+}
 }
 
 /* INTRO STYLES */
@@ -2912,6 +2973,13 @@ hr {
   margin-bottom: 56px;
 }
 
+@media screen and (max-width: 768px) { 
+  .top-box {
+    display: unset;
+    margin-bottom: 20px;
+  }
+}
+
 .partner-area .top-box .shape {
   position: absolute;
   top: -50px;
@@ -4448,6 +4516,12 @@ top-15 {
   margin-bottom: 20px;
   width: 100%;
   position: relative;
+}
+
+@media screen and (max-width: 768px) { 
+  .footer_part .thumb-wrapper .img-box {
+    height: 200px;
+  }
 }
 
 .footer_part .thumb-wrapper .img-box img {

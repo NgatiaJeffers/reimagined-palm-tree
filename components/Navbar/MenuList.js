@@ -68,12 +68,8 @@ export const MENU_LIST = [
       url: "/events",
     },
     {
-      title: "What's Happening",
+      title: "News & Media",
       url: "/whats-happening",
-    },
-    {
-      title: "Support Us",
-      url: "/support-us",
     },
     {
       title: "Contact Us",

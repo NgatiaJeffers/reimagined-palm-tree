@@ -17,7 +17,7 @@ const MenuItems = ({ activeRoute, setActiveRoute, items }) => {
   const { subMenu, title, url } = items;
 
   return (
-    <li className="nav-item dropdown position-static">
+    <li className="onMobile nav-item dropdown position-static">
       {subMenu ? (
         <>
           <a
