@@ -4,10 +4,12 @@ import Image from "next/image";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
 import { AiFillFacebook } from "react-icons/ai";
+import { urlFor } from "../../../lib/sanity";
 
 import titleShape from "../../../public/shapes/title-shape.webp";
 
 const BlogSideBar = ({ recentBlog, blogs }) => {
+  const { image, slug, title } = recentBlog
   return (
     <Fragment>
       <div className="col-lg-4 col-md-12">
@@ -18,7 +20,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
               <Image src={titleShape} />
             </h2>
             <div className="big-box bg-color">
-              <Image src={recentBlog?.image?.url} width={280} height={150} />
+              <Image src={urlFor(image?.asset).url()} width={280} height={150} />
               <div className="content">
                 <span className="date d-block text-gray-color">
                   <BsFillCalendar2CheckFill className="icon" />
@@ -26,10 +28,10 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
                 </span>
                 <h3 className="mb-0">
                   <Link
-                    as={`/whats-happening/${recentBlog?.slug?.current}`}
+                    as={`/whats-happening/${slug?.current}`}
                     href={"/whats-happening/[slug]"}
                   >
-                    <a>{recentBlog?.title}</a>
+                    <a>{title}</a>
                   </Link>
                 </h3>
               </div>
@@ -42,7 +44,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
                   <article className="post-item" key={_id}>
                     <div className="thumb">
                       <Image
-                        src={image?.url}
+                        src={urlFor(image?.asset).url()}
                         layout="fill"
                         objectFit="contain"
                         style={{ position: "relative !important" }}
