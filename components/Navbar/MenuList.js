@@ -10,14 +10,14 @@ export const MENU_LIST = [
           name: "About",
           subItems: [
             {
-              title: "Our Mission",
-              url: "/about",
-              description: "Our mission is to make the world a better place for everyone."
-            },
-            {
               title: "Our Vision",
               url: "/about",
               description: "A safe haven accessible to anyone affected by cancer."
+            },
+            {
+              title: "Our Mission",
+              url: "/about",
+              description: "Our mission is to make the world a better place for everyone."
             },
             {
               title: "Meet The Team",

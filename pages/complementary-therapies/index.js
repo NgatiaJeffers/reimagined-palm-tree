@@ -2,10 +2,14 @@ import React, { Fragment } from 'react'
 import BreadCrumb from '../../components/atoms/Breadcrumb'
 import Accordion from '../../components/atoms/Accordion';
 
-const Therapy = () => {
+// API CALLS
+import { fetchTherapy } from '../../util/fetchTherapy';
+
+const Therapy = (props) => {
+  const { therapies } = props;
   return (
     <Fragment>
-      {/* <BreadCrumb title={"Therapy"} /> */}
+      <BreadCrumb title={"Complementary therapies"} />
       <section className="wide-tb-100"></section>
       <section className="wide-tb-100 pt-0 mb-spacer-md therapy-area">
         <div className="container">
@@ -29,7 +33,7 @@ const Therapy = () => {
                     </p>
                   </div>
                   <div className='col-12 col-lg-6 col-md-12'>
-                    <Accordion panels={panels} />
+                    <Accordion panels={therapies} />
                   </div>
                 </div>
               </div>
@@ -41,7 +45,18 @@ const Therapy = () => {
   );
 }
 
-export default Therapy
+export default Therapy;
+
+// Backend call for server side data
+export const getStaticProps = async () => {
+  const therapies = await fetchTherapy();
+
+  return {
+    props: {
+      therapies,
+    }
+  }
+}
 
 const panels = [
     {
