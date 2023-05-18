@@ -22,11 +22,6 @@ const NewsAndMedia = (props) => {
       <section className="blog-area bg-color">
         <div className="container">
           <div className="blog-title text-center">
-            <div className="sub-title">
-              <div className="inner text-center">
-                <h3>Our Blog</h3>
-              </div>
-            </div>
             <h2>Trending</h2>
           </div>
           <div className="row justify-content-center">

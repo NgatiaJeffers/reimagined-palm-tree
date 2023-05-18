@@ -25,7 +25,7 @@ const FarajaMedicalSupportFund = () => {
                     <div className="text-area">
                       <div className="text-1">
                         <div className="title">
-                          <h3>Giving hope and a real chance of recovery</h3>
+                          <h3>Giving Hope , Help and Life</h3>
                           <div className="title-shape">
                             <Image src={shape} />
                           </div>
