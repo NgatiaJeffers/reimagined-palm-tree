@@ -25,7 +25,7 @@ const MenuItems = ({ activeRoute, setActiveRoute, items }) => {
               activeRoute === activeSubMenu ? "active" : ""
             }`}
             data-bs-toggle="dropdown"
-            data-bs-auto-close="inside" 
+            data-bs-auto-close="true"
             aria-expanded="false"
           >
             {title}

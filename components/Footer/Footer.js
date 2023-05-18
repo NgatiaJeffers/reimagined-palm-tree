@@ -36,7 +36,32 @@ const Footer = () => {
                   detect cancer cells in the body and track their spread.
                 </p>
               </div>
+            </div>
+            <div className="col-12 col-md-6 col-lg-3">
               <div className="footer_part m-top-15">
+                <h5>Important Links</h5>
+                <ul className="footer_links">
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-angle-right" aria-hidden="true"></i>
+                      Terms & Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-angle-right" aria-hidden="true"></i>
+                      Privacy Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i className="fa fa-angle-right" aria-hidden="true"></i>
+                      Cookies Policy
+                    </a>
+                  </li>
+                </ul>
+
+                <div className="footer_part m-top-15">
                 <h5>Social Links</h5>
                 <ul className="footer_social_links">
                   <li>
@@ -83,53 +108,9 @@ const Footer = () => {
                   </li>
                 </ul>
               </div>
-            </div>
-            <div className="col-12 col-md-6 col-lg-3">
-              <div className="footer_part">
-                <h5>Cancer Awareness Tags</h5>
-                <ul className=" footer_widget">
-                  <li>
-                    <a href="#">Therapy</a>
-                  </li>
-                  <li>
-                    <a href="#">Prostate</a>
-                  </li>
-                  <li>
-                    <a href="#">Breast</a>
-                  </li>
-                  <li>
-                    <a href="#">Colon</a>
-                  </li>
-                  <li>
-                    <a href="#">Childhood</a>
-                  </li>
-                </ul>
               </div>
+            </div>
 
-              <div className="footer_part m-top-15">
-                <h5>Important Links</h5>
-                <ul className="footer_links">
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-angle-right" aria-hidden="true"></i>
-                      Terms & Conditions
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-angle-right" aria-hidden="true"></i>
-                      Privacy Policy
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i className="fa fa-angle-right" aria-hidden="true"></i>
-                      Cookies Policy
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </div>
             <div className="col-12 col-md-6 col-lg-3">
               <div className="footer_part">
                 <h5>Quick Contact</h5>

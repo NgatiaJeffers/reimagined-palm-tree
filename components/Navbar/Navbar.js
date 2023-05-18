@@ -13,6 +13,7 @@ import MenuItems from "./MenuItems";
 import { MENU_LIST } from "./MenuList";
 import logo from "../../public/logo.png";
 
+
 const NavbarLayout = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [isActive, setIsActive] = useState(false);
@@ -106,46 +107,47 @@ const NavbarLayout = () => {
                       type="button"
                       className="btn-donate dropdown-toggle text-start"
                       data-bs-toggle="dropdown"
+                      data-bs-auto-close="true"
                       aria-expanded="false"
                     >
                       <AiFillHeart className="icon" />
                       Support Us
                     </button>
-                    <div
-                      className="dropdown-menu dropdown-menu-end"
-                      aria-labelledby="navbarDropdown"
-                    >
-                      <Link href={"/donate"}>
-                        <a className="dropdown-item color-1" href="#">
-                          <FcDonate className="icon" />
-                          Donate
-                        </a>
-                      </Link>
-                      <Link href={"/fundraise"}>
-                        <a className="dropdown-item color-2" href="#">
-                          <GiReceiveMoney className="icon" />
-                          Fundraise
-                        </a>
-                      </Link>
-                      <Link href={"/volunteer"}>
-                        <a className="dropdown-item color-3" href="#">
-                          <TbHeartHandshake className="icon" />
-                          Volunteer
-                        </a>
-                      </Link>
-                      <Link href={"/events"}>
-                        <a className="dropdown-item color-4" href="#">
-                          <MdEventNote className="icon" />
-                          Find Event
-                        </a>
-                      </Link>
-                      <Link href={"/in-kind-donation"}>
-                        <a className="dropdown-item color-5" href="#">
-                          <BiDonateHeart className="icon" />
-                          In Kind Donation
-                        </a>
-                      </Link>
-                    </div>
+                      <div
+                        className="dropdown-menu dropdown-menu-end animate slideIn"
+                        aria-labelledby="navbarDropdown"
+                      >
+                        <Link href={"/donate"}>
+                          <a className="dropdown-item color-1" href="#">
+                            <FcDonate className="icon" />
+                            Donate
+                          </a>
+                        </Link>
+                        <Link href={"/fundraise"}>
+                          <a className="dropdown-item color-2" href="#">
+                            <GiReceiveMoney className="icon" />
+                            Fundraise
+                          </a>
+                        </Link>
+                        <Link href={"/volunteer"}>
+                          <a className="dropdown-item color-3" href="#">
+                            <TbHeartHandshake className="icon" />
+                            Volunteer
+                          </a>
+                        </Link>
+                        <Link href={"/events"}>
+                          <a className="dropdown-item color-4" href="#">
+                            <MdEventNote className="icon" />
+                            Find Event
+                          </a>
+                        </Link>
+                        <Link href={"/in-kind-donation"}>
+                          <a className="dropdown-item color-5" href="#">
+                            <BiDonateHeart className="icon" />
+                            In Kind Donation
+                          </a>
+                        </Link>
+                      </div>
                   </div>
                 </div>
               </div>

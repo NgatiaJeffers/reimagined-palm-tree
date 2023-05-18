@@ -6,7 +6,7 @@ const Dropdown = ({ subMenus, handleDropDownSelect }) => {
   const router = useRouter();
 
   return (
-    <div className="dropdown-menu dropdown-mobile">
+    <div className="dropdown-menu dropdown-mobile animate slideIn">
       <div className="container">
         <div className="mega-content px-4">
           <div className="row">

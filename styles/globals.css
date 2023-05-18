@@ -474,10 +474,47 @@ hr {
   padding: 0 100px 0 100px;
 }
 
-/* .dropdown:hover .dropdown-menu {
-  display: block;
-  transition: all 0.6s;
-} */
+/* Dropdown Menu */
+.animate {
+  animation-duration: 0.3s;
+  -webkit-animation-duration: 0.3s;
+  animation-fill-mode: both;
+  -webkit-animation-fill-mode: both;
+}
+@keyframes slideIn {
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0rem);
+    opacity: 1;
+  }
+  0% {
+    transform: translateY(1rem);
+    opacity: 0;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  0% {
+    -webkit-transform: transform;
+    -webkit-opacity: 0;
+  }
+  100% {
+    -webkit-transform: translateY(0);
+    -webkit-opacity: 1;
+  }
+  0% {
+    -webkit-transform: translateY(1rem);
+    -webkit-opacity: 0;
+  }
+}
+
+.slideIn {
+  -webkit-animation-name: slideIn;
+  animation-name: slideIn;
+}
 
 .dropdown-menu .item-box {
   padding-bottom: 20px;
@@ -656,7 +693,7 @@ hr {
   box-shadow: 0px 10px 34px -20px rgba(0, 0, 0, 0.41);
   padding: 0;
   min-width: 17rem;
-  margin-top: 15px;
+  margin-top: 55px;
   position: relative;
 }
 
@@ -786,6 +823,10 @@ hr {
     display: contents;
   }
 
+  .dropdown-mobile {
+    margin-top: 15px;
+  }
+
   .dropdown-menu.dropdown-mobile {
     max-height: 300px;
     overflow-y: scroll;
@@ -812,6 +853,7 @@ hr {
   .btn-group.support-us-dropdown .dropdown-menu {
     transform: unset !important;
     margin-top: 0px !important;
+    max-width: 10px !important;
   }
 }
 
@@ -1722,6 +1764,13 @@ hr {
 .pdf-area .sub-heading {
   margin: 4em 1em 3em;
 }
+
+@media screen and (max-width: 768px) { 
+  .pdf-area .view-box {
+    margin-top: 30px;
+  }
+}
+
 
 .pdf-area button.btn-settings {
   margin: 25px;

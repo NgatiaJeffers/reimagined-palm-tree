@@ -57,7 +57,7 @@ const ContactUs = () => {
                         </div>
                       </div>
                       <p>
-                        +254 727 844 882, <br></br>+254 737 844 882,<br></br> +254 727 529 287
+                      Nairobi: 0748 811 909, <br></br>Eldoret: 0746 963 107<br></br>
                       </p>
                     </li>
                     <li>
@@ -70,7 +70,8 @@ const ContactUs = () => {
                         </div>
                       </div>
                       <p>
-                        info@farajacancersupport.org
+                        <a href="mailto:">info@farajacancersupport.org</a>
+                        
                       </p>
                     </li>
                   </ul>
