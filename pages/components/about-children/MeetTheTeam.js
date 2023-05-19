@@ -25,8 +25,12 @@ const MeetTheTean = ({ staffs }) => {
                       objectFit="cover"
                     />
                   </div>
-                  <h4>{name}</h4>
-                  <h5>{title}</h5>
+                  <div className="name-section">
+                    <h4>{name}</h4>
+                  </div>
+                  <div className="title-section">
+                    <h5>{title}</h5>
+                  </div>
                   <div className="bio">
                     {bio.map((text, index) => (
                       <p key={index}>{text.text}</p>
@@ -44,8 +48,13 @@ const MeetTheTean = ({ staffs }) => {
               <div className="img green">
                 <Image src={image7} />
               </div>
-              <h4>Andrew Ndegwa</h4>
-              <h5>Trustee</h5>
+              <div className="name-section">
+                <h4>Andrew Ndegwa</h4>
+              </div>
+              <div className="title-section">
+                <h5>Trustee</h5>
+              </div>
+
               <div className="bio">
                 <p>
                   Andrew is an executive director of First Chartered Securities
@@ -61,8 +70,13 @@ const MeetTheTean = ({ staffs }) => {
               <div className="img green">
                 <Image src={image8} />
               </div>
-              <h4>Mathew Ward</h4>
-              <h5>Trustee</h5>
+              <div className="name-section">
+                <h4>Mathew Ward</h4>
+              </div>
+              <div className="title-section">
+                <h5>Trustee</h5>
+              </div>
+
               <div className="bio">
                 <p>
                   Matthew is a co-founder of Levanter and is a trusted growth
@@ -77,8 +91,13 @@ const MeetTheTean = ({ staffs }) => {
               <div className="img green">
                 <Image src={image9} />
               </div>
-              <h4>Manu Chandaria</h4>
-              <h5>Trustee</h5>
+              <div className="name-section">
+                <h4>Manu Chandaria</h4>
+              </div>
+              <div className="title-section">
+                <h5>Trustee</h5>
+              </div>
+
               <div className="bio">
                 <p>
                   Manu is engaged in work within the framework of a joint Indian
