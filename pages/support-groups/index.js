@@ -1,11 +1,11 @@
 import React, { Fragment } from "react";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
+import PdfModal from "../../components/atoms/PdfModal";
 
 // API CALLS
 import { fetchSupportGroup } from "../../util/fetchSupportGroup";
 import { useState } from "react";
-import PdfModal from "../../components/atoms/PdfModal";
 
 const SupportGroups = (props) => {
   const { supportGroup } = props;

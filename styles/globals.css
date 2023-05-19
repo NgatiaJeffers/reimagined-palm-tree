@@ -1225,11 +1225,12 @@ hr {
 
   .banner-wrapper .slide {
     padding: 60px 0px 140px;
-}
+  }
 
-.swiper-slide {
-  padding: 13px !important;
-}
+  .swiper-slide {
+    padding: 13px !important;
+    margin-right: 100px;
+  } 
 }
 
 /* INTRO STYLES */
@@ -1724,6 +1725,12 @@ hr {
   font-weight: 500;
   margin-bottom: 1rem;
 }
+
+.team-section-wrap .bio {
+  max-height: 100px;
+  overflow-y: scroll;
+}
+
 
 /* =====================SUPPORT US PAGE STYLES==================== */
 .support-area {

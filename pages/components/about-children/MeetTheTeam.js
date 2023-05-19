@@ -1,87 +1,44 @@
 import React from "react";
 import Image from "next/image";
 
-import shape from "../../../public/shape2.png";
-import image from "../../../public/Team/Trustees/Dr-Noelle.jpg";
-import image1 from "../../../public/Team/Trustees/Hasheem.jpg";
-import image2 from "../../../public/Team/Trustees/Harriet.jpg";
-import image3 from "../../../public/Team/Trustees/Shaira.jpg";
-import image4 from "../../../public/Team/Trustees/Sonal.png";
-import image5 from "../../../public/Team/Trustees/Akberali.jpg";
-import image6 from "../../../public/Team/Trustees/hollas.jpg";
 import image7 from "../../../public/Team/Trustees/ndegwa.jpg";
 import image8 from "../../../public/Team/Trustees/Mathew.jpeg";
 import image9 from "../../../public/Team/Trustees/manu.jpg";
 
-const MeetTheTean = () => {
+import { urlFor } from "../../../lib/sanity";
+
+const MeetTheTean = ({ staffs }) => {
   return (
     <section className="wide-tb-100">
       <div className="container">
-        <h1 className="heading-main">Our Trustees</h1>
+        <h1 className="heading-main">Our Team</h1>
         <div className="row">
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image} />
+          {staffs?.map((item) => {
+            const { _id, name, title, bio, image } = item;
+            return (
+              <div className="col-12 col-lg-3 col-sm-6" key={_id}>
+                <div className="team-section-wrap">
+                  <div className="img green">
+                    <Image
+                      src={urlFor(image?.asset).url()}
+                      layout="fill"
+                      objectFit="cover"
+                    />
+                  </div>
+                  <h4>{name}</h4>
+                  <h5>{title}</h5>
+                  <div className="bio">
+                    {bio.map((text, index) => (
+                      <p key={index}>{text.text}</p>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <h4>Dr Noelle Orata</h4>
-              <h5>Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image1} />
-              </div>
-              <h4>Hasheem Maloo</h4>
-              <h5>Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image2} />
-              </div>
-              <h4>Harriet Wanjohi</h4>
-              <h5>Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image3} />
-              </div>
-              <h4>Shaira Adamali</h4>
-              <h5>Founding Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image4} />
-              </div>
-              <h4>Sonal Tejpar</h4>
-              <h5>Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image5} />
-              </div>
-              <h4>Akbermoawalla - UK Trustee</h4>
-              <h5>Trustee</h5>
-            </div>
-          </div>
-          <div className="col-12 col-lg-3 col-sm-6">
-            <div className="team-section-wrap">
-              <div className="img green">
-                <Image src={image6} />
-              </div>
-              <h4>Andrew Hollas</h4>
-              <h5>Board Chair</h5>
-            </div>
-          </div>
+            );
+          })}
+        </div>
+        <div className="row">
+          <h1 className="heading-main">Trustees</h1>
           <div className="col-12 col-lg-3 col-sm-6">
             <div className="team-section-wrap">
               <div className="img green">
@@ -89,6 +46,14 @@ const MeetTheTean = () => {
               </div>
               <h4>Andrew Ndegwa</h4>
               <h5>Trustee</h5>
+              <div className="bio">
+                <p>
+                  Andrew is an executive director of First Chartered Securities
+                  Limited (FCS), a Nairobi based investment holding company, as
+                  well as a non-executive board member of a number of public and
+                  private companies.
+                </p>
+              </div>
             </div>
           </div>
           <div className="col-12 col-lg-3 col-sm-6">
@@ -98,6 +63,13 @@ const MeetTheTean = () => {
               </div>
               <h4>Mathew Ward</h4>
               <h5>Trustee</h5>
+              <div className="bio">
+                <p>
+                  Matthew is a co-founder of Levanter and is a trusted growth
+                  and reputation advisor to our clients in financial services,
+                  fintech, ICT and supply chain.
+                </p>
+              </div>
             </div>
           </div>
           <div className="col-12 col-lg-3 col-sm-6">
@@ -107,6 +79,16 @@ const MeetTheTean = () => {
               </div>
               <h4>Manu Chandaria</h4>
               <h5>Trustee</h5>
+              <div className="bio">
+                <p>
+                  Manu is engaged in work within the framework of a joint Indian
+                  family with business interests in more than seventy countries.
+                  He sits as Chairman on a number of boards in the
+                  manufacturing, insurance and higher education sectors in East
+                  Africa. He is a leading industrialist and a Philanthropist in
+                  Kenya.
+                </p>
+              </div>
             </div>
           </div>
         </div>

@@ -16,6 +16,9 @@ import OurVision from "../components/about-children/OurVision";
 import OurServices from "../components/about-children/OurServices";
 import MeetTheTean from "../components/about-children/MeetTheTeam";
 
+// API CALLS
+import { fetchStaff } from "../../util/fetchStaff";
+
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
 
@@ -85,7 +88,8 @@ const useStyles = makeStyles({
   },
 });
 
-const AboutPage = () => {
+const AboutPage = (props) => {
+  const { staffs } = props;
   const theme = useTheme();
   const classes = useStyles();
   const [value, setValue] = useState(0);
@@ -150,7 +154,7 @@ const AboutPage = () => {
               <OurServices />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              <MeetTheTean />
+              <MeetTheTean staffs={staffs} />
             </TabPanel>
           </SwipeableViews>
         </Box>
@@ -160,3 +164,13 @@ const AboutPage = () => {
 };
 
 export default AboutPage;
+
+export const getServerSideProps = async () => {
+  const staffs = await fetchStaff();
+
+  return {
+    props: {
+      staffs,
+    }
+  }
+}

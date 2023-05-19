@@ -9,7 +9,7 @@ const Therapy = (props) => {
   const { therapies } = props;
   return (
     <Fragment>
-      <BreadCrumb title={"Complementary therapies"} />
+      <BreadCrumb title={"Therapies"} />
       <section className="wide-tb-100"></section>
       <section className="wide-tb-100 pt-0 mb-spacer-md therapy-area">
         <div className="container">

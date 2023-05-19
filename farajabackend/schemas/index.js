@@ -10,6 +10,8 @@ import event from './homePage/event';
 import sponsors from './homePage/sponsors';
 import supportGroup from './supportGroup';
 import therapy from './therapy';
+import staff from './staff';
+import trustee from './trustee';
 
 export const schemaTypes = [
     blog, 
@@ -23,5 +25,7 @@ export const schemaTypes = [
     sponsors,
     supportGroup,
     therapy,
+    staff,
+    trustee,
     blockContent
 ]
