@@ -1446,6 +1446,12 @@ hr {
   font-weight: 800;
 }
 
+@media (max-width: 767.98px) {
+  .about-title h2 {
+    font-size: 40px;
+  }
+}
+
 .about-content {
   position: relative;
   display: block;
@@ -4278,7 +4284,7 @@ hr {
 }
 
 .therapy-area .panel-content {
-  color: #ff8d15 !important;
+  color: #ffc107 !important;
 }
 
 .therapy-area .panel-label:after,
@@ -4288,6 +4294,18 @@ hr {
 
 .therapy-area .panel[aria-expanded="true"] .panel-label {
   color: #fff !important;
+}
+
+@media (max-width: 767.98px) {
+  .therapy-wrap {
+    padding: 3rem 2rem;
+    color: #fff;
+    margin-top: -10rem;
+  }
+
+  .therapy-wrap h1.heading-main {
+    font-size: 2.5rem !important;
+  }
 }
 
 /*============= CONTACT STYLE =====================*/
@@ -4958,9 +4976,11 @@ top-15 {
   transition: color 0.2s linear;
   cursor: pointer;
 }
+
 .panel-label:focus {
   outline: none;
 }
+
 .panel-label:after,
 .panel-label:before {
   content: "";
@@ -4972,24 +4992,30 @@ top-15 {
   margin-top: -2px;
   background-color: #000000;
 }
+
 .panel-label:before {
   transform: rotate(-90deg);
   transition: transform 0.35s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+
 .panel[aria-expanded="true"] .panel-content {
   opacity: 1;
 }
+
 .panel[aria-expanded="true"] .panel-label {
   color: #000000;
 }
+
 .panel[aria-expanded="true"] .panel-label:before {
   transform: rotate(0deg);
 }
+
 .panel-inner {
   overflow: hidden;
   will-change: height;
   transition: height 0.4s cubic-bezier(0.65, 0.05, 0.36, 1);
 }
+
 .panel-content {
   margin: 5px 25px 25px;
   font-size: 14px;
@@ -4997,8 +5023,19 @@ top-15 {
   opacity: 0;
   transition: opacity 0.3s linear 0.18s;
 }
+
 .panel:not(:last-child) {
   margin-bottom: 3px;
+}
+
+@media (max-width: 767.98px) {
+  .panel-label {
+    padding: 25px 60px 25px 0px;
+  }
+
+  .panel-content {
+    margin: 5px 0px 25px;
+  }
 }
 
 /* Set the width and height of the scrollbar */
