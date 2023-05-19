@@ -8,7 +8,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import { AiOutlineGift, AiFillClockCircle } from "react-icons/ai";
 import { ImQuotesLeft } from "react-icons/im";
 import Banner from "../components/Banner/Banner";
-import TruncatedParagraph from "../components/atoms/TruncatedText"
+import TruncatedParagraph from "../components/atoms/TruncatedText";
 import SponsorsLogo from "./components/SponsorsLogos";
 
 import shape1 from "../public/shape1.png";
@@ -129,7 +129,9 @@ export default function Home(props) {
         <div className="about-title text-center">
           <div className="sub-title">
             <div className="inner text-center">
-              <h3>Don't just take it from us, let our clients do the talking!</h3>
+              <h3>
+                Don't just take it from us, let our clients do the talking!
+              </h3>
             </div>
           </div>
           <h2>Testimonials</h2>
@@ -152,13 +154,15 @@ export default function Home(props) {
                     <TruncatedParagraph text={item.text[0]} limit={200} />
                   </div>
                   <div className="testimonial-meta">
-                  <Link
+                    <Link
                       href={"https://farajacancersupport.wordpress.com"}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <a>
-                        <strong className="testimonial-name">{item?.name}</strong>
+                        <strong className="testimonial-name">
+                          {item?.name}
+                        </strong>
                       </a>
                     </Link>
                   </div>
@@ -182,14 +186,15 @@ export default function Home(props) {
             <div className="col-lg-6 offset-lg-1">
               <div className="content-box">
                 <div className="title style-two">
-                  <h4 className="content-title">A Charity with Mission</h4>
-                  <h1>
-                    Upcoming <span>Events</span>
-                  </h1>
+                  <div className="title-align">
+                    <h4 className="content-title">A Charity with Mission</h4>
+                    <h1>
+                      Upcoming <span>Events</span>
+                    </h1>
+                  </div>
                   <div className="text">
-                    The future is something which everyone reaches at the rate{" "}
-                    <br /> of sixty minutes an hour, whatever he does, whoever
-                    he is.
+                    The future is something which everyone reaches at the rateof
+                    sixty minutes an hour, whatever he does, whoever he is.
                   </div>
                   <div className="row">
                     {events?.slice(0, 2).map((event) => (
@@ -198,9 +203,7 @@ export default function Home(props) {
                         key={event?._id}
                       >
                         <div className="inner-box">
-                          <div className="date">
-                          {event?.eventDate}
-                          </div>
+                          <div className="date">{event?.eventDate}</div>
                           <h4>{event?.title}</h4>
                         </div>
                       </div>
@@ -236,39 +239,43 @@ export default function Home(props) {
           </div>
           <div className="row">
             {blog?.map((item) => {
-              const {_id, image, title, description, slug } = item
+              const { _id, image, title, description, slug } = item;
               return (
                 <div className="col-xl-4 col-lg-4" key={_id}>
-                <div className="single-blog">
-                  <div className="img-holder">
-                    <div className="inner">
-                    <Link as={`/whats-happening/${slug?.current}`}
-                              href={"/whats-happening/[slug]"}>
-                        <a>
-                          <Image
-                            src={urlFor(image?.asset).url()}
-                            layout="fill"
-                            objectFit="contain"
-                            style={{ position: "relative !important" }}
-                          />
-                        </a>
-                      </Link>
+                  <div className="single-blog">
+                    <div className="img-holder">
+                      <div className="inner">
+                        <Link
+                          as={`/whats-happening/${slug?.current}`}
+                          href={"/whats-happening/[slug]"}
+                        >
+                          <a>
+                            <Image
+                              src={urlFor(image?.asset).url()}
+                              layout="fill"
+                              objectFit="contain"
+                              style={{ position: "relative !important" }}
+                            />
+                          </a>
+                        </Link>
+                      </div>
                     </div>
-                  </div>
-                  <div className="text-holder">
-                    <h3 className="blog-title">
-                    <Link as={`/whats-happening/${slug?.current}`}
-                              href={"/whats-happening/[slug]"}>
-                        <a>{title}</a>
-                      </Link>
-                    </h3>
-                    <div className="text">
-                      <p>{description}</p>
+                    <div className="text-holder">
+                      <h3 className="blog-title">
+                        <Link
+                          as={`/whats-happening/${slug?.current}`}
+                          href={"/whats-happening/[slug]"}
+                        >
+                          <a>{title}</a>
+                        </Link>
+                      </h3>
+                      <div className="text">
+                        <p>{description}</p>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              )
+              );
             })}
           </div>
         </div>

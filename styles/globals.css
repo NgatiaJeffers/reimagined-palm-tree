@@ -2248,16 +2248,6 @@ hr {
   margin-top: 10px;
 }
 
-/* Styles for desktop devices with a screen width of 1024px or larger */
-@media screen and (min-width: 1024px) {
-  /* Your desktop styles here */
-}
-
-/* Styles for tablets with a screen width between 768px and 1023px */
-@media only screen and (min-width: 320px) and (max-width: 1199px) {
-  /* Your tablet styles here */
-}
-
 /* Styles for mobile devices with a screen width of 767px or smaller */
 @media screen and (max-width: 767px) {
   /* Your mobile styles here */
@@ -2270,6 +2260,10 @@ hr {
   .event-area .content-box {
     padding: 58px 15px 50px !important;
     background: #fff;
+  }
+
+  .event-area .content-box .title.style-two .title-align {
+    text-align: center;
   }
 }
 
@@ -3041,6 +3035,20 @@ hr {
   .top-box {
     display: unset;
     margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .partner-area .top-box .title {
+    margin-top: -8px;
+    margin-bottom: 30px;
+  }
+
+  .partner-area .top-box .title h2 {
+    font-size: 40px !important;
+  }
+
+  .partner-area .top-box .btn-box {
+    margin-bottom: 40px;
   }
 }
 
@@ -5054,4 +5062,14 @@ top-15 {
 ::-webkit-scrollbar-track {
   background-color: #f1f1f1;
   border-radius: 10px;
+}
+
+/* Styles for desktop devices with a screen width of 1024px or larger */
+@media screen and (min-width: 1024px) {
+  /* Your desktop styles here */
+}
+
+/* Styles for tablets with a screen width between 768px and 1023px */
+@media only screen and (min-width: 320px) and (max-width: 1199px) {
+  /* Your tablet styles here */
 }
