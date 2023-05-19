@@ -3214,18 +3214,22 @@ hr {
   .post-row {
     margin: 0 auto !important;
   }
+
+  .support-area .content-box.annual-reports {
+    margin-bottom: 70px;
+  }
 }
 
 /* ANNUAL REPORT STYLING */
-.annual-report-area {
-  margin-bottom: 40px;
+.timeline-column {
+  max-height: 600px;
+  overflow-y: scroll;
 }
 
-.timeline-section .section_heading {
-  text-align: left;
-}
-
-.annual-report-area h3 {
+@media (max-width: 767.98px) {
+  .support-area .content-box.annual-reports {
+    margin-bottom: 70px;
+  }
 }
 
 .timeline-area {

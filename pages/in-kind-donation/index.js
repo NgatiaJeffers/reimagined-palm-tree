@@ -38,7 +38,7 @@ const InKindDonation = () => {
                       </div>
                       <div className="text-1">
                         <div className="title">
-                          <h3>We are open to receiving items such as</h3>
+                          <h3>Examples of the items we are receiving include</h3>
                           <div className="title-shape-1">
                             <Image src={shape} />
                           </div>

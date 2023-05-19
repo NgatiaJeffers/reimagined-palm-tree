@@ -10,12 +10,14 @@ const AnnualReports = () => {
   return (
     <>
       <BreadCrumb title={"Annual Reports"} />
-      <section className="annual-reports-section">
+      <section className="support-area">
         <div className="container">
           <div className="row">
-            <div className="col annual-report-area">
-              <div className="post-details-1">
-                <h1 className="text-left">Annual Reports</h1>
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+              <div className="content-box annual-reports">
+                <h2 className="heading-title">
+                  Our <span className="underline">Annual Reports</span>
+                </h2>
                 <p>
                   Our annual reports show how, with your support, we have
                   achieved our strategic objectives of giving hope, help and
@@ -33,23 +35,7 @@ const AnnualReports = () => {
                 </p>
               </div>
             </div>
-
-          </div>
-        </div>
-      </section>
-
-      <section className="section-padddign timeline-section">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-sm-8 col-lg-6">
-              <div className="section_heading text-left">
-                <h3>Our Annual Reports</h3>
-                <div className="line"></div>
-              </div>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col col-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 timeline-column">
               <div className="timeline-area">
                 {/* Timeline Content */}
                 <div className="timeline-box">
@@ -57,15 +43,16 @@ const AnnualReports = () => {
                     <p>2023</p>
                   </div>
                   <div className="row">
-                    <div className="col col-12 col-lg-4 col-md-6">
+                    <div className="col col-12 col-lg-12 col-md-12">
                       <div className="timeline-content">
                         <div className="timeline-icon">
-                          <AiOutlineBarChart className="chart-icon"/>
+                          <AiOutlineBarChart className="chart-icon" />
                         </div>
                         <div className="timeline-text">
-                            <button className="ripple-effect">View</button>
-                          <p>Faraja Financial Report 2023 <BiCalendar /></p>
-                          
+                          <button className="ripple-effect">View</button>
+                          <p>
+                            Faraja Financial Report 2023 <BiCalendar />
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -80,15 +67,16 @@ const AnnualReports = () => {
                     <p>2022</p>
                   </div>
                   <div className="row">
-                    <div className="col col-12 col-lg-4 col-md-6">
+                    <div className="col col-12 col-lg-12 col-md-12">
                       <div className="timeline-content">
                         <div className="timeline-icon">
-                          <AiOutlineBarChart className="chart-icon"/>
+                          <AiOutlineBarChart className="chart-icon" />
                         </div>
                         <div className="timeline-text">
-                            <button className="ripple-effect">View</button>
-                          <p>Faraja Financial Report 2022 <BiCalendar /></p>
-                          
+                          <button className="ripple-effect">View</button>
+                          <p>
+                            Faraja Financial Report 2022 <BiCalendar />
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -103,15 +91,16 @@ const AnnualReports = () => {
                     <p>2021</p>
                   </div>
                   <div className="row">
-                    <div className="col col-12 col-lg-4 col-md-6">
+                    <div className="col col-12 col-lg-12 col-md-12">
                       <div className="timeline-content">
                         <div className="timeline-icon">
-                          <AiOutlineBarChart className="chart-icon"/>
+                          <AiOutlineBarChart className="chart-icon" />
                         </div>
                         <div className="timeline-text">
-                            <button className="ripple-effect">View</button>
-                          <p>Faraja Financial Report 2021 <BiCalendar /></p>
-                          
+                          <button className="ripple-effect">View</button>
+                          <p>
+                            Faraja Financial Report 2021 <BiCalendar />
+                          </p>
                         </div>
                       </div>
                     </div>
