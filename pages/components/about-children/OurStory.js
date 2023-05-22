@@ -8,7 +8,7 @@ import Support from "../../../components/shared/Support";
 const OurStory = () => {
   return (
     <Fragment>
-      <section className="wide-tb-100 our-story-area">
+      <section className="our-story-area">
         <div className="container-fluid">
           <div className="row">
             <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">

@@ -1661,6 +1661,11 @@ hr {
   margin-top: 100px;
 }
 
+.our-story-area {
+  padding-top: 70px;
+  padding-bottom: 100px;
+}
+
 .our-story-area .our-story-content {
   padding: 100px 70px 50px 60px;
 }
@@ -4322,6 +4327,34 @@ hr {
     font-size: 2.5rem !important;
   }
 }
+
+
+
+
+/*============= CRAFT FOR CURE STYLE =====================*/
+.crafts-for-cure-area .blog-title {
+  padding: 100px 50px 60px 50px;
+}
+
+.crafts-for-cure-area .service-section .content-box {
+  padding: 60px 70px 10px 60px !important;
+}
+
+.crafts-for-cure-area .service-section .content-box .heading-box {
+  margin-bottom: unset !important;
+}
+
+.crafts-for-cure-area .service-section .content-box .heading-box .heading-title {
+  font-size: 25px !important;
+}
+
+.crafts-for-cure-area .service-section .content-box .heading-box p {
+  font-size: 15px;
+  margin-top: unset !important;
+}
+
+
+
 
 /*============= CONTACT STYLE =====================*/
 .contact-area {
