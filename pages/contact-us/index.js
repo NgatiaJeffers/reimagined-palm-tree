@@ -27,6 +27,10 @@ const ContactUs = () => {
                   assist.
                 </p>
               </div>
+              <div className="google-maps">
+              <iframe height="400"
+                src="https://www.google.co.ke/maps/ms?msa=0&amp;msid=208305355725789246003.0004fd349b53d0606de69&amp;hl=en&amp;ie=UTF8&amp;t=m&amp;ll=-1.262714,36.812455&amp;spn=0,0&amp;output=embed"></iframe>
+              </div>
             </div>
             <div className="col-xl-4">
               <div className="contact-sidebar-box">
@@ -70,8 +74,7 @@ const ContactUs = () => {
                         </div>
                       </div>
                       <p>
-                        <a href="mailto:">info@farajacancersupport.org</a>
-                        
+                        <a href="mailto:info@farajacancersupport.org">info@farajacancersupport.org</a>
                       </p>
                     </li>
                   </ul>
