@@ -22,11 +22,18 @@ import {
 } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
 import { BsFacebook } from "react-icons/bs";
+import Carousel from "../atoms/CarouselText";
 
 const Footer = () => {
   const getCurrentYear = () => {
     return new Date().getFullYear();
   };
+
+  const texts = [
+    "Finally, some cancers can actually glow in the dark. Certain types of cancer cells produce fluorescent molecules that emit light when exposed to certain wavelengths. Scientists have used this property to develop imaging techniques that can help detect cancer cells in the body and track their spread.",
+
+    "Another fun fact is that some animals are less likely to develop cancer than humans, despite living much longer. For example, elephants, whales, and naked mole rats have very low cancer rates, despite having many more cells than humans. Scientists are studying these animals to understand what factors might protect them from cancer and whether these insights can be applied to human medicine.",
+  ];
   return (
     <footer className="footer_area">
       <div className="foo_top_header_one section_padding_100_70">
@@ -36,13 +43,7 @@ const Footer = () => {
             <div className="col-12 col-md-6 col-lg-3">
               <div className="footer_part">
                 <h5>Did You Know</h5>
-                <p>
-                  Finally, some cancers can actually glow in the dark. Certain
-                  types of cancer cells produce fluorescent molecules that emit
-                  light when exposed to certain wavelengths. Scientists have
-                  used this property to develop imaging techniques that can help
-                  detect cancer cells in the body and track their spread.
-                </p>
+                <Carousel texts={texts} />
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3">
@@ -80,39 +81,38 @@ const Footer = () => {
                     </li>
                     <li>
                       <a href="#">
-                        <Image src={tiktok} height={30} width={30} /> 
+                        <Image src={tiktok} height={30} width={30} />
                         <span className="social-name">TikTok</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <Image src={youtube} height={30} width={30} />
-                        <span className="social-name">YouTube</span> 
+                        <span className="social-name">YouTube</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <Image src={twitter} height={30} width={30} />
-                        <span className="social-name">Twitter</span> 
+                        <span className="social-name">Twitter</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <Image src={instagram} height={30} width={30} />
                         <span className="social-name">Instagram</span>
-                        
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <Image src={linkedin} height={30} width={30} />
-                        <span className="social-name">Linkedin</span> 
+                        <span className="social-name">Linkedin</span>
                       </a>
                     </li>
                     <li>
                       <a href="#">
                         <Image src={whatsapp} height={30} width={30} />
-                        <span className="social-name">Whatsapp</span> 
+                        <span className="social-name">Whatsapp</span>
                       </a>
                     </li>
                   </ul>
