@@ -9,9 +9,9 @@ const OurStory = () => {
   return (
     <Fragment>
       <section className="wide-tb-100 our-story-area">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div className="our-story-content">
                 <h2 className="heading-main">
                   Our <span className="underline">Story</span>
@@ -25,7 +25,7 @@ const OurStory = () => {
                 </p>
               </div>
             </div>
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div
                 className="box-bg"
                 style={{ backgroundImage: `url(/in-kind.jpeg)` }}
@@ -33,13 +33,13 @@ const OurStory = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div
                 className="box-bg"
                 style={{ backgroundImage: `url(/diff.jpg)` }}
               ></div>
             </div>
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div className="our-story-content">
                 <h2 className="heading-main">
                   Our <span className="underline">Mission</span>
@@ -56,7 +56,7 @@ const OurStory = () => {
             </div>
           </div>
           <div className="row">
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div className="our-story-content">
                 <h2 className="heading-main">
                   Our <span className="underline">Vision</span>
@@ -64,7 +64,7 @@ const OurStory = () => {
                 <p>A safe haven accessible to anyone affected by cancer.</p>
               </div>
             </div>
-            <div className="col-xl-6 col-12 col-lg-6 col-md-12">
+            <div className="col-xl-6 col-12 col-lg-6 col-md-12 p-0">
               <div
                 className="box-bg"
                 style={{ backgroundImage: `url(/about1.jpg)` }}

@@ -20,7 +20,7 @@ const Support = () => {
                   </p>
                 </div>
                 <div className="section-btn">
-                  <Link href={"/"}>
+                  <Link href={"/volunteer"}>
                     <a className="btn-main">Become a Volunteer</a>
                   </Link>
                 </div>
@@ -43,7 +43,7 @@ const Support = () => {
                         portion of your life that you will never get back.
                     </p>
                     <div className="section-btn">
-                        <Link href={"/"}>
+                        <Link href={"/donate"}>
                             <a className="btn-main">Donate Now</a>
                         </Link>
                     </div>
@@ -59,7 +59,7 @@ const Support = () => {
                         portion of your life that you will never get back.
                     </p>
                     <div className="section-btn">
-                        <Link href={"/"}>
+                        <Link href={"/donate"}>
                             <a className="btn-main">Sponsor Now</a>
                         </Link>
                     </div>
@@ -75,7 +75,7 @@ const Support = () => {
                         portion of your life that you will never get back.
                     </p>
                     <div className="section-btn">
-                        <Link href={"/"}>
+                        <Link href={"/in-kind-donation"}>
                             <a className="btn-main">Check Out</a>
                         </Link>
                     </div>

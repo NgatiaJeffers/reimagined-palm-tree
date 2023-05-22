@@ -1668,7 +1668,7 @@ hr {
 .our-story-area .box-bg {
   height: 500px;
   width: 100%;
-  background-size: contain !important;
+  background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
 }

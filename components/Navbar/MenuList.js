@@ -25,14 +25,14 @@ export const MENU_LIST = [
               description: "Our team of experienced professionals will work closely with you, providing the support and expertise to deliver the best possible service."
             },
             {
-              title: "Annual Reports",
-              url: "/about/annual-reports",
-              description: "Our annual reports show how, with your support, we have achieved our strategic objectives of giving hope."
-            },
-            {
               title: "Sponsors & Supporters",
               url: "/",
               description: "Get a glimpse of our able Sponsors and Supporters"
+            },
+            {
+              title: "Annual Reports",
+              url: "/about/annual-reports",
+              description: "Our annual reports show how, with your support, we have achieved our strategic objectives of giving hope."
             }
           ],
         },

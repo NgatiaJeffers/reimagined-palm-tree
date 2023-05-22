@@ -6,9 +6,13 @@ import ourWork from "../../public/our-work.jpg";
 import craftforCure from "../../public/crafts_for_cure.jpg";
 import FarajaFruity from "../../public/Faraja_fruity.jpg";
 import received from "../../public/received.jpg";
+import { Fragment } from "react";
+import BreadCrumb from "../../components/atoms/Breadcrumb";
 
 const OurWork = () => {
   return (
+    <Fragment>
+      <BreadCrumb title={"Crafts For Cure"} />
     <section className="section-padding section-color">
       <div className="container-fluid">
         <div className="row">
@@ -214,6 +218,8 @@ const OurWork = () => {
         </div>
       </div>
     </section>
+    </Fragment>
+
   );
 };
 
