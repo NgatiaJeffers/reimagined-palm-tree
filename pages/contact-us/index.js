@@ -31,9 +31,14 @@ const ContactUs = () => {
                 </div>
                 <h2>Get In Touch</h2>
                 <p>
-                  Please reach out to us on info@farajacancersupport.org with
-                  any questions or comments you may have and we will be happy to
-                  assist.
+                  Please reach out to us on{" "}
+                  <a href="mailto:info@farajacancersupport.org">
+                    <span className="underline">
+                      info@farajacancersupport.org
+                    </span>
+                  </a>{" "}
+                  with any questions or comments you may have and we will be
+                  happy to assist.
                 </p>
               </div>
               <div className="google-maps">
