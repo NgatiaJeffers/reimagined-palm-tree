@@ -2100,6 +2100,147 @@ hr {
 }
 
 /* EVENTS SECTION STYLES */
+.event-wrap {
+  background: #FFF;
+  border-radius: 7px;
+  overflow: hidden;
+  margin: 0;
+  box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.15);
+  position: relative;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+}
+
+.event-wrap .img-wrap img {
+  width: 100%;
+}
+
+.event-wrap .img-wrap a span img
+ {
+  height: auto !important;
+}
+
+.event-wrap .img-wrap a span,
+.event-wrap .img-wrap a span img
+ {
+  position: unset !important;
+}
+
+.event-wrap .content-wrap {
+  padding: 0 2.5rem;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  min-height: 1px;
+}
+
+.event-wrap .date-wrap {
+  margin-top: -50px;
+  pointer-events: none;
+  margin-bottom: 30px;
+}
+
+.event-wrap .date-box, .event-wrap-single .date-box {
+  min-width: 90px;
+  min-height: 90px;
+  border-radius: 7px;
+  background: #00afea;
+  color: #fff5ec;
+  font-size: 1.875rem;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-weight: 700;
+  margin-right: 5px;
+  flex-flow: column;
+  max-width: 90px;
+  margin-right: 20px;
+}
+
+.event-wrap .date-box span, .event-wrap-single .date-box span {
+  display: block;
+  font-size: 1rem;
+  color: #ffffff;;
+  padding-top: 3px;
+  font-weight: 400;
+}
+
+.event-wrap .event-details {
+  color: #6e7c90;
+  font-size: 0.875rem;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.event-wrap .event-details > div:not(:last-child) {
+  margin-right: 15px;
+}
+
+.event-wrap .content-wrap h3 {
+  margin-bottom: 1.5rem;
+}
+
+.event-wrap .content-wrap h3 a, .event-wrap-single .date-wrap h3 a {
+  color: #27304b;
+  font-weight: 600;
+  font-size: 1.5rem;
+}
+
+.read-more-wrap {
+  padding: 0 2.5rem 2.5rem 2.5rem;
+  text-align: right;
+}
+
+.read-more-line {
+  font-size: 1.3rem;
+  align-items: center;
+  font-weight: 700;
+  text-align: right;
+  color: #ff6b2a !important;
+}
+
+.read-more-line span {
+  position: relative;
+  margin-left: 0.5rem;
+}
+
+.read-more-line span::after {
+  position: absolute;
+  content: "";
+  left: -65px;
+  top: 50%;
+  width: 50px;
+  border-bottom: 2px solid #27304b;
+  transform: translateY(-50%);
+}
+
+@media (max-width: 767px) {
+  .read-more-line span:after {
+    right: -65px;
+    left: auto;
+  }
+
+  .read-more-wrap {
+    text-align: left;
+  }
+}
+
+
+
+
+
+
+
+
+
+
 .event-area {
   position: relative;
   display: block;

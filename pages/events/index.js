@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
 import BreadCrumb from "../../components/atoms/Breadcrumb";
 import TruncatedParagraph from "../../components/atoms/TruncatedText";
 import { getDayAndMonth } from "../../util/util";
+import { urlFor } from "../../lib/sanity";
 
 // API CALLS
 import { fetchEvents } from "../../util/fetchEvents";
 
 const EventsPage = (props) => {
   const { events } = props;
+  console.log(events);
 
   const groupedEvents = events.reduce((acc, event) => {
     if (!acc[event?.eventIn?.slug?.current]) {
@@ -21,12 +23,15 @@ const EventsPage = (props) => {
   }, {});
 
   return (
-    <>
+    <Fragment>
       <BreadCrumb title={"Upcoming Events"} />
       <section className="events-page">
         <div className="container">
           {Object.entries(groupedEvents)?.map(([slug, events]) => (
-            <div className="row" key={slug}>
+            <div
+              className="row row-cols-1 row-cols-md-2 row-cols-sm-1"
+              key={slug}
+            >
               <div className="col col-xl-12 col-lg-12 col-md-12">
                 <div className="title">
                   <h2>
@@ -39,43 +44,92 @@ const EventsPage = (props) => {
                   </h2>
                 </div>
               </div>
-              {events?.map((item) => (
-                <div className="col-xl-4 col-lg-6 col-md-6" key={item?._id}>
-                  <div className="event-card">
-                    <div className="card-content">
-                      <div className="date-box">
-                        <div className="left">
-                          <h2>{item?.eventDate}</h2>
-                        </div>
+              {events?.map((item) => {
+                const { _id, image, title, slug, eventLocation, eventDate
+                } = item;
+                return (
+                  <div className="col mb-5" key={_id}>
+                    <div className="event-wrap">
+                      <div className="img-wrap">
+                        <a>
+                          <Image 
+                            src={urlFor(image?.asset).url()}
+                            objectFit="cover"
+                            layout="fill"
+                            />
+                        </a>
                       </div>
-                      <div className="title">
-                        <h2>
+                      <div className="content-wrap">
+                        <div className="date-wrap d-lg-flex align-items-end">
+                          <div className="date-box">
+                            <span>{eventDate}</span>
+                          </div>
+                          <div className="event-details">
+                            <div>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                className="feather feather-clock"
+                              >
+                                <circle cx="12" cy="12" r="10"></circle>
+                                <polyline points="12 6 12 12 16 14"></polyline>
+                              </svg>{" "}
+                              09:00 Am
+                            </div>
+                            <div>
+                              <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="24"
+                                height="24"
+                                viewBox="0 0 24 24"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                className="feather feather-map-pin"
+                              >
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                              </svg>{" "}
+                              {eventLocation}
+                            </div>
+                          </div>
+                        </div>
+                        <h3>
                           <Link
-                            as={`/events/${item?.slug?.current}`}
+                            as={`/events/${slug?.current}`}
                             href={"/events/[slug]"}
                           >
-                            <a>{item?.title}</a>
+                            <a>{title}</a>
                           </Link>
-                        </h2>
+                        </h3>
                       </div>
-                      <div className="inner-text">
-                        <p>
-                          <TruncatedParagraph
-                            text={item?.eventDetails.join(" ")}
-                            limit={200}
-                          />
-                        </p>
+                      <div className="text-md-right text-right read-more-wrap">
+                        <Link
+                          as={`/events/${slug?.current}`}
+                          href={"/events/[slug]"}
+                        >
+                          <a className="read-more-line">
+                            <span>Read More</span></a>
+                        </Link>
                       </div>
-                      <div className="border-box"></div>
                     </div>
                   </div>
-                </div>
-              ))}
+                );
+              })}
             </div>
           ))}
         </div>
       </section>
-    </>
+    </Fragment>
   );
 };
 
