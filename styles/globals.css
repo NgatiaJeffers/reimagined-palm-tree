@@ -4597,13 +4597,51 @@ top-15 {
 .footer_social_links a {
   border: 1px solid #333;
   border-radius: 6px;
-  color: #888;
+  color: #fff;
   display: inline-block;
-  font-size: 13px;
+  font-size: 15px;
   margin-bottom: 3px;
-  padding: 7px 12px;
+  padding: 8px 12px;
   margin-right: 5px;
 }
+
+.footer_social_links a:hover {
+  color: #ffffff;
+}
+
+.footer_social_links a .icon {
+  height: 1.8em;
+  width: 1.8em;
+}
+
+.footer_social_links a .icon.color-1 {
+  color: #2AA4F4;
+}
+
+.footer_social_links a .icon.color-2 {
+  color: #1d9bf0;
+}
+
+.footer_social_links a .icon.color-3 {
+  color: #bb368d;
+}
+
+.footer_social_links a .icon.color-4 {
+  color: #ee1d52;
+}
+
+.footer_social_links a .icon.color-5 {
+  color: #ff0000;
+}
+
+.footer_social_links a .icon.color-6 {
+  color: #0077b5;
+}
+
+.footer_social_links a .icon.color-7 {
+  color: #25D366;
+}
+
 
 .footer_links a i {
   padding-right: 10px;

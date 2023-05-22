@@ -7,12 +7,14 @@ import Childhood from "../../public/Childhood.png";
 import { 
   AiFillFacebook, 
   AiFillTwitterSquare, 
+  AiFillTwitterCircle ,
   AiFillInstagram, 
   AiFillLinkedin,
   AiOutlineWhatsApp,
   AiFillYoutube
 } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs"
 
 
 const Footer = () => {
@@ -64,6 +66,44 @@ const Footer = () => {
                 <div className="footer_part m-top-15">
                 <h5>Social Links</h5>
                 <ul className="footer_social_links">
+                <li>
+                  <a href="#">
+                    <BsFacebook className="icon color-1" />
+                    <span>Facebook</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <FaTiktok className="icon color-4" /> TikTok
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <AiFillYoutube className="icon color-5" /> YouTube
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <AiFillTwitterCircle className="icon color-2" /> Twitter
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <AiFillInstagram className="icon color-3" /> Instagram
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <AiFillLinkedin className="icon color-6" /> Linkedin
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <AiOutlineWhatsApp className="icon color-7" /> Whatsapp
+                  </a>
+                </li>
+              </ul>
+                {/* <ul className="footer_social_links">
                   <li>
                     <a href="#">
                       <AiFillFacebook className="icon" />{" "}
@@ -106,7 +146,7 @@ const Footer = () => {
                       Linkedin
                     </a>
                   </li>
-                </ul>
+                </ul> */}
               </div>
               </div>
             </div>
