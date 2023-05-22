@@ -193,7 +193,7 @@ export default function Home(props) {
                     </h1>
                   </div>
                   <div className="text">
-                    The future is something which everyone reaches at the rateof
+                    The future is something which everyone reaches at the rate of
                     sixty minutes an hour, whatever he does, whoever he is.
                   </div>
                   <div className="row">

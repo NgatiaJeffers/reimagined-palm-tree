@@ -3,19 +3,25 @@ import Link from "next/link";
 import Image from "next/image";
 
 import Childhood from "../../public/Childhood.png";
+import facebook from "../../public/Social-media/facebook.png";
+import instagram from "../../public/Social-media/instagram.png";
+import linkedin from "../../public/Social-media/linkedin.png";
+import tiktok from "../../public/Social-media/tiktok-white.png";
+import twitter from "../../public/Social-media/twitter.png";
+import whatsapp from "../../public/Social-media/whatsapp.png";
+import youtube from "../../public/Social-media/youtube.png";
 
-import { 
-  AiFillFacebook, 
-  AiFillTwitterSquare, 
-  AiFillTwitterCircle ,
-  AiFillInstagram, 
+import {
+  AiFillFacebook,
+  AiFillTwitterSquare,
+  AiFillTwitterCircle,
+  AiFillInstagram,
   AiFillLinkedin,
   AiOutlineWhatsApp,
-  AiFillYoutube
+  AiFillYoutube,
 } from "react-icons/ai";
 import { FaTiktok } from "react-icons/fa";
-import { BsFacebook } from "react-icons/bs"
-
+import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   const getCurrentYear = () => {
@@ -64,90 +70,53 @@ const Footer = () => {
                 </ul>
 
                 <div className="footer_part m-top-15">
-                <h5>Social Links</h5>
-                <ul className="footer_social_links">
-                <li>
-                  <a href="#">
-                    <BsFacebook className="icon color-1" />
-                    <span>Facebook</span>
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <FaTiktok className="icon color-4" /> TikTok
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <AiFillYoutube className="icon color-5" /> YouTube
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <AiFillTwitterCircle className="icon color-2" /> Twitter
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <AiFillInstagram className="icon color-3" /> Instagram
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <AiFillLinkedin className="icon color-6" /> Linkedin
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <AiOutlineWhatsApp className="icon color-7" /> Whatsapp
-                  </a>
-                </li>
-              </ul>
-                {/* <ul className="footer_social_links">
-                  <li>
-                    <a href="#">
-                      <AiFillFacebook className="icon" />{" "}
-                      Facebook
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <AiFillTwitterSquare className="icon" />{" "}
-                      Twitter
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <AiFillInstagram className="icon" />{" "}
-                      Instagram
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <FaTiktok className="icon" />{" "}
-                      TikTok
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <AiFillYoutube className="icon" />{" "}
-                      YouTube
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <AiFillLinkedin className="icon" />{" "}
-                      Linkedin
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <AiOutlineWhatsApp className="icon" />{" "}
-                      Linkedin
-                    </a>
-                  </li>
-                </ul> */}
-              </div>
+                  <h5>Social Links</h5>
+                  <ul className="footer_social_links">
+                    <li>
+                      <a href="#">
+                        <Image src={facebook} height={30} width={30} />
+                        <span className="social-name">Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={tiktok} height={30} width={30} /> 
+                        <span className="social-name">TikTok</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={youtube} height={30} width={30} />
+                        <span className="social-name">YouTube</span> 
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={twitter} height={30} width={30} />
+                        <span className="social-name">Twitter</span> 
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={instagram} height={30} width={30} />
+                        <span className="social-name">Instagram</span>
+                        
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={linkedin} height={30} width={30} />
+                        <span className="social-name">Linkedin</span> 
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <Image src={whatsapp} height={30} width={30} />
+                        <span className="social-name">Whatsapp</span> 
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
 
@@ -157,31 +126,34 @@ const Footer = () => {
                 <div className="footer_single_contact_info">
                   <h5>Phone:</h5>
                   <p>
-                  Nairobi: 0748 811 909 <br /> Eldoret: 0746 963 107
+                    Nairobi: 0748 811 909 <br /> Eldoret: 0746 963 107
                   </p>
                 </div>
                 <div className="footer_single_contact_info">
                   <h5>Email:</h5>
-                  <p>
-                  info@farajacancersupport.org
-                  </p>
+                  <p>info@farajacancersupport.org</p>
                 </div>
               </div>
             </div>
             <div className="col-12 col-md-6 col-lg-3">
               <div className="footer_part">
-              <div className="thumb-wrapper">
-								<div className="img-box">
-                  <Image 
-                  src={Childhood} 
-                  // height={180}
-                  />
-								</div>
-								<div className="thumb-content">
-									<h4>Buy Safari Lounge Coffee and support patients and caregivers with cancer in Kenya</h4>
-									<a href="#" className="btn btn-primary">Buy Now</a>
-								</div>						
-							</div>
+                <div className="thumb-wrapper">
+                  <div className="img-box">
+                    <Image
+                      src={Childhood}
+                      // height={180}
+                    />
+                  </div>
+                  <div className="thumb-content">
+                    <h4>
+                      Buy Safari Lounge Coffee and support patients and
+                      caregivers with cancer in Kenya
+                    </h4>
+                    <a href="#" className="btn btn-primary">
+                      Buy Now
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -192,8 +164,8 @@ const Footer = () => {
           <div className="row">
             <div className="col-12">
               <p>
-                &copy; {getCurrentYear()} All Rights Reserved by
-                Faraja Cancer Support
+                &copy; {getCurrentYear()} All Rights Reserved by Faraja Cancer
+                Support
               </p>
             </div>
           </div>
