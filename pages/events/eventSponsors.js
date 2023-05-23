@@ -23,7 +23,7 @@ const EventSponsors = (props) => {
             <div className="col col-xl-12 col-lg-12 col-md-12">
               <div className="sponsor1">
                 <Image
-                  src={urlFor(sponsors?.sponsorImages[0]?.asset).url()}
+                  src={urlFor(sponsors?.sponsorImages[0]?.image?.asset).url()}
                   width={742}
                   height={523}
                   // layout="fill"

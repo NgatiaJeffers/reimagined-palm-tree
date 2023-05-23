@@ -12,7 +12,6 @@ import { fetchEvents } from "../../util/fetchEvents";
 
 const EventsPage = (props) => {
   const { events } = props;
-  console.log(events);
 
   const groupedEvents = events.reduce((acc, event) => {
     if (!acc[event?.eventIn?.slug?.current]) {

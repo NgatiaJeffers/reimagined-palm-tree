@@ -10,18 +10,6 @@ import tiktok from "../../public/Social-media/tiktok-white.png";
 import twitter from "../../public/Social-media/twitter.png";
 import whatsapp from "../../public/Social-media/whatsapp.png";
 import youtube from "../../public/Social-media/youtube.png";
-
-import {
-  AiFillFacebook,
-  AiFillTwitterSquare,
-  AiFillTwitterCircle,
-  AiFillInstagram,
-  AiFillLinkedin,
-  AiOutlineWhatsApp,
-  AiFillYoutube,
-} from "react-icons/ai";
-import { FaTiktok } from "react-icons/fa";
-import { BsFacebook } from "react-icons/bs";
 import Carousel from "../atoms/CarouselText";
 
 const Footer = () => {
@@ -74,46 +62,83 @@ const Footer = () => {
                   <h5>Social Links</h5>
                   <ul className="footer_social_links">
                     <li>
-                      <a href="#">
-                        <Image src={facebook} height={30} width={30} />
-                        <span className="social-name">Facebook</span>
-                      </a>
+                      <Link
+                        href={"https://www.facebook.com/FarajaCancerSupport/"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={facebook} height={30} width={30} />
+                          <span className="social-name">Facebook</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={tiktok} height={30} width={30} />
-                        <span className="social-name">TikTok</span>
-                      </a>
+                      <Link
+                        href={"https://www.tiktok.com/@farajacancersupport"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={tiktok} height={30} width={30} />
+                          <span className="social-name">TikTok</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={youtube} height={30} width={30} />
-                        <span className="social-name">YouTube</span>
-                      </a>
+                      <Link
+                        href={"https://www.youtube.com/@FarajaCancerSupport"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={youtube} height={30} width={30} />
+                          <span className="social-name">YouTube</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={twitter} height={30} width={30} />
-                        <span className="social-name">Twitter</span>
-                      </a>
+                      <Link
+                        href={"https://twitter.com/FarajaTrust"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={twitter} height={30} width={30} />
+                          <span className="social-name">Twitter</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={instagram} height={30} width={30} />
-                        <span className="social-name">Instagram</span>
-                      </a>
+                      <Link
+                        href={"https://www.instagram.com/farajacancersupport/"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={instagram} height={30} width={30} />
+                          <span className="social-name">Instagram</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={linkedin} height={30} width={30} />
-                        <span className="social-name">Linkedin</span>
-                      </a>
+                      <Link
+                        href={
+                          "https://www.linkedin.com/in/faraja-cancer-support-trust-44416635/"
+                        }
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={linkedin} height={30} width={30} />
+                          <span className="social-name">Linkedin</span>
+                        </a>
+                      </Link>
                     </li>
                     <li>
-                      <a href="#">
-                        <Image src={whatsapp} height={30} width={30} />
-                        <span className="social-name">Whatsapp</span>
-                      </a>
+                      <Link
+                        href={"https://api.whatsapp.com/send?phone=0748811909"}
+                        target="_blank"
+                      >
+                        <a>
+                          <Image src={whatsapp} height={30} width={30} />
+                          <span className="social-name">Whatsapp</span>
+                        </a>
+                      </Link>
                     </li>
                   </ul>
                 </div>
@@ -131,7 +156,9 @@ const Footer = () => {
                 </div>
                 <div className="footer_single_contact_info">
                   <h5>Email:</h5>
-                  <p>info@farajacancersupport.org</p>
+                  <p>
+                    <a href="mailto:info@farajacancersupport.org">info@farajacancersupport.org</a>
+                  </p>
                 </div>
               </div>
             </div>

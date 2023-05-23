@@ -4687,6 +4687,7 @@ hr {
 .sidebar-socials li a {
   display: flex;
   align-items: center;
+  color: #000;
 }
 
 .sidebar-socials .icon-name {
@@ -4774,6 +4775,7 @@ hr {
 }
 
 .footer_single_contact_info > p,
+.footer_single_contact_info > p a,
 .footer_single_contact_info > h5,
 .foo_top_header_one .footer_part > p {
   color: rgba(255, 255, 255, 0.5);

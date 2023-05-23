@@ -40,9 +40,6 @@ const Event = (props) => {
                     blurDataURL={rgbDataURL(237, 181, 6)}
                     placeholder="blur"
                   />
-                  <div className="tags">
-                    <h6>Childhood Cancer Awareness</h6>
-                  </div>
                 </div>
                 <div className="events-details-text-box">
                   <h2>{eventData?.title}</h2>

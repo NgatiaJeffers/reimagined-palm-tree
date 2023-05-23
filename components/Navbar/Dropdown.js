@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Link from "next/link";
 import TruncatedParagraph from "../atoms/TruncatedText";
 import { useRouter } from "next/router";
@@ -5,8 +6,9 @@ import { useRouter } from "next/router";
 const Dropdown = ({ subMenus, handleDropDownSelect }) => {
   const router = useRouter();
 
+
   return (
-    <div className="dropdown-menu dropdown-mobile animate slideIn">
+    <div className="dropdown-menu dropdown-menu-open dropdown-mobile animate slideIn">
       <div className="container">
         <div className="mega-content px-4">
           <div className="row">

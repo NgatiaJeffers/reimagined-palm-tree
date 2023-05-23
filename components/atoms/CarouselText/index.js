@@ -7,7 +7,7 @@ const Carousel = ({ texts }) => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((currentIndex + 1) % texts.length);
-    }, 3000); // Adjust the delay between transitions (in milliseconds)
+    }, 8000); // Adjust the delay between transitions (in milliseconds)
 
     return () => clearInterval(interval);
   }, [currentIndex]);
