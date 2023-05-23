@@ -4,7 +4,15 @@ import Image from "next/image";
 import moment from "moment";
 import { BsFillCalendar2CheckFill } from "react-icons/bs";
 import { FiExternalLink } from "react-icons/fi";
-import { AiFillFacebook } from "react-icons/ai";
+import {
+  AiFillFacebook,
+  AiFillTwitterSquare,
+  AiFillInstagram,
+  AiFillYoutube,
+} from "react-icons/ai";
+import { FaTiktok } from "react-icons/fa";
+import { BsFacebook } from "react-icons/bs";
+
 import { urlFor } from "../../../lib/sanity";
 
 import titleShape from "../../../public/shapes/title-shape.webp";
@@ -77,7 +85,7 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
             </h2>
             <ul className="socials ps-0 mb-0">
               <li className="d-flex align-items-center justify-content-between">
-                <Link href={"/"}>
+                <Link href={"https://www.facebook.com/FarajaCancerSupport/"}>
                   <a className="d-flex align-items-center">
                     <span className="icon-wrap">
                       <AiFillFacebook className="icon" />
@@ -86,12 +94,93 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
                   </a>
                 </Link>
                 <span className="text-gray-color">
-                  <Link href={"/"}>
+                  <Link href={"https://www.facebook.com/FarajaCancerSupport/"}>
                     <a className="d-flex align-items-center">
                       <span className="icon-wrap">
                         <FiExternalLink className="icon-link" />
                       </span>
                       Facebook
+                    </a>
+                  </Link>
+                </span>
+              </li>
+              <li className="d-flex align-items-center justify-content-between">
+                <Link href={"https://www.instagram.com/farajacancersupport/"}>
+                  <a className="d-flex align-items-center">
+                    <span className="icon-wrap">
+                      <AiFillInstagram className="icon" />
+                    </span>
+                    Instagram
+                  </a>
+                </Link>
+                <span className="text-gray-color">
+                  <Link href={"https://www.instagram.com/farajacancersupport/"}>
+                    <a className="d-flex align-items-center">
+                      <span className="icon-wrap">
+                        <FiExternalLink className="icon-link" />
+                      </span>
+                      Instagram
+                    </a>
+                  </Link>
+                </span>
+              </li>
+              <li className="d-flex align-items-center justify-content-between">
+                <Link href={"https://www.youtube.com/@FarajaCancerSupport"}>
+                  <a className="d-flex align-items-center">
+                    <span className="icon-wrap">
+                      <AiFillYoutube className="icon" />
+                    </span>
+                    YouTube
+                  </a>
+                </Link>
+                <span className="text-gray-color">
+                  <Link href={"https://www.youtube.com/@FarajaCancerSupport"}>
+                    <a className="d-flex align-items-center">
+                      <span className="icon-wrap">
+                        <FiExternalLink className="icon-link" />
+                      </span>
+                      YouTube
+                    </a>
+                  </Link>
+                </span>
+              </li>
+              <li className="d-flex align-items-center justify-content-between">
+                <Link href={"https://twitter.com/FarajaTrust"}>
+                  <a className="d-flex align-items-center">
+                    <span className="icon-wrap">
+                      <AiFillTwitterSquare className="icon" />
+                    </span>
+                    Twitter
+                  </a>
+                </Link>
+                <span className="text-gray-color">
+                  <Link href={"https://twitter.com/FarajaTrust"}>
+                    <a className="d-flex align-items-center">
+                      <span className="icon-wrap">
+                        <FiExternalLink className="icon-link" />
+                      </span>
+                      Twitter
+                    </a>
+                  </Link>
+                </span>
+              </li>
+
+              <li className="d-flex align-items-center justify-content-between">
+                <Link href={"https://www.tiktok.com/@farajacancersupport"}>
+                  <a className="d-flex align-items-center">
+                    <span className="icon-wrap">
+                      <FaTiktok className="icon" />
+                    </span>
+                    TikTok
+                  </a>
+                </Link>
+                <span className="text-gray-color">
+                  <Link href={"https://www.tiktok.com/@farajacancersupport"}>
+                    <a className="d-flex align-items-center">
+                      <span className="icon-wrap">
+                        <FiExternalLink className="icon-link" />
+                      </span>
+                      TikTok
                     </a>
                   </Link>
                 </span>
