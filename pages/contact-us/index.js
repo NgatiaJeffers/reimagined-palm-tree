@@ -108,51 +108,113 @@ const ContactUs = () => {
                         <div className="col-md-6 box-1">
                           <ul className="sidebar-socials">
                             <li>
-                              <a>
-                                <Image src={facebook} height={30} width={30} />
-                                <span className="icon-name">Facebook</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://www.facebook.com/FarajaCancerSupport/"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image
+                                    src={facebook}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="icon-name">Facebook</span>
+                                </a>
+                              </Link>
                             </li>
                             <li>
-                              <a>
-                                <Image src={twitter} height={30} width={30} />
-                                <span className="icon-name">Twitter</span>
-                              </a>
+                              <Link
+                                href={"https://twitter.com/FarajaTrust"}
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image src={twitter} height={30} width={30} />
+                                  <span className="icon-name">Twitter</span>
+                                </a>
+                              </Link>
                             </li>
                             <li>
-                              <a>
-                                <Image src={youtube} height={30} width={30} />
-                                <span className="icon-name">YouTube</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://www.youtube.com/@FarajaCancerSupport"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image src={youtube} height={30} width={30} />
+                                  <span className="icon-name">YouTube</span>
+                                </a>
+                              </Link>
                             </li>
                             <li>
-                              <a>
-                                <Image src={linkedin} height={30} width={30} />
-                                <span className="icon-name">Linkedin</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://www.linkedin.com/in/faraja-cancer-support-trust-44416635/"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image
+                                    src={linkedin}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="icon-name">Linkedin</span>
+                                </a>
+                              </Link>
                             </li>
                           </ul>
                         </div>
                         <div className="col-md-6">
                           <ul className="sidebar-socials">
                             <li>
-                              <a>
-                                <Image src={instagram} height={30} width={30} />
-                                <span className="icon-name">Instagram</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://www.instagram.com/farajacancersupport/"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image
+                                    src={instagram}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="icon-name">Instagram</span>
+                                </a>
+                              </Link>
                             </li>
-
                             <li>
-                              <a>
-                                <Image src={tiktok} height={30} width={30} />
-                                <span className="icon-name">TikTok</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://www.tiktok.com/@farajacancersupport"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image src={tiktok} height={30} width={30} />
+                                  <span className="icon-name">TikTok</span>
+                                </a>
+                              </Link>
                             </li>
                             <li>
-                              <a>
-                                <Image src={whatsapp} height={30} width={30} />
-                                <span className="icon-name">Whatsapp</span>
-                              </a>
+                              <Link
+                                href={
+                                  "https://api.whatsapp.com/send?phone=0748811909"
+                                }
+                                target="_blank"
+                              >
+                                <a>
+                                  <Image
+                                    src={whatsapp}
+                                    height={30}
+                                    width={30}
+                                  />
+                                  <span className="icon-name">Whatsapp</span>
+                                </a>
+                              </Link>
                             </li>
                           </ul>
                         </div>
