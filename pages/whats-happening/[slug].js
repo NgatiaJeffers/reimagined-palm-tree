@@ -33,8 +33,8 @@ const BlogItem = (props) => {
                   <div className="post-thumb">
                     <Image
                       src={urlFor(image?.asset).url()}
-                      width={600}
-                      height={389}
+                      objectFit="cover"
+                      layout="fill"
                       blurDataURL={rgbDataURL(237, 181, 6)}
                       placeholder="blur"
                     />

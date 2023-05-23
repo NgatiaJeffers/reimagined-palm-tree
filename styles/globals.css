@@ -3183,10 +3183,18 @@ hr {
 
 .blog-details-desc .post-thumb {
   margin-bottom: 25px;
+  width: 100%;
+  height: auto !important;
 }
 
 .blog-details-desc .post-thumb img {
   width: 100% !important;
+  height: auto !important;
+}
+
+.blog-details-desc .post-thumb span,
+.blog-details-desc .post-thumb span img {
+  position: unset !important;
 }
 
 .blog-details-desc .post-title ul {
