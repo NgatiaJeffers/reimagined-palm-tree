@@ -8,6 +8,7 @@ const query = groq`*[_type == "trustee"] {
     slug,
     image,
     "bio": bio[].children[],
+    _createdAt
 }`;
 
 export default async function handler(req, res) {
