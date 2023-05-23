@@ -3,7 +3,7 @@ import { BsPeopleFill } from "react-icons/bs";
 
 export default defineType({
   name: 'trustee',
-  title: 'Trsutee',
+  title: 'Trustee',
   type: 'document',
   icon: BsPeopleFill,
   fields: [

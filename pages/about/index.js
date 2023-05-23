@@ -18,6 +18,7 @@ import MeetTheTean from "../components/about-children/MeetTheTeam";
 
 // API CALLS
 import { fetchStaff } from "../../util/fetchStaff";
+import { fetchTrustee } from "../../util/fetchTrustee";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -89,7 +90,7 @@ const useStyles = makeStyles({
 });
 
 const AboutPage = (props) => {
-  const { staffs } = props;
+  const { staffs, trustees } = props;
   const theme = useTheme();
   const classes = useStyles();
   const [value, setValue] = useState(0);
@@ -154,7 +155,7 @@ const AboutPage = (props) => {
               <OurServices />
             </TabPanel>
             <TabPanel value={value} index={2} dir={theme.direction}>
-              <MeetTheTean staffs={staffs} />
+              <MeetTheTean staffs={staffs} trustees={trustees} />
             </TabPanel>
           </SwipeableViews>
         </Box>
@@ -167,10 +168,12 @@ export default AboutPage;
 
 export const getServerSideProps = async () => {
   const staffs = await fetchStaff();
+  const trustees = await fetchTrustee();
 
   return {
     props: {
       staffs,
+      trustees,
     }
   }
 }
