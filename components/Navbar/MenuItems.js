@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 
 import Dropdown from "./Dropdown";
@@ -7,6 +7,19 @@ import { useRouter } from "next/router";
 const MenuItems = ({ activeRoute, setActiveRoute, items }) => {
   const router = useRouter();
   const [activeSubMenu, setActiveSubMenu] = useState(null);
+
+  useEffect(() => {
+    const handleScroll = (e) => {
+      e.stopPropagation();
+    };
+
+    const sectionElement = document.querySelector('.dropdown-menu');
+    sectionElement.addEventListener('scroll', handleScroll);
+
+    return () => {
+      sectionElement.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
 
   const handleDropDownSelect = (route) => {
     setActiveRoute(route);

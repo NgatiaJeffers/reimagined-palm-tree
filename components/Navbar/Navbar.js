@@ -28,6 +28,11 @@ const NavbarLayout = () => {
     }
   };
 
+  // useEffect(() => {
+
+
+
+
   useEffect(() => {
     const currentRoute = router.pathname;
 
@@ -35,8 +40,51 @@ const NavbarLayout = () => {
     setActiveRoute(currentRoute);
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+
+    const megaMenus = document.querySelectorAll('.navbar .dropdown-menu');
+
+    const handleDocumentClick = (e) => {
+      const target = e.target;
+      const isInsideMenu = target.closest('.navbar .dropdown-menu');
+      const isOpenMenu = target.classList.contains('show') && target.classList.contains('dropdown-toggle');
+
+      if (!isInsideMenu && !isOpenMenu) {
+        megaMenus.forEach((megaMenu) => {
+          const menuToggle = megaMenu.querySelector('.dropdown-toggle');
+          if (menuToggle) {
+            menuToggle.classList.remove('show');
+          }
+        });
+      }
+    };
+
+    const handleDocumentReady = () => {
+      // Get the mobile toggle button and the navbar collapse element
+      const mobileToggleButton = document.querySelector('.navbar-toggler');
+      const navbarCollapse = document.querySelector('.navbar-collapse');
+
+      // Auto-close mobile menu when a link is clicked
+      document.querySelectorAll('.navbar-nav .nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+          if (navbarCollapse.classList.contains('show')) {
+            mobileToggleButton.click();
+          }
+        });
+      });
+    };
+
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', handleDocumentReady);
+    } else {
+      handleDocumentReady();
+    }
+
+    document.addEventListener('click', handleDocumentClick);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      document.removeEventListener('click', handleDocumentClick);
+      document.removeEventListener('DOMContentLoaded', handleDocumentReady);
     };
   }, [scrollPosition, router.pathname]);
 
