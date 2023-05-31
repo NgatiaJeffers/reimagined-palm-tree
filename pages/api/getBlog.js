@@ -10,7 +10,8 @@ const query = groq`*[_type == 'blog'] {
     image
   }, 
   "image": mainImage,
-  description
+  description,
+  publishedAt
   }`;
 
 export default async function handler(req, res) {

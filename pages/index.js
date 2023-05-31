@@ -244,7 +244,7 @@ export default function Home(props) {
           </div>
           <div className="row">
             {blog?.map((item) => {
-              const { _id, image, title, description, slug } = item;
+              const { _id, image, title, description, slug, publishedAt } = item;
               return (
                 <div className="col-xl-4 col-lg-4" key={_id}>
                   <div className="single-blog">
@@ -263,6 +263,11 @@ export default function Home(props) {
                             />
                           </a>
                         </Link>
+                      </div>
+                      <div className="date-box">
+                        
+                        <h2>{getDayAndMonth(publishedAt)}</h2>
+                        {/* <p>June</p> */}
                       </div>
                     </div>
                     <div className="text-holder">

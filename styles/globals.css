@@ -2722,10 +2722,9 @@ body.dropdown-menu .dropdown-menu-open .show {
 
 .single-blog .img-holder .date-box h2 {
   color: #ffffff;
-  font-size: 36px;
-  line-height: 30px;
+  font-size: 15px;
+  line-height: 20px;
   font-weight: 800;
-  margin: 0 0 6px;
 }
 
 .single-blog .img-holder .date-box p {
