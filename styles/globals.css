@@ -3887,6 +3887,12 @@ body.dropdown-menu .dropdown-menu-open .show {
   padding-bottom: 0;
 }
 
+@media (max-width: 767.98px) {
+  .custom-blog .text-holder {
+    padding: 30px 20px 40px !important;
+  }
+}
+
 .sidebar-content-box {
   position: relative;
   display: block;
