@@ -22,9 +22,9 @@ const MeetTheTean = ({ staffs, trustees }) => {
             <h1 className="heading-main">Trustees</h1>
             <div className="content meet-the-team">
               <p>
-                Our team of experienced professionals will work closely with you,
-                providing the support and expertise to deliver the best possible
-                service.
+                Our team of experienced professionals will work closely with
+                you, providing the support and expertise to deliver the best
+                possible service.
               </p>
             </div>
           </div>

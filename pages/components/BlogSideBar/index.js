@@ -185,6 +185,26 @@ const BlogSideBar = ({ recentBlog, blogs }) => {
                   </Link>
                 </span>
               </li>
+              <li className="d-flex align-items-center justify-content-between">
+                <Link href={"https://api.whatsapp.com/send?phone=0748811909"}>
+                  <a className="d-flex align-items-center">
+                    <span className="icon-wrap">
+                      <FaTiktok className="icon" />
+                    </span>
+                    WhatsApp
+                  </a>
+                </Link>
+                <span className="text-gray-color">
+                  <Link href={"https://api.whatsapp.com/send?phone=0748811909"}>
+                    <a className="d-flex align-items-center">
+                      <span className="icon-wrap">
+                        <FiExternalLink className="icon-link" />
+                      </span>
+                      WhatsApp
+                    </a>
+                  </Link>
+                </span>
+              </li>
             </ul>
           </div>
         </div>
