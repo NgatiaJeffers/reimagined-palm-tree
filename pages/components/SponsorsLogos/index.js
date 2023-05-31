@@ -4,6 +4,7 @@ import Link from "next/link";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper";
+import { urlFor } from "../../../lib/sanity";
 
 import shape4 from "../../../public/shape4.png";
 
@@ -49,7 +50,7 @@ const SponsorsLogo = ({ logos }) => {
                 <div className="single-sponsor">
                   <div className="img-box">
                     <Image
-                      src={image?.image?.url}
+                      src={urlFor(image?.asset).url()}
                       layout="fill"
                       objectFit="contain"
                     />

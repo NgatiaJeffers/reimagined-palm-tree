@@ -13,6 +13,12 @@ import { fetchEvents } from "../../util/fetchEvents";
 const EventsPage = (props) => {
   const { events } = props;
 
+  events?.sort((a, b) => {
+    const dateA = new Date(a.dateCreated);
+    const dateB = new Date(b.dateCreated);
+    return dateA - dateB;
+  });
+
   const groupedEvents = events.reduce((acc, event) => {
     if (!acc[event?.eventIn?.slug?.current]) {
       acc[event?.eventIn?.slug?.current] = [];

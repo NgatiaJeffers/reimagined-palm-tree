@@ -5,7 +5,7 @@ const query = groq `*[_type == 'sponsors'] {
     _id,
     name,
     slug,
-    "image": image.asset ->,
+    image,
   }`;
 
 export default async function handler(req, res) {

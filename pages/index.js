@@ -32,6 +32,11 @@ import { fetchSponsors } from "../util/fetchSponsors";
 
 export default function Home(props) {
   const { about, testimonial, images, events, blog, sponsors } = props;
+  events?.sort((a, b) => {
+    const dateA = new Date(a.dateCreated);
+    const dateB = new Date(b.dateCreated);
+    return dateA - dateB;
+  });
 
   return (
     <>

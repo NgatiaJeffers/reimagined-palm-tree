@@ -26,7 +26,7 @@ export const MENU_LIST = [
             },
             {
               title: "Sponsors & Supporters",
-              url: "/",
+              url: "/sponsors",
               description: "Get a glimpse of our able Sponsors and Supporters"
             },
             {

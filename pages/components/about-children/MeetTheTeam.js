@@ -8,7 +8,6 @@ import image9 from "../../../public/Team/Trustees/manu.jpg";
 import { urlFor } from "../../../lib/sanity";
 
 const MeetTheTean = ({ staffs, trustees }) => {
-  console.log(trustees)
   const sortedTrustees = trustees?.sort((a, b) => {
     const dateA = new Date(a._createdAt);
     const dateB = new Date(b._createdAt);
@@ -18,7 +17,18 @@ const MeetTheTean = ({ staffs, trustees }) => {
   return (
     <section className="wide-tb-100">
       <div className="container">
-        <h1 className="heading-main">Trustees</h1>
+        <div className="row">
+          <div className="col col-12 col-md-6">
+            <h1 className="heading-main">Trustees</h1>
+            <div className="content meet-the-team">
+              <p>
+                Our team of experienced professionals will work closely with you,
+                providing the support and expertise to deliver the best possible
+                service.
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="row">
           {sortedTrustees?.map((item) => {
             const { _id, name, title, bio, image } = item;
