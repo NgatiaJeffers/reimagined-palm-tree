@@ -45,8 +45,10 @@ const SponsorsLogo = ({ logos }) => {
             navigation={true}
             modules={[Autoplay, Pagination, Navigation]}
           >
-            {logos?.map((image) => (
-              <SwiperSlide key={image?._id}>
+            {logos?.map((item) => {
+              const { _id, name, slug, image } = item;
+              return (
+                <SwiperSlide key={_id}>
                 <div className="single-sponsor">
                   <div className="img-box">
                     <Image
@@ -57,7 +59,8 @@ const SponsorsLogo = ({ logos }) => {
                   </div>
                 </div>
               </SwiperSlide>
-            ))}
+              )
+            })}
           </Swiper>
         </div>
       </section>
